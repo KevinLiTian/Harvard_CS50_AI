@@ -1,0 +1,15 @@
+- NOT (¬)
+- AND (∧)
+- OR (∨)
+- XOR (⊕)
+- Implication (→)
+- Biconditional (↔)
+
+- Modus Ponens
+- And Elimination
+- Double Negation Elimination
+- Implication Elimination
+- Biconditional Elimination
+- De Morgan's Law
+- Distributive Property
+- Knowledge and Search
