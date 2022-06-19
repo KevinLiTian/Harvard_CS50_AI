@@ -20,6 +20,10 @@ There are two sets of data, one in "small" folder and another in "large" folder.
 
 The main program is written in the degrees.py file, which utilizes some useful classes and functions in the util.py file.
 
+## How to Use
+
+Run the degrees.py file. If you are using the large dataset, it will take some time for the data to load in. Then enter the hollywood movie star names as the program prompts, wait a bit for the program to search, and you will see the results.
+
 ## Example Output
 
 ```Python
