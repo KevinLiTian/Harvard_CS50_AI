@@ -17,21 +17,21 @@
 - Knowledge Engineering: The process of figuring out how to represent propositions and logic in AI.
 - [Inference](https://en.wikipedia.org/wiki/Inference): The process of deriving new sentences from old ones
   - Inference Rules
-    - Modus Ponens
-    - And Elimination
-    - Double Negation Elimination
-    - Implication Elimination
-    - Biconditional Elimination
-    - De Morgan's Law
-    - Distributive Property
-    - Knowledge and Search
-- Resolution
-  - Complimentary Literals
-  - Clause
-  - Disjunction
-  - Conjunction
-  - Conjunctive Normal Form (CNF)
-  - Empty Clause
+    - Modus Ponens: If we know an implication and its antecedent is true, then the consequent must also be true
+    - And Elimination: If an AND proposition is true, then any one atomic proposition within it must also be true
+    - Double Negation Elimination: A proposition that is negated twice is true
+    - Implication Elimination: An implication is equivalent to an OR relation between the negated antecedent and the consequent
+    - Biconditional Elimination:A biconditional proposition is equivalent to an implication and its inverse with an And connective
+    - De Morgan's Law: Turning AND connective to OR or vice versa
+    - Distributive Property: AND and OR can be distributed just like multiplication
+    - Knowledge and Search: Inference can be viewed as a search problem. The initial state is the starting KB, the actions are inference rules and inferencing, the goal is a statement we are trying to prove
+- Resolution: A power inference rule that states that if one of two atomic propositions in an OR proposition is false, the other has to be true
+  - Complimentary Literals: Two of the same atomic propositions where one is negated and the other is not, such as P and ¬P
+  - Clause: A disjunction of literals (a propositional symbol or a negation of a propositional symbol, such as P, ¬P)
+  - Disjunction: Consists of propositions that are connected with an Or logical connective (P ∨ Q ∨ R)
+  - Conjunction: Consists of propositions that are connected with an And logical connective (P ∧ Q ∧ R)
+  - Conjunctive Normal Form (CNF): A conjunction of clauses
+  - Empty Clause: Resolving complimentary literals will result in the empty clause which is always of value false
 - First Order Logic
-  - Universal Quantification
-  - Existential Quantification
+  - Universal Quantification: Universal quantification uses the symbol ∀ to express “for all.”
+  - Existential Quantification: Existential quantification is used to create sentences that are true for at least one x. It is expressed using the symbol ∃
