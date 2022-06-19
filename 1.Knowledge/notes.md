@@ -10,7 +10,7 @@
     - OR (∨): True as as long as either of its arguments is true. This means that for P ∨ Q to be true, at least one of P or Q has to be true
     - XOR (⊕): Exclusive OR, true if and only if one of P or Q is true
     - Implication (→): Represents a structure of “if P then Q.”
-    - Biconditional (↔): Implication that goes both directions
+    - Biconditional (⇔): Implication that goes both directions
   - Model: Provides information about the world based on existing sentences which also known as the Knowledge Base
   - Knowledge Base (KB): The combination of all existing sentences
   - Entailment (⊨): If If α ⊨ β (α entails β), then in any possible world where α is true, then β must be true
