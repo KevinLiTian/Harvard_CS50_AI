@@ -12,8 +12,8 @@ This course explores the concepts and algorithms at the foundation of modern art
 
 Artificial Intelligence (AI) covers a range of techniques that appear as sentient behavior by the computer. For example, AI is used to recognize faces in photographs on your social media, beat the World’s Champion in chess, and process your speech when you speak to Siri or Alexa on your phone. This course will explore some of the ideas that make AI possible.
 
-- [Search](#lecture-0---search)
-- [Knowledge](#lecture-1---knowledge)
+- [Search](#lecture-0---search): Finding a solution to a problem, like a navigator app that finds the best route from your origin to the destination, or like playing a game and figuring out the next move
+- [Knowledge](#lecture-1---knowledge): Representing information and drawing inferences from it
 - Uncertainty
 - Optimization
 - Learning
@@ -22,7 +22,7 @@ Artificial Intelligence (AI) covers a range of techniques that appear as sentien
 
 ## Lecture 0 - [Search](/0.Search/notes.md)
 
-Finding a solution to a problem, like a navigator app that finds the best route from your origin to the destination, or like playing a game and figuring out the next move.
+Search problems involve an agent that is given an initial state and a goal state, and it returns a solution of how to get from the former to the latter
 
 ### Objectives
 
@@ -51,7 +51,7 @@ Finding a solution to a problem, like a navigator app that finds the best route 
 
 ## Lecture 1 - [Knowledge](/1.Knowledge/notes.md)
 
-Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI, and in this lecture we will explore how we can achieve this behavior.
+Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI, and in this lecture we will explore how we can achieve this behavior
 
 ### Objectives
 
