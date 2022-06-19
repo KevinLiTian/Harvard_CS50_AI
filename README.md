@@ -20,7 +20,7 @@ Artificial Intelligence (AI) covers a range of techniques that appear as sentien
 - Neural Networks
 - Language
 
-## Lecture 0 - Search
+## Lecture 0 - [Search](/0.Search/notes.md)
 
 Finding a solution to a problem, like a navigator app that finds the best route from your origin to the destination, or like playing a game and figuring out the next move.
 
@@ -49,7 +49,7 @@ Finding a solution to a problem, like a navigator app that finds the best route 
 - [Degrees](/0.Search/degrees/)
 - [Tic-Tac-Toe](/0.Search/tictactoe/)
 
-## Lecture 1 - Knowledge
+## Lecture 1 - [Knowledge](/1.Knowledge/notes.md)
 
 Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI, and in this lecture we will explore how we can achieve this behavior.
 
