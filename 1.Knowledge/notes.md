@@ -32,6 +32,6 @@
   - Conjunction: Consists of propositions that are connected with an And logical connective (P ∧ Q ∧ R)
   - Conjunctive Normal Form (CNF): A conjunction of clauses
   - Empty Clause: Resolving complimentary literals will result in the empty clause which is always of value false
-- First Order Logic
+- [First Order Logic](https://www.javatpoint.com/first-order-logic-in-artificial-intelligence)
   - Universal Quantification: Universal quantification uses the symbol ∀ to express “for all.”
   - Existential Quantification: Existential quantification is used to create sentences that are true for at least one x. It is expressed using the symbol ∃
