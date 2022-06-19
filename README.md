@@ -20,7 +20,7 @@ Artificial Intelligence (AI) covers a range of techniques that appear as sentien
 - Neural Networks: A program structure inspired by the human brain that is able to perform tasks effectively
 - Language: Processing natural language, which is produced and understood by humans
 
-## Lecture 0 - [Search](/0.Search/notes.md)
+## Lecture 0 - [Search](/0.Search/README.md)
 
 Search problems involve an agent that is given an initial state and a goal state, and it returns a solution of how to get from the former to the latter
 
@@ -49,7 +49,7 @@ Search problems involve an agent that is given an initial state and a goal state
 - [Degrees](/0.Search/degrees/)
 - [Tic-Tac-Toe](/0.Search/tictactoe/)
 
-## Lecture 1 - [Knowledge](/1.Knowledge/notes.md)
+## Lecture 1 - [Knowledge](/1.Knowledge/README.md)
 
 Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI, and in this lecture we will explore how we can achieve this behavior
 
