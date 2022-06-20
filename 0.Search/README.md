@@ -82,7 +82,7 @@ Manhattan distance vs Euclidean distance
 #### [A\* Search](https://www.geeksforgeeks.org/a-search-algorithm/)
 
 Consider both the cost of path until now and the estimated cost to the goal, g(n) + h(n) </br>
-g(n) = cost to reach node
+g(n) = cost to reach node </br>
 h(n) = estimated cost to goal
 
 <img width="679" alt="Screen Shot 2022-06-19 at 8 53 16 PM" src="https://user-images.githubusercontent.com/98674104/174507529-69b6908c-f37f-41ed-a94a-0d9323aab6e8.png">
