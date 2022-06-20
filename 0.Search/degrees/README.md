@@ -12,17 +12,17 @@ We can frame this as a search problem: our states are people. Our actions are mo
 
 ## Files
 
-There are two sets of data, one in "small" folder and another in "large" folder. Both contain three csv files, people.csv, movies.csv and stars.csv. Data in "small" folder is relatively tiny in size comparing to the data in "large" folder so it can be used to test the functionality of the program. Whereas in the "large" folder, all the data from IMDb's database is in the csv files <br/>
+There are two sets of data, one in _small_ folder and another in _large_ folder. Both contain three csv files, _people.csv_, _movies.csv_ and _stars.csv_. Data in _small_ folder is relatively tiny in size comparing to the data in _large_ folder so it can be used to test the functionality of the program. Whereas in the _large_ folder, all the data from IMDb's database is in the csv files <br/>
 
-- Movies.csv contains information each movie's assigned ID, its title and release year
-- People.csv contains information about each hollywood movie star's unique ID, corresponding to their ID in the IMDb's database, with their name and birth year
-- Stars.csv establishes a relationship between the movie stars in the people.csv and movies in movies.csv, stating that which person starred in which movie
+- _Movies.csv_ contains information each movie's assigned ID, its title and release year
+- _People.csv_ contains information about each hollywood movie star's unique ID, corresponding to their ID in the IMDb's database, with their name and birth year
+- _Stars.csv_ establishes a relationship between the movie stars in the _people.csv_ and movies in _movies.csv_, stating that which person starred in which movie
 
-The main program is written in the degrees.py file, which utilizes some useful classes and functions in the util.py file
+The main program is written in the _degrees.py_ file, which utilizes some useful classes and functions in the _util.py_ file
 
 ## How to Use
 
-Run the degrees.py file. If you are using the large dataset, it will take some time for the data to load in. Then enter the hollywood movie star names as the program prompts, wait a bit for the program to search, and you will see the results
+In the _degrees_ directory, run the _degrees.py_ file. If you are using the large dataset, it will take some time for the data to load in. Then enter the hollywood movie star names as the program prompts, wait a bit for the program to search, and you will see the results
 
 ## Example Output
 
