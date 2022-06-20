@@ -51,7 +51,7 @@ Search problems involve an agent that is given an initial state and a goal state
 
 ## Lecture 1 - [Knowledge](/1.Knowledge/README.md)
 
-Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI, and in this lecture we will explore how we can achieve this behavior
+Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI, and this lecture will explore how we can achieve this behavior
 
 ### Objectives
 
