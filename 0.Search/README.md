@@ -70,14 +70,22 @@ Follow multiple directions at the same time, taking one step in each possible di
 
 #### [Greedy Best-First Search](https://www.javatpoint.com/ai-informed-search-algorithms#:~:text=Greedy%20best%2Dfirst%20search%20algorithm,the%20advantages%20of%20both%20algorithms.)
  
-At any time, choose the state that is closest to the goal as the next state (only consider the estimated cost to the goal)
+At any time, choose the state that is closest to the goal as the next state (only consider the estimated cost to the goal), as estimated by a
+heuristic function h(n)
 
-<img width="678" alt="Screen Shot 2022-06-19 at 8 52 05 PM" src="https://user-images.githubusercontent.com/98674104/174507458-d59637f1-bd4d-4bd8-bfbe-85f1c4454024.png">
+<img width="678" alt="Screen Shot 2022-06-19 at 8 55 53 PM" src="https://user-images.githubusercontent.com/98674104/174507683-67090988-940d-4a4e-b045-0ac985f4fb4c.png">
 
+Manhattan distance vs Euclidean distance
+
+<img src="https://user-images.githubusercontent.com/98674104/174507758-c1a8a28d-3a2a-4a3b-bfe8-be28384a6a95.jpeg" width="680" height="350">
  
 #### [A\* Search](https://www.geeksforgeeks.org/a-search-algorithm/)
 
-Consider both the cost of path until now and the estimated cost to the goal
+Consider both the cost of path until now and the estimated cost to the goal, g(n) + h(n) </br>
+g(n) = cost to reach node
+h(n) = estimated cost to goal
+
+<img width="679" alt="Screen Shot 2022-06-19 at 8 53 16 PM" src="https://user-images.githubusercontent.com/98674104/174507529-69b6908c-f37f-41ed-a94a-0d9323aab6e8.png">
 
 ## Adversarial Search
 
@@ -85,9 +93,13 @@ Consider both the cost of path until now and the estimated cost to the goal
 
 A recursive or backtracking algorithm which is used in decision-making and game theory. It provides an optimal move for the player assuming that opponent is also playing optimally
 
-#### [Alpha-Beta Pruning](https://www.javatpoint.com/ai-alpha-beta-pruning): 
+<img width="674" alt="Screen Shot 2022-06-19 at 8 53 37 PM" src="https://user-images.githubusercontent.com/98674104/174507542-ed38bf8f-7f65-41f2-8af2-b3a3b30b9e2d.png">
+
+#### [Alpha-Beta Pruning](https://www.javatpoint.com/ai-alpha-beta-pruning) 
 
 An optimization technique for the Minimax Algorithm
+
+<img width="679" alt="Screen Shot 2022-06-19 at 8 53 53 PM" src="https://user-images.githubusercontent.com/98674104/174507566-df02b8e6-a489-4d58-9a8a-ab0e98ec0bc3.png">
 
 #### Depth-Limited Minimax
 
