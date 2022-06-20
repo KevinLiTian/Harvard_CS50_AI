@@ -6,9 +6,12 @@
 
 An entity that perceives its environment and acts upon that environment
 
+
 #### State
 
 A configuration of an agent in its environment
+
+<img width="675" alt="Screen Shot 2022-06-19 at 8 45 52 PM" src="https://user-images.githubusercontent.com/98674104/174507105-dbd932c9-fbfa-4a4f-b5df-f79bb3d6e298.png">
 
 #### Initial State
 
@@ -18,13 +21,19 @@ The state from which the search algorithm starts
 
 Choices that can be made in a state
 
+<img width="676" alt="Screen Shot 2022-06-19 at 8 46 13 PM" src="https://user-images.githubusercontent.com/98674104/174507117-71e97a91-08ca-416c-b32a-af7dc5516e55.png">
+
 #### Transition Model
 
 A description of what state results from performing any applicable action in any state
 
+<img width="676" alt="Screen Shot 2022-06-19 at 8 46 33 PM" src="https://user-images.githubusercontent.com/98674104/174507131-39f1116b-7bdb-4fb6-ba3d-dfb2d163800e.png">
+
 #### State Space
 
 The set of all states reachable from the initial state by any sequence of actions
+
+<img width="679" alt="Screen Shot 2022-06-19 at 8 46 55 PM" src="https://user-images.githubusercontent.com/98674104/174507153-ec890424-f4ef-41d7-9c00-c6e2708c1f9f.png">
 
 #### Goal Test
 
@@ -34,19 +43,37 @@ The condition that determines whether a given state is a goal state
 
 A numerical cost associated with a given path
 
+<img width="675" alt="Screen Shot 2022-06-19 at 8 47 16 PM" src="https://user-images.githubusercontent.com/98674104/174507169-e74f9eaa-3533-4d9b-a549-d0765f475a5b.png">
+
+
 ## Algorithms Solving Search Problems
 
 #### [Depth-First Search (DFS)](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
 
-Exhausts each one direction before trying another direction
+Exhausts each one direction before trying another direction </br>
+There are different possible ways, which will be chosen randomly </br>
+
+For example: </br>
+
+<img width="675" alt="Screen Shot 2022-06-19 at 8 48 56 PM" src="https://user-images.githubusercontent.com/98674104/174507280-633a5e6a-9d41-4111-9634-0b12d5963dcb.png">
+
+OR </br>
+
+<img width="678" alt="Screen Shot 2022-06-19 at 8 50 04 PM" src="https://user-images.githubusercontent.com/98674104/174507348-2df8c20c-6e2e-4df2-912a-ee3f2dc6dafd.png">
+
 
 #### [Breadth-First Search (BFS)](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
 
 Follow multiple directions at the same time, taking one step in each possible direction before taking the second step in each direction
 
- #### [Greedy Best-First Search](https://www.javatpoint.com/ai-informed-search-algorithms#:~:text=Greedy%20best%2Dfirst%20search%20algorithm,the%20advantages%20of%20both%20algorithms.)
+<img width="677" alt="Screen Shot 2022-06-19 at 8 48 21 PM" src="https://user-images.githubusercontent.com/98674104/174507239-b6c05071-3100-4143-81d1-95581c24f33e.png">
+
+#### [Greedy Best-First Search](https://www.javatpoint.com/ai-informed-search-algorithms#:~:text=Greedy%20best%2Dfirst%20search%20algorithm,the%20advantages%20of%20both%20algorithms.)
  
 At any time, choose the state that is closest to the goal as the next state (only consider the estimated cost to the goal)
+
+<img width="678" alt="Screen Shot 2022-06-19 at 8 52 05 PM" src="https://user-images.githubusercontent.com/98674104/174507458-d59637f1-bd4d-4bd8-bfbe-85f1c4454024.png">
+
  
 #### [A\* Search](https://www.geeksforgeeks.org/a-search-algorithm/)
 
