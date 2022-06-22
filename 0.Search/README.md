@@ -46,7 +46,7 @@ A numerical cost associated with a given path
 <img width="675" alt="Screen Shot 2022-06-19 at 8 47 16 PM" src="https://user-images.githubusercontent.com/98674104/174507169-e74f9eaa-3533-4d9b-a549-d0765f475a5b.png">
 
 
-## Algorithms Solving Search Problems
+## Algorithms
 
 #### [Depth-First Search (DFS)](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
 
