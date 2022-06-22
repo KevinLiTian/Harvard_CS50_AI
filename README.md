@@ -28,21 +28,13 @@ Search problems involve an agent that is given an initial state and a goal state
 
 - Agent
 - State
-  - Initial State
 - Actions
 - Transition Model
 - State Space
 - Goal Test
 - Path Cost
-- Algorithms Solving Search Problems
-  - Depth-First Search (DFS)
-  - Breadth-First Search (BFS)
-  - Greedy Best-First Search
-  - A\* Search
+- Algorithms
 - Adversarial Search
-  - Minimax
-  - Alpha-Beta Pruning
-  - Depth-Limited Minimax
 
 ### Projects
 
@@ -58,24 +50,10 @@ Humans reason based on existing knowledge and draw conclusions. The concept of r
 - Knowledge-Based Agents
 - Sentence
 - Propositional Logic
-  - Propositional Symbols
-  - Logical Connectives
-  - Model
-  - Knowledge Base (KB)
-  - Entailment (⊨)
 - Knowledge Engineering
 - Inference
-  - Inference Rules
 - Resolution
-  - Complimentary Literals
-  - Clause
-  - Disjunction
-  - Conjunction
-  - Conjunctive Normal Form (CNF)
-  - Empty Clause
 - First Order Logic
-  - Universal Quantification
-  - Existential Quantification
 
 ### Projects
 
