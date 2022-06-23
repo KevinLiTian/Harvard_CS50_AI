@@ -1,4 +1,4 @@
-# Harvard University's CS50 - Introduction to Artificial Intelligence
+# Harvard University's CS50 - Introduction to AI
 
 In the summer after my sophomore year, in order to gain more knowledge and continue programming, I chose to study Harvard's online artificial intelligence course, [CS50](https://cs50.harvard.edu/ai/2020/), which I found through the online learning platform, [edX](https://www.edx.org/)<br/>
 
