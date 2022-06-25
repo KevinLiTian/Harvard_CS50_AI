@@ -88,6 +88,17 @@ Last lecture shows how AI can represent knowledge and from that, derive new know
 
 ### Objectives
 
+- Probability
+- Conditional Probability
+- Random Variables
+- Bayes's Rule
+- Joint Probability
+- Probability Rules
+- Bayesian Networks
+- Sampling
+- Markov Models
+- Hidden Markov Models
+
 ### Projects
 
 - PageRank
