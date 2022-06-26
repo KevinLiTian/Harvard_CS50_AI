@@ -16,11 +16,15 @@ This method is similar to using sampling to get a general probability. The AI ra
 
 But this method itself might be problematic in some situations. Consider this:
 
+<img src="https://user-images.githubusercontent.com/99038613/175796132-6d907aae-fc3f-4574-b38e-afb39b25e166.jpg" width="60%" height="60%">
+
 The pages 5 and 6 only link to each other, which means that if the AI initially selects one of these two pages, then it will only visit page 5 and 6 over and over again, and page 1 - 4 will never be visited. A solution to this is to add a damping factor (d), which itself is a probability (usualy set at 0.85). It means 85% of times, the AI will follow the links to the next page, but 15% of times, the AI will randomly select one page from all the pages (including the current page)
 
 ## Iterative Algorithm
 
 Using Random Surfer Model (sampling) to get a general probability is a good method, but there is another method that is mathematically more accurate, the iterative algorithm. This method calculates the probability of visiting a page using the following mathematic formula:
+
+![image](https://user-images.githubusercontent.com/99038613/175796159-d9ee85f5-930f-4464-b5f2-5c4b7e3e7153.png)
 
 PR(p) represents the page rank, which is also the probability of getting visited. d is the damping factor, and N is the total number of pages so the first term stands for the probability of a page to be selected at random. The second term is the probability of a page to be selected through links in other pages
 
