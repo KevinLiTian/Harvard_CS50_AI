@@ -11,10 +11,12 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python pagerank.py corpus")
     corpus = crawl(sys.argv[1])
+
     ranks = sample_pagerank(corpus, DAMPING, SAMPLES)
     print(f"PageRank Results from Sampling (n = {SAMPLES})")
     for page in sorted(ranks):
         print(f"  {page}: {ranks[page]:.4f}")
+
     ranks = iterate_pagerank(corpus, DAMPING)
     print(f"PageRank Results from Iteration")
     for page in sorted(ranks):
@@ -90,8 +92,28 @@ def sample_pagerank(corpus, damping_factor, n):
     their estimated PageRank value (a value between 0 and 1). All
     PageRank values should sum to 1.
     """
-    raise NotImplementedError
+    # Keep track of how many times each page has been visited
+    # Initialize all pages to 0
+    visited = {}
+    for webpage in corpus:
+        visited[webpage] = 0
 
+    # First choose at random from all pages
+    probabilities = [1/len(corpus)] * len(corpus)
+    first_choice = random.choices(population=list(corpus.keys()), weights=probabilities, k=1)[0]
+
+    # Repeat the process for SAMPLES times, similar to the Markov chain
+    choice = first_choice
+    for sample in range(n):
+        prob = transition_model(corpus, choice, damping_factor)
+        choice = random.choices(population=list(prob.keys()), weights=list(prob.values()), k=1)[0]
+        visited[choice] += 1
+
+    PageRank = {}
+    for webpage in visited:
+        PageRank[webpage] = visited[webpage] / n
+
+    return PageRank
 
 def iterate_pagerank(corpus, damping_factor):
     """
