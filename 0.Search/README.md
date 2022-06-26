@@ -1,11 +1,8 @@
 # Notes for Lecture 0 - Search
 
-## Definition
-
 #### Agent
 
 An entity that perceives its environment and acts upon that environment
-
 
 #### State
 
@@ -13,11 +10,9 @@ A configuration of an agent in its environment
 
 <img width="675" alt="Screen Shot 2022-06-19 at 8 45 52 PM" src="https://user-images.githubusercontent.com/98674104/174507105-dbd932c9-fbfa-4a4f-b5df-f79bb3d6e298.png">
 
-
 #### Initial State
 
 The state from which the search algorithm starts
-
 
 #### Actions
 
@@ -26,7 +21,6 @@ i.e. Up, Down, Left, Right in the 15 Puzzle Game
 
 <img width="676" alt="Screen Shot 2022-06-19 at 8 46 13 PM" src="https://user-images.githubusercontent.com/98674104/174507117-71e97a91-08ca-416c-b32a-af7dc5516e55.png">
 
-
 #### Transition Model
 
 A description of what state results from performing any applicable action in any state </br>
@@ -34,18 +28,15 @@ i.e. result(s, a) return the state in s by performing the action a
 
 <img width="676" alt="Screen Shot 2022-06-19 at 8 46 33 PM" src="https://user-images.githubusercontent.com/98674104/174507131-39f1116b-7bdb-4fb6-ba3d-dfb2d163800e.png">
 
-
 #### State Space
 
 The set of all states reachable from the initial state by any sequence of actions
 
 <img width="679" alt="Screen Shot 2022-06-19 at 8 46 55 PM" src="https://user-images.githubusercontent.com/98674104/174507153-ec890424-f4ef-41d7-9c00-c6e2708c1f9f.png">
 
-
 #### Goal Test
 
 The condition that determines whether a given state is a goal state
-
 
 #### Path Cost
 
@@ -54,7 +45,6 @@ The cost of each edge (between two vertices) could be 1 or more than 1 </br>
 i.e. when navigating a path on the map, we do not only consider the distance but also trying to minimize the path cost
 
 <img width="675" alt="Screen Shot 2022-06-19 at 8 47 16 PM" src="https://user-images.githubusercontent.com/98674104/174507169-e74f9eaa-3533-4d9b-a549-d0765f475a5b.png">
-
 
 ## Algorithms
 
@@ -71,7 +61,6 @@ OR </br>
 
 <img width="678" alt="Screen Shot 2022-06-19 at 8 50 04 PM" src="https://user-images.githubusercontent.com/98674104/174507348-2df8c20c-6e2e-4df2-912a-ee3f2dc6dafd.png">
 
-
 #### [Breadth-First Search (BFS)](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
 
 Follow multiple directions at the same time, taking one step in each possible direction before taking the second step in each direction </br>
@@ -79,9 +68,8 @@ Guarantee the shortest path, but take long time as it seeks each directions setp
 
 <img width="677" alt="Screen Shot 2022-06-19 at 8 48 21 PM" src="https://user-images.githubusercontent.com/98674104/174507239-b6c05071-3100-4143-81d1-95581c24f33e.png">
 
-
 #### [Greedy Best-First Search](https://www.javatpoint.com/ai-informed-search-algorithms#:~:text=Greedy%20best%2Dfirst%20search%20algorithm,the%20advantages%20of%20both%20algorithms.)
- 
+
 At any time, choose the state that is closest to the goal as the next state (only consider the estimated cost to the goal), as estimated by a
 heuristic function h(n). However, it only consider the distance between the current node to the destination but not consider the cost to reach this node (g(n))
 
@@ -90,7 +78,7 @@ heuristic function h(n). However, it only consider the distance between the curr
 Manhattan distance vs Euclidean distance, we uses Manhattan distance in the Greedy BFS
 
 <img src="https://user-images.githubusercontent.com/98674104/174507758-c1a8a28d-3a2a-4a3b-bfe8-be28384a6a95.jpeg" width="680" height="350">
- 
+
 
 #### [A\* Search](https://www.geeksforgeeks.org/a-search-algorithm/)
 
@@ -103,7 +91,6 @@ Thus, A\* is the best path search algorithm as it considers the distance, weight
 
 <img width="679" alt="Screen Shot 2022-06-19 at 8 53 16 PM" src="https://user-images.githubusercontent.com/98674104/174507529-69b6908c-f37f-41ed-a94a-0d9323aab6e8.png">
 
-
 ## Adversarial Search
 
 #### [Minimax Algorithm](https://www.javatpoint.com/mini-max-algorithm-in-ai)
@@ -112,15 +99,12 @@ A recursive or backtracking algorithm which is used in decision-making and game 
 
 <img width="674" alt="Screen Shot 2022-06-19 at 8 53 37 PM" src="https://user-images.githubusercontent.com/98674104/174507542-ed38bf8f-7f65-41f2-8af2-b3a3b30b9e2d.png">
 
-
-#### [Alpha-Beta Pruning](https://www.javatpoint.com/ai-alpha-beta-pruning) 
+#### [Alpha-Beta Pruning](https://www.javatpoint.com/ai-alpha-beta-pruning)
 
 An optimization technique for the Minimax Algorithm </br>
 For example, if we want to find the max of three nodes and we know the current node will be definitely less than the previous node, then we do not need to explore every other subnodes of it
 
-
 <img width="679" alt="Screen Shot 2022-06-19 at 8 53 53 PM" src="https://user-images.githubusercontent.com/98674104/174507566-df02b8e6-a489-4d58-9a8a-ab0e98ec0bc3.png">
-
 
 #### Depth-Limited Minimax
 

@@ -18,7 +18,9 @@ This method is similar to using sampling to get a general probability. The AI ra
 
 But this method itself might be problematic in some situations. Consider this:
 
+<p align="center">
 <img src="https://user-images.githubusercontent.com/99038613/175796132-6d907aae-fc3f-4574-b38e-afb39b25e166.jpg" width="60%" height="60%">
+</p>
 
 The pages 5 and 6 only link to each other, which means that if the AI initially selects one of these two pages, then it will only visit page 5 and 6 over and over again, and page 1 - 4 will never be visited. A solution to this is to add a damping factor (d), which itself is a probability (usualy set at 0.85). It means 85% of times, the AI will follow the links to the next page, but 15% of times, the AI will randomly select one page from all the pages (including the current page)
 
@@ -26,13 +28,15 @@ The pages 5 and 6 only link to each other, which means that if the AI initially 
 
 Using Random Surfer Model (sampling) to get a general probability is a good method, but there is another method that is mathematically more accurate, the iterative algorithm. This method calculates the probability of visiting a page using the following mathematic formula:
 
-![image](https://user-images.githubusercontent.com/99038613/175796159-d9ee85f5-930f-4464-b5f2-5c4b7e3e7153.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/99038613/175796159-d9ee85f5-930f-4464-b5f2-5c4b7e3e7153.png">
+</p>
 
 PR(p) represents the page rank, which is also the probability of getting visited. d is the damping factor, and N is the total number of pages so the first term stands for the probability of a page to be selected at random. The second term is the probability of a page to be selected through links in other pages
 
 ## Files
 
-There are three set of sample pages in folders _corpus0_, _corpus1_ and _corpus2, and a main file _pagerank.py_. In _pagerank.py_, there are two constants, the damping factor (d=0.85) and the sample size (N=10000). The main function takes in arguments specifying which set of pages the program will be using and pass them into two functions, the _sample_pagerank_ and the _iterate_pagerank_. They uses the Random Surfer Model and the Iterative Algorithm respectively
+There are three set of sample pages in folders _corpus0_, _corpus1_ and _corpus2, and a main file \_pagerank.py_. In _pagerank.py_, there are two constants, the damping factor (d=0.85) and the sample size (N=10000). The main function takes in arguments specifying which set of pages the program will be using and pass them into two functions, the _sample_pagerank_ and the _iterate_pagerank_. They uses the Random Surfer Model and the Iterative Algorithm respectively
 
 ## Example Output
 
