@@ -205,17 +205,17 @@ def joint_probability(people, one_gene, two_genes, have_trait):
 
             # Both parents passed on the gene
             if num_gene == 2:
-                gene_prob = parents[father] * parents[mother]
+                gene_prob = parent_passing_prob[father] * parent_passing_prob[mother]
 
             # One of the parents passed on the gene
             # Father passed on but mother did not or vice versa
             elif num_gene == 1:
-                gene_prob = parents[father] * (1 - parents[mother]) + \
-                            parents[mother] * (1 - parents[father])
+                gene_prob = parent_passing_prob[father] * (1 - parent_passing_prob[mother]) + \
+                            parent_passing_prob[mother] * (1 - parent_passing_prob[father])
 
             # No parents passed on the gene
             else:
-                gene_prob = (1 - parents[father]) * (1 - parents[mother])
+                gene_prob = (1 - parent_passing_prob[father]) * (1 - parent_passing_prob[mother])
 
             joint_prob = joint_prob * gene_prob
 
@@ -234,15 +234,35 @@ def update(probabilities, one_gene, two_genes, have_trait, p):
     Which value for each distribution is updated depends on whether
     the person is in `have_gene` and `have_trait`, respectively.
     """
-    raise NotImplementedError
+    # For each family member, update the probability distribution depending on
+    # the set they are in (number of genes, have trait or not)
+    for family_member in probabilities:
+        # Add the probability distribution to corresponding gene number
+        num_gene = (
+                    2 if family_member in two_genes else
+                    1 if family_member in one_gene else
+                    0
+                   )
 
+        probabilities[family_member]["gene"][num_gene] += p
+
+        # Add the probability distribution to the corresponding trait
+        trait = family_member in have_trait
+        probabilities[family_member]["trait"][trait] += p
 
 def normalize(probabilities):
     """
     Update `probabilities` such that each probability distribution
     is normalized (i.e., sums to 1, with relative proportions the same).
     """
-    raise NotImplementedError
+    # For each properties for each family member (gene, trait)
+    # find the normalizing factor by using 1 / sum and times
+    # every probability distribution by this factor
+    for family_member in probabilities:
+        for properties in probabilities[family_member]:
+            factor = 1.0 / sum(probabilities[family_member][properties].values())
+            for var in probabilities[family_member][properties]:
+                probabilities[family_member][properties][var] *= factor
 
 
 if __name__ == "__main__":
