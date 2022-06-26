@@ -62,11 +62,22 @@ Humans reason based on existing knowledge and draw conclusions. The concept of r
 - [Knights](/1.Knowledge/knights/)
 - [Minesweeper](/1.Knowledge/minesweeper/)
 
-## Lecture 2 - Uncertainty
+## Lecture 2 - [Uncertainty](2.Uncertainty/README.md)
 
 Last lecture shows how AI can represent knowledge and from that, derive new knowledge. But in reality, usually we don't have that much knowledge for certain. In fact, most of the times AI can only have partial knowledge and leaving some space for uncertainty. Still, we would want the AI to make the best possible decision during these situations. For example, when predicting weather, the AI has the information about the weather conditions right now but the AI cannot be certain for tomorrow. Still, the AI can do better than pure chance. This lecture will demonstrate how an AI can make optimal decisions with limited knowledge
 
 ### Objectives
+
+- Probability
+- Conditional Probability
+- Random Variables
+- Bayes's Rule
+- Joint Probability
+- Probability Rules
+- Bayesian Networks
+- Sampling
+- Markov Models
+- Hidden Markov Models
 
 ### Projects
 
