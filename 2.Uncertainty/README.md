@@ -12,12 +12,12 @@
   - Inclusion-Exclusion: P(a ∨ b) = P(a) + P(b) - P(a ∧ b)
   - Marginalization: P(a) = P(a, b) + P(a, ¬b)
   - Conditioning: P(a) = P(a | b)P(b) + P(a | ¬b)P(¬b)
-- Bayesian Networks: A Bayesian network is a data structure that represents the dependencies among random variables
+- [Bayesian Networks](https://www.bayesfusion.com/bayesian-networks/): A Bayesian network is a data structure that represents the dependencies among random variables
   - Inference: In the last lecture, the AI makes inferences using knowledge through entailments. The AI can also make inferences using probabilities
   - Inference by Enumeration: Inference by enumeration is a process of finding the probability distribution of variable X given observed evidence e and some hidden variables Y
 - Sampling: Sampling is one technique of approximate inference
-  - Likelihood Weighting: Normal sampling will discard samples we don't need for certain queries, that is inefficient. Likelihood weighting is a way to get around these situations
-- Markov Models
+  - [Likelihood Weighting](https://en.wikipedia.org/wiki/Likelihood_function): Normal sampling will discard samples we don't need for certain queries, that is inefficient. Likelihood weighting is a way to get around these situations
+- [Markov Models](https://en.wikipedia.org/wiki/Markov_model)
   - The Markov Assumption: The Markov assumption is an assumption that the current state depends on only a finite fixed number of previous states
   - Markov Chain: A Markov chain is a sequence of random variables where the distribution of each variable follows the Markov assumption
 - Hidden Markov Models: A hidden Markov model is a type of a Markov model for a system with hidden states that generate some observed event
