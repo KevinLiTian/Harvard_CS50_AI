@@ -82,4 +82,4 @@ Last lecture shows how AI can represent knowledge and from that, derive new know
 ### Projects
 
 - [PageRank](2.Uncertainty/pagerank/)
-- Heredity
+- [Heredity](2.Uncertainty/heredity/)
