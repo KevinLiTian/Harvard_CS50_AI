@@ -1,3 +1,4 @@
+""" 4 example puzzles that uses logic expressions to make inferences """
 from logic import *
 
 AKnight = Symbol("A is a Knight")
@@ -81,6 +82,11 @@ knowledge3 = And(
 
 
 def main():
+    """ Main Function
+    Take in four examples puzzles and construct four corresponding
+    knowledge bases, use KB to make inference about the identity of
+    each character
+    """
     symbols = [AKnight, AKnave, BKnight, BKnave, CKnight, CKnave]
     puzzles = [
         ("Puzzle 0", knowledge0),
@@ -100,4 +106,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

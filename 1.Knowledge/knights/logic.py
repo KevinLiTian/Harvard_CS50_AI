@@ -1,8 +1,8 @@
-import itertools
+""" Logic Expressions """
 
 
 class Sentence():
-
+    """ A logic sentence """
     def evaluate(self, model):
         """Evaluates the logical sentence."""
         raise Exception("nothing to evaluate")
@@ -17,6 +17,7 @@ class Sentence():
 
     @classmethod
     def validate(cls, sentence):
+        """ Determine if the object is a sentence """
         if not isinstance(sentence, Sentence):
             raise TypeError("must be a logical sentence")
 
@@ -41,9 +42,8 @@ class Sentence():
         else:
             return f"({s})"
 
-
 class Symbol(Sentence):
-
+    """ Logic symbols """
     def __init__(self, name):
         self.name = name
 
@@ -70,6 +70,7 @@ class Symbol(Sentence):
 
 
 class Not(Sentence):
+    """ Logic connective NOT """
     def __init__(self, operand):
         Sentence.validate(operand)
         self.operand = operand
@@ -94,6 +95,7 @@ class Not(Sentence):
 
 
 class And(Sentence):
+    """ Logic connective AND """
     def __init__(self, *conjuncts):
         for conjunct in conjuncts:
             Sentence.validate(conjunct)
@@ -114,6 +116,7 @@ class And(Sentence):
         return f"And({conjunctions})"
 
     def add(self, conjunct):
+        """ Link two set of sentences with and junction """
         Sentence.validate(conjunct)
         self.conjuncts.append(conjunct)
 
@@ -131,6 +134,7 @@ class And(Sentence):
 
 
 class Or(Sentence):
+    """ Logic connective OR """
     def __init__(self, *disjuncts):
         for disjunct in disjuncts:
             Sentence.validate(disjunct)
@@ -162,6 +166,7 @@ class Or(Sentence):
 
 
 class Implication(Sentence):
+    """ Logic connective Implication """
     def __init__(self, antecedent, consequent):
         Sentence.validate(antecedent)
         Sentence.validate(consequent)
@@ -193,6 +198,7 @@ class Implication(Sentence):
 
 
 class Biconditional(Sentence):
+    """ Logic connective Biconditional """
     def __init__(self, left, right):
         Sentence.validate(left)
         Sentence.validate(right)

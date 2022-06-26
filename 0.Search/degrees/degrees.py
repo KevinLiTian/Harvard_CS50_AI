@@ -1,7 +1,11 @@
+"""
+A program that determines how many "degrees of sepatraion" apart
+two hollywood actors are. Each degree consists of a film that two actors both starred in
+"""
 import csv
 import sys
 
-from util import Node, StackFrontier, QueueFrontier
+from util import Node, QueueFrontier
 
 # Maps names to a set of corresponding person_ids
 names = {}
@@ -53,6 +57,11 @@ def load_data(directory):
 
 
 def main():
+    """ Main Function
+    Take arguments from command line and get which dataset the AI
+    will be using. Then use the shortest path function to get the
+    degrees of separation between two stars
+    """
     if len(sys.argv) > 2:
         sys.exit("Usage: python degrees.py [directory]")
     directory = sys.argv[1] if len(sys.argv) == 2 else "large"
@@ -118,6 +127,10 @@ def shortest_path(source, target):
     return None
 
 def back_track(node):
+    """
+    Back track from a node to the origin node through
+    each node's parent node
+    """
     path = []
     cur_node = node
     while cur_node.parent is not None:
@@ -162,8 +175,8 @@ def neighbors_for_person(person_id):
     movie_ids = people[person_id]["movies"]
     neighbors = set()
     for movie_id in movie_ids:
-        for person_id in movies[movie_id]["stars"]:
-            neighbors.add((movie_id, person_id))
+        for person in movies[movie_id]["stars"]:
+            neighbors.add((movie_id, person))
     return neighbors
 
 

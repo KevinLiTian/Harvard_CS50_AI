@@ -1,3 +1,4 @@
+""" The Minesweeper AI that plays the game using advanced logics """
 import itertools
 import random
 
@@ -49,6 +50,7 @@ class Minesweeper():
         print("--" * self.width + "-")
 
     def is_mine(self, cell):
+        """ Determine if a cell is mine """
         i, j = cell
         return self.board[i][j]
 

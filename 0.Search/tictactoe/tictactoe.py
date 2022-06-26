@@ -31,10 +31,10 @@ def player(board):
                 num_x += 1
             if  col == O:
                 num_o += 1
-    
+
     if num_o == num_x:
         return X
-    
+
     else:
         return O
 
@@ -43,14 +43,14 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    actions = set()
+    possible_actions = set()
     for row in range(3):
         for col in range(3):
             if board[row][col] == EMPTY:
-                actions.add((row, col))
-    
-    return actions
-    
+                possible_actions.add((row, col))
+
+    return possible_actions
+
 
 def result(board, action):
     """
@@ -80,7 +80,7 @@ def winner(board):
         candidate = board[row][0]
         if candidate is not None and candidate == board[row][1] and candidate == board[row][2]:
             return candidate
-    
+
     #Column check
     for col in range(3):
         candidate = board[0][col]
@@ -89,7 +89,8 @@ def winner(board):
 
     #Diagonals check
     candidate = board[1][1]
-    if candidate is not None and (candidate == board[0][0] and candidate == board[2][2]) or (candidate == board[0][2] and candidate == board[2][0]):
+    if candidate is not None and (candidate == board[0][0] and candidate == board[2][2]) or \
+    (candidate == board[0][2] and candidate == board[2][0]):
         return candidate
 
     return None
@@ -105,7 +106,7 @@ def terminal(board):
             for col in row:
                 if col == EMPTY:
                     return False
-                
+
     return True
 
 
@@ -141,19 +142,20 @@ def minimax(board):
 
         return cur_result[0]
 
-    else:
-        cur_result = (None, math.inf)
-        for action in actions(board):
-            score = minimax_algorithm(result(board, action), True)
-            if score == -1:
-                return action
-            if score < cur_result[1]:
-                cur_result = (action, score)
 
-        return cur_result[0]
+    cur_result = (None, math.inf)
+    for action in actions(board):
+        score = minimax_algorithm(result(board, action), True)
+        if score == -1:
+            return action
+        if score < cur_result[1]:
+            cur_result = (action, score)
+
+    return cur_result[0]
 
 
 def minimax_algorithm(board, max_min_player):
+    """ The AI player logic recursive algorithm to get the optimal move """
     if terminal(board):
         return utility(board)
 
