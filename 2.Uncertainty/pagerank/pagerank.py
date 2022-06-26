@@ -1,3 +1,5 @@
+""" An AI that ranks web pages by their importance using two methods """
+
 import os
 import random
 import re
@@ -8,6 +10,11 @@ SAMPLES = 10000
 
 
 def main():
+    """ Main Function 
+    Take argument from command line of which set of pages to use
+    and crawl the pages links. Using two methods, the sampling
+    and iterating method to calculate the page rank
+    """
     if len(sys.argv) != 2:
         sys.exit("Usage: python pagerank.py corpus")
     corpus = crawl(sys.argv[1])
@@ -63,7 +70,7 @@ def transition_model(corpus, page, damping_factor):
     probabilities = {}
 
     # If no link to other pages, choose at random, all pages have same probability
-    if len(corpus[page]) == 0: 
+    if len(corpus[page]) == 0:
         for webpage in corpus:
             probabilities[webpage] = 1/len(corpus)
 
@@ -110,8 +117,8 @@ def sample_pagerank(corpus, damping_factor, n):
         visited[choice] += 1
 
     PageRank = {}
-    for webpage in visited:
-        PageRank[webpage] = visited[webpage] / n
+    for webpage, visited_times in visited.items():
+        PageRank[webpage] = visited_times / n
 
     return PageRank
 
@@ -124,8 +131,35 @@ def iterate_pagerank(corpus, damping_factor):
     their estimated PageRank value (a value between 0 and 1). All
     PageRank values should sum to 1.
     """
-    raise NotImplementedError
+    PageRank = {}
 
+    # Initialize each page's page rank to the random selection probability
+    for webpage in corpus:
+        PageRank[webpage] = 1 / len(corpus)
+
+    # Iterate until PageRank converges (no PR value change by more than 0.001)
+    iterating = True
+    while iterating:
+        iterating = False
+        for cur_webpage in corpus:
+            old_PR = PageRank[cur_webpage]
+            sum_of_link = 0
+
+            # Sum up the link probabilities from other page to cur page
+            for other_webpage in corpus:
+                # If not the same page and other page link to cur page
+                if cur_webpage != other_webpage and cur_webpage in corpus[other_webpage]:
+                    sum_of_link += PageRank[other_webpage] / len(corpus[other_webpage])
+
+            # Update new PR value
+            new_PR = (1 - damping_factor) / len(corpus) + damping_factor * sum_of_link
+            PageRank[cur_webpage] = new_PR
+
+            # Check if still need iterating
+            if abs(new_PR - old_PR) > 0.001:
+                iterating = True
+
+    return PageRank
 
 if __name__ == "__main__":
     main()
