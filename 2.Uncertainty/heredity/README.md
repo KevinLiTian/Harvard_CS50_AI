@@ -21,7 +21,7 @@ Your task in this project is to use this model to make inferences about a popula
 ## Files
 
 There are three datasets in the _data_ directory, which are three family relationships and genetic traits.
-And in the _heredity.py_ file, there are some probability constants and we are to use them and the dataset to infer which family member has certain genetic traits
+And in the _heredity.py_ file, there are some probability constants and we are to use them and the dataset to infer the probability distribution of which family member has certain genetic traits. The _testcase.py_ contains a unit test test case that is provided as an example in the course's project description. One can use this to confirm the functionality of the _joint_probability_ function in _heredity.py_ 
 
 ## How to Use
 
@@ -33,7 +33,7 @@ python heredity.py data/dataname
 
 Where dataname is the name of the data file in the _data_ directory
 
-The _testcase.py_ contains a unit test test case that is provided as an example in the course's project description. One can use this to confirm the functionality of the _joint_probability_ function. If one wants to run the unit test _testcase.py_, use the command
+If one wants to run the unit test _testcase.py_, use the command
 
 ```
 python testcase.py
