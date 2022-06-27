@@ -4,7 +4,7 @@ In the summer after my sophomore year, in order to gain more knowledge and conti
 
 In this repository, I will put my notes and my work on course projects. For each lecture, I will list the objectives of the lecture and two corresponding projects. Detailed notes regarding each lecture can be accessed through the link of each lecture
 
-Please <strong>DO NOT</strong> directly use the source code, they are <strong>ONLY</strong> for reference. Plagiarism is prohibited by both the Harvard University and the edX platform
+Please <strong>DO NOT</strong> directly use the source code, they are <strong>ONLY</strong> for reference. Plagiarism is strictly prohibited by both the Harvard University and the edX platform
 
 ## Course Overview
 
