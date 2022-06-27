@@ -2,7 +2,7 @@
 
 In the summer after my sophomore year, in order to gain more knowledge and continue programming, I chose to study Harvard's online artificial intelligence course, [CS50](https://cs50.harvard.edu/ai/2020/), which I found through the online learning platform, [edX](https://www.edx.org/)<br/>
 
-In this repository, I will put my notes and my work on course projects. For each lecture, I will list the objectives of the lecture and two corresponding projects. Detailed notes regarding each lecture can be accessed through the link of each lecture
+In this repository, I will put my notes and my work on course projects. For each lecture, I will list the objectives of the lecture and corresponding projects. Detailed notes regarding each lecture can be accessed through the link of each lecture
 
 Please <strong>DO NOT</strong> directly use the source code, they are <strong>ONLY</strong> for reference. Plagiarism is strictly prohibited by both the Harvard University and the edX platform
 
@@ -83,3 +83,22 @@ Last lecture shows how AI can represent knowledge and from that, derive new know
 
 - [PageRank](2.Uncertainty/pagerank/)
 - [Heredity](2.Uncertainty/heredity/)
+
+## Lecture 3 - [Optimization](3.Optimization/README.md)
+
+Optimization is choosing the best option from a set of possible options. We have already encountered problems where we tried to find the best possible option, such as in the minimax algorithm, and this lecture will learn about tools that we can use to solve an even broader range of problems
+
+### Objectives
+
+- Local Search
+- Hill Climbing
+- Simulated Annealing
+- Linear Programming
+- Constraint Satisfaction
+- Node Consistency
+- Arc Consistency
+- Backtracking Search
+
+### Projects
+
+- Crossword
