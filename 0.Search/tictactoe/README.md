@@ -8,9 +8,19 @@ The runner.py is used to initiate the pygame instance and it uses functions writ
 
 ## How to Play
 
-- Make sure _pygame_ is installed on your device
+Make sure _pygame_ is installed on your device, if not, use the command
 
-In the _tictactoe_ directory, run the _runner.py_ file, a pygame window will pop up like the screenshot below
+```
+pip install pygame
+```
+
+In the _tictactoe_ directory, run the command
+
+```
+python runner.py
+```
+
+A pygame window will pop up like the screenshot below
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/99038613/174504591-79a6821a-98ab-4195-b9a5-cd654ef16fed.png" width="60%" height="60%">

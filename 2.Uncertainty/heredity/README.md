@@ -25,13 +25,15 @@ And in the _heredity.py_ file, there are some probability constants and we are t
 
 ## How to Use
 
-One can use either the existing data in the _data_ directory or custom data. If using custom data, one should be familiar with the format of the data and added into the _data_ directory. Use this command to get the probability distribution for genetic traits
+One can use either the existing data in the _data_ directory or custom data. If using custom data, one should be familiar with the format of the data and added into the _data_ directory. Run this command in the _heredity_ directory to get the probability distribution for genetic traits
 
 ```
 python heredity.py data/dataname
 ```
 
-The _testcase.py_ contains a unit test test case that is provided as an example in the course's project description. One can use this to confirm the functionality of the _joint_probability_ function. If one wants to run the unit test _testcase.py_, use the command 
+Where dataname is the name of the data file in the _data_ directory
+
+The _testcase.py_ contains a unit test test case that is provided as an example in the course's project description. One can use this to confirm the functionality of the _joint_probability_ function. If one wants to run the unit test _testcase.py_, use the command
 
 ```
 python testcase.py

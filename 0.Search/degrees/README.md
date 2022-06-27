@@ -22,7 +22,15 @@ The main program is written in the _degrees.py_ file, which utilizes some useful
 
 ## How to Use
 
-In the _degrees_ directory, run the _degrees.py_ file. If you are using the large dataset, it will take some time for the data to load in. Then enter the hollywood movie star names as the program prompts, wait a bit for the program to search, and you will see the results
+In the _degrees_ directory, run the command
+
+```
+python degrees.py dataset
+```
+
+Where dataset is the name of the dataset folder
+
+If you are using the large dataset, it will take some time for the data to load in. Then enter the hollywood movie star names as the program prompts, wait a bit for the program to search, and you will see the results
 
 ## Example Output
 

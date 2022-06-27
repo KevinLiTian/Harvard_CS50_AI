@@ -12,9 +12,19 @@ The _runner.py_ is used to initiate an instance of pygame and uses logics provid
 
 ## How to Play
 
-- Make sure _pygame_ is installed on your device
+Make sure _pygame_ is installed on your device, if not, use the command
 
-In the _minesweeper_ directory, run the _runner.py_, a pygame window will pop up like the screenshot below, the instructions on how to play the game is written on this page. Click on the _Play Game_ button to start the game
+```
+pip install pygame
+```
+
+In the _minesweeper_ directory, run the command
+
+```
+python runner.py
+```
+
+A pygame window will pop up like the screenshot below, the instructions on how to play the game is written on this page. Click on the _Play Game_ button to start the game
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/99038613/174506268-95ac59f6-e15f-4605-a18e-7970cd45ff46.png" width="60%" height="60%">
