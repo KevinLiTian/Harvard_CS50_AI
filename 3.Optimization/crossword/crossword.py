@@ -1,10 +1,11 @@
+""" Contains two helper classes for solving crossword puzzle """
 class Variable():
-
+    """ Represent a variable in a crossword puzzle """
     ACROSS = "across"
     DOWN = "down"
 
     def __init__(self, i, j, direction, length):
-        """Create a new variable with starting point, direction, and length."""
+        """ Create a new variable with starting point, direction, and length. """
         self.i = i
         self.j = j
         self.direction = direction
@@ -36,7 +37,7 @@ class Variable():
 
 
 class Crossword():
-
+    """ Crossword: Represent the puzzle itself """
     def __init__(self, structure_file, words_file):
 
         # Determine structure of crossword
