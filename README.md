@@ -2,7 +2,7 @@
 
 In the summer after my sophomore year, in order to gain more knowledge and continue programming, I chose to study Harvard's online artificial intelligence course, [CS50](https://cs50.harvard.edu/ai/2020/), which I found through the online learning platform, [edX](https://www.edx.org/)<br/>
 
-In this repository, I will put my notes and my work on course projects. For each lecture, I will list the objectives of the lecture and corresponding projects. Detailed notes regarding each lecture can be accessed through the link of each lecture
+In this repository, I will put my notes and my work on course projects. For each lecture, I will list the objectives of the lecture and corresponding projects. Detailed notes and in-class examples regarding each lecture can be accessed through the link of the corresponding lecture below
 
 Please <strong>DO NOT</strong> directly use the source code, they are <strong>ONLY</strong> for reference. Plagiarism is strictly prohibited by both the Harvard University and the edX platform
 
