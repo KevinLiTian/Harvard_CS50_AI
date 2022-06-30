@@ -5,6 +5,7 @@
 Local search is a search algorithm that maintains a single node and searches by moving to a neighboring node
 
 #### State Space Landscape
+
 In all the state space, there are better and worse results that are unevenly distributed, as the figure below illustrates
 
 <img src="https://user-images.githubusercontent.com/99038613/176784545-bb4f5683-9d8d-47f5-8258-028fe8f6ab66.jpg" width=60% height=60%>
@@ -25,9 +26,7 @@ Hill climbing is one type of a local search algorithm. In this algorithm, the ne
   - **First-choice**: Choose the first higher-valued neighbor
   - **Random-restart**: Conduct hill climbing multiple times
   - **Local Beam Search**: Chooses the k highest-valued neighbors
-  
 - **Limitation**: Hill climbing only changes current state if neighboring state is better, but if we reached any local minima/maxmima, the neighboring states are all worse than the current state, then the algorithm will terminate which leaves us at a local, instead of a global maxima/minima
-
 
 #### [Simulated Annealing](https://en.wikipedia.org/wiki/Simulated_annealing)
 
@@ -59,6 +58,6 @@ Arc consistency is when all the values in a variable’s domain satisfy the vari
 
 Backtracking search is a type of a search algorithm that takes into account the structure of a constraint satisfaction search problem. It recursively assigns variables to certain values in their domains, if anything goes wrong it backtracks to the previous point and tries another value
 
-- Inference: Although backtracking search is more efficient than simple search, it still takes a lot of computational power. Enforcing arc consistency, on the other hand, is less resource intensive. By interleaving backtracking search with inference (enforcing arc consistency), we can get at a more efficient algorithm
+- **Inference**: Although backtracking search is more efficient than simple search, it still takes a lot of computational power. Enforcing arc consistency, on the other hand, is less resource intensive. By interleaving backtracking search with inference (enforcing arc consistency), we can get at a more efficient algorithm
 
-- Minimum Remaining Values (MRV): When choosing the next variable to try, the MRV heuristic says that we should let the variable that has the least number of values in its domain to try first since there's a higher chance to get the correct result
+- **Minimum Remaining Values (MRV)**: When choosing the next variable to try, the MRV heuristic says that we should let the variable that has the least number of values in its domain to try first since there's a higher chance to get the correct result

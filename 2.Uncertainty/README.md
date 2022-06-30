@@ -38,10 +38,10 @@ Joint probability is the likelihood of multiple events all occurring, and the pr
 
 ## Probability Rules
 
-- Negation: P(¬a) = 1 - P(a)
-- Inclusion-Exclusion: P(a ∨ b) = P(a) + P(b) - P(a ∧ b)
-- Marginalization: P(a) = P(a, b) + P(a, ¬b)
-- Conditioning: P(a) = P(a | b)P(b) + P(a | ¬b)P(¬b)
+- **Negation**: P(¬a) = 1 - P(a)
+- **Inclusion-Exclusion**: P(a ∨ b) = P(a) + P(b) - P(a ∧ b)
+- **Marginalization**: P(a) = P(a, b) + P(a, ¬b)
+- **Conditioning**: P(a) = P(a | b)P(b) + P(a | ¬b)P(¬b)
 
 ## [Bayesian Networks](https://www.bayesfusion.com/bayesian-networks/)
 
