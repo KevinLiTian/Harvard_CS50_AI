@@ -126,7 +126,40 @@ class CrosswordCreator():
         Return True if a revision was made to the domain of `x`; return
         False if no revision was made.
         """
-        raise NotImplementedError
+        # Check overlap
+        overlap = self.crossword.overlaps[x, y]
+
+        # If no overlap, nothing needs to be changed
+        if overlap is None:
+            return False
+
+        # Store indices of overlap
+        index_x = overlap[0]
+        index_y = overlap[1]
+
+        # Otherwise for each word in x domain, check if any word in y domain is possible
+        # Same reason, we cannot modify set during iterating, so store first
+        remove_words = []
+        for word in self.domains[x]:
+            possible = False
+            # If any word in y is possible, then the word in x is OK
+            for possible_word in self.domains[y]:
+                if word[index_x] == possible_word[index_y]:
+                    possible = True
+
+            # If no word in y satisfies the word in x, remove word in x
+            if not possible:
+                remove_words.append(word)
+
+        # If no words in x needs to be removed, return false since we won't modify anything
+        if len(remove_words) == 0:
+            return False
+
+        # If there is, remove them from domain of x
+        for word in remove_words:
+            self.domains[x].remove(word)
+
+        return True
 
     def ac3(self, arcs=None):
         """
@@ -198,15 +231,18 @@ def main():
     # Generate crossword
     crossword = Crossword(structure, words)
     creator = CrosswordCreator(crossword)
-    assignment = creator.solve()
+    # assignment = creator.solve()
 
-    # Print result
-    if assignment is None:
-        print("No solution.")
-    else:
-        creator.print(assignment)
-        if output:
-            creator.save(assignment, output)
+    # Testing
+    creator.enforce_node_consistency()
+
+    # # Print result
+    # if assignment is None:
+    #     print("No solution.")
+    # else:
+    #     creator.print(assignment)
+    #     if output:
+    #         creator.save(assignment, output)
 
 
 if __name__ == "__main__":
