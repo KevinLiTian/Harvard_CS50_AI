@@ -1,19 +1,29 @@
-# Notes for Lecture 1 - Knowledge
+## Definitions
 
-- [Knowledge-Based Agents](https://www.geeksforgeeks.org/knowledge-based-agents-in-ai/): These are agents that reason by operating on internal representations of knowledge
-- Sentence: An assertion about the world in a knowledge representation language. A sentence is how AI stores knowledge and uses it to infer new information
-- [Propositional Logic](https://iep.utm.edu/prop-log/#:~:text=Propositional%20logic%2C%20also%20known%20as%20sentential%20logic%2C%20is%20that%20branch,common%20way%20of%20combining%20statements.)
-  - Propositional Symbols: Used to represent an assertion in reality
-  - [Logical Connectives](https://en.wikipedia.org/wiki/Logical_connective): Logical connectives are logical symbols that connect propositional symbols in order to reason in a more complex way about the world
-    - NOT (¬): Inverses the truth value of the proposition
-    - AND (∧): When two proposition, P and Q, are connected by ∧, the resulting proposition P ∧ Q is true only in the case that both P and Q are true
-    - OR (∨): True as as long as either of its arguments is true. This means that for P ∨ Q to be true, at least one of P or Q has to be true
-    - XOR (⊕): Exclusive OR, true if and only if one of P or Q is true
-    - Implication (→): Represents a structure of “if P then Q.”
-    - Biconditional (⇔): Implication that goes both directions
-  - Model: Provides information about the world based on existing sentences which also known as the Knowledge Base
-  - Knowledge Base (KB): The combination of all existing sentences
-  - Entailment (⊨): If If α ⊨ β (α entails β), then in any possible world where α is true, then β must be true
+#### [Knowledge-Based Agents](https://www.geeksforgeeks.org/knowledge-based-agents-in-ai/)
+
+These are agents that reason by operating on internal representations of knowledge
+
+#### Sentence
+
+An assertion about the world in a knowledge representation language. A sentence is how AI stores knowledge and uses it to infer new information
+
+#### [Propositional Logic](https://iep.utm.edu/prop-log/#:~:text=Propositional%20logic%2C%20also%20known%20as%20sentential%20logic%2C%20is%20that%20branch,common%20way%20of%20combining%20statements.)
+
+##### Propositional Symbols
+
+Used to represent an assertion in reality
+
+- [Logical Connectives](https://en.wikipedia.org/wiki/Logical_connective): Logical connectives are logical symbols that connect propositional symbols in order to reason in a more complex way about the world
+  - NOT (¬): Inverses the truth value of the proposition
+  - AND (∧): When two proposition, P and Q, are connected by ∧, the resulting proposition P ∧ Q is true only in the case that both P and Q are true
+  - OR (∨): True as as long as either of its arguments is true. This means that for P ∨ Q to be true, at least one of P or Q has to be true
+  - XOR (⊕): Exclusive OR, true if and only if one of P or Q is true
+  - Implication (→): Represents a structure of “if P then Q.”
+  - Biconditional (⇔): Implication that goes both directions
+- Model: Provides information about the world based on existing sentences which also known as the Knowledge Base
+- Knowledge Base (KB): The combination of all existing sentences
+- Entailment (⊨): If If α ⊨ β (α entails β), then in any possible world where α is true, then β must be true
 - Knowledge Engineering: The process of figuring out how to represent propositions and logic in AI.
 - [Inference](https://en.wikipedia.org/wiki/Inference): The process of deriving new sentences from old ones
   - Inference Rules

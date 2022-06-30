@@ -1,4 +1,4 @@
-# Notes for Lecture 0 - Search
+## Definitions
 
 #### Agent
 
