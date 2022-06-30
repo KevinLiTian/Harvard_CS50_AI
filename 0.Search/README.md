@@ -2,22 +2,22 @@
 
 #### Agent
 
-An entity that perceives its environment and acts upon that environment
+Agent is an entity that perceives its environment and acts upon that environment. For instance, this entity could be an AI program, the environment could be the state of a chess game, and the AI will determine the action under that state, in another word, how to take the next move
 
 #### State
 
-A configuration of an agent in its environment
+A configuration of an agent in its environment, also can be understood as the state of the game in a chess game. The below figure is three random states of the Klotski Puzzle Game
 
 <img width="675" alt="Screen Shot 2022-06-19 at 8 45 52 PM" src="https://user-images.githubusercontent.com/98674104/174507105-dbd932c9-fbfa-4a4f-b5df-f79bb3d6e298.png">
 
 #### Initial State
 
-The state from which the search algorithm starts
+The state from which the search algorithm starts, the environment when the agent first kick in
 
 #### Actions
 
 Choices that can be made in a state </br>
-i.e. Up, Down, Left, Right in the 15 Puzzle Game
+i.e. Up, Down, Left, Right in the Klotski Puzzle Game
 
 <img width="676" alt="Screen Shot 2022-06-19 at 8 46 13 PM" src="https://user-images.githubusercontent.com/98674104/174507117-71e97a91-08ca-416c-b32a-af7dc5516e55.png">
 
@@ -36,13 +36,13 @@ The set of all states reachable from the initial state by any sequence of action
 
 #### Goal Test
 
-The condition that determines whether a given state is a goal state
+The condition that determines whether a given state is a goal state, if certain state passes the goal test, which means the algorithm should be terminated since we have found the solution
 
 #### Path Cost
 
 A numerical cost associated with a given path </br>
 The cost of each edge (between two vertices) could be 1 or more than 1 </br>
-i.e. when navigating a path on the map, we do not only consider the distance but also trying to minimize the path cost
+i.e. when navigating a path on the map, we do not only consider the distance but also trying to minimize the path cost, which is the traffic on certain path. If there's a bad traffic on a certain path, then the cost of that path is high
 
 <img width="675" alt="Screen Shot 2022-06-19 at 8 47 16 PM" src="https://user-images.githubusercontent.com/98674104/174507169-e74f9eaa-3533-4d9b-a549-d0765f475a5b.png">
 
@@ -71,7 +71,7 @@ Guarantee the shortest path, but take long time as it seeks each directions setp
 #### [Greedy Best-First Search](https://www.javatpoint.com/ai-informed-search-algorithms#:~:text=Greedy%20best%2Dfirst%20search%20algorithm,the%20advantages%20of%20both%20algorithms.)
 
 At any time, choose the state that is closest to the goal as the next state (only consider the estimated cost to the goal), as estimated by a
-heuristic function h(n). However, it only consider the distance between the current node to the destination but not consider the cost to reach this node (g(n))
+heuristic function h(n). However, it only consider the distance between the current node to the destination but not consider the cost to reach this node (g(n)). The greedy algorithm does not guarantee a shortest path
 
 <img width="678" alt="Screen Shot 2022-06-19 at 8 55 53 PM" src="https://user-images.githubusercontent.com/98674104/174507683-67090988-940d-4a4e-b045-0ac985f4fb4c.png">
 
@@ -79,15 +79,14 @@ Manhattan distance vs Euclidean distance, we uses Manhattan distance in the Gree
 
 <img src="https://user-images.githubusercontent.com/98674104/174507758-c1a8a28d-3a2a-4a3b-bfe8-be28384a6a95.jpeg" width="680" height="350">
 
-
 #### [A\* Search](https://www.geeksforgeeks.org/a-search-algorithm/)
 
 Consider both the cost of path until now and the estimated cost to the goal, g(n) + h(n) </br>
 
-g(n) = cost to reach node </br>
-h(n) = estimated cost to goal </br>
+g(n) = cumalative cost reaching the current node </br>
+h(n) = estimated cost to the destination node </br>
 
-Thus, A\* is the best path search algorithm as it considers the distance, weight, cost, etc.
+Thus, A\* is the best path search algorithm as it considers the distance, weight, cost, etc. and it guarantees to find the shortest path
 
 <img width="679" alt="Screen Shot 2022-06-19 at 8 53 16 PM" src="https://user-images.githubusercontent.com/98674104/174507529-69b6908c-f37f-41ed-a94a-0d9323aab6e8.png">
 
