@@ -90,7 +90,7 @@ Thus, A\* is the best path search algorithm as it considers the distance, weight
 
 #### [Minimax Algorithm](https://www.javatpoint.com/mini-max-algorithm-in-ai)
 
-A recursive or backtracking algorithm which is used in decision-making and game theory. It provides an optimal move for the player assuming that opponent is also playing optimally
+A recursive or backtracking algorithm which is used in decision-making and game theory. It provides an optimal move for the player assuming that opponent is also playing optimally. For instance, in the figure below, the green player is trying to maximize the score and the red player is to minimize to score, which is exactly the same in any game
 
 <img width="674" alt="Screen Shot 2022-06-19 at 8 53 37 PM" src="https://user-images.githubusercontent.com/98674104/174507542-ed38bf8f-7f65-41f2-8af2-b3a3b30b9e2d.png">
 
