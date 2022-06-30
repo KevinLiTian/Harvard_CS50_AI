@@ -6,13 +6,13 @@ Similar to the agent definition in Lecture 0, but knowledge-based agents are age
 
 #### Sentence
 
-An assertion about the world in a knowledge representation language. A sentence is how AI stores knowledge and uses it to infer new information
+Sentence is an assertion about the world in a knowledge representation language. A sentence is how AI stores knowledge and uses it to infer new information
 
 ## [Propositional Logic](https://iep.utm.edu/prop-log/#:~:text=Propositional%20logic%2C%20also%20known%20as%20sentential%20logic%2C%20is%20that%20branch,common%20way%20of%20combining%20statements.)
 
 #### Propositional Symbols
 
-Used to represent an assertion in reality
+Propositional symbols are used to represent an assertion in reality
 
 #### [Logical Connectives](https://en.wikipedia.org/wiki/Logical_connective)
 
@@ -27,7 +27,7 @@ Logical connectives are logical symbols that connect propositional symbols in or
 
 #### Model
 
-Provides information about the world based on existing sentences which also known as the Knowledge Base
+Provides information about the world based on existing sentences which also known as the Knowledge Base. Input a query about the world into the model, it will output its best result based on the KB
 
 #### Knowledge Base (KB)
 
