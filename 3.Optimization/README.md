@@ -4,17 +4,30 @@
 
 Local search is a search algorithm that maintains a single node and searches by moving to a neighboring node
 
+#### State Space Landscape
+In all the state space, there are better and worse results that are unevenly distributed, as the figure below illustrates
+
+<img src="https://user-images.githubusercontent.com/99038613/176784545-bb4f5683-9d8d-47f5-8258-028fe8f6ab66.jpg" width=60% height=60%>
+
 #### Hill Climbing
 
 Hill climbing is one type of a local search algorithm. In this algorithm, the neighbor states are compared to the current state, and if any of them is better, we change the current node from the current state to that neighbor state
 
-- Local and Global Minima and Maxima: A local maximum (plural: maxima) is a state that has a higher value than its neighboring states. As opposed to that, a global maximum is a state that has the highest value of all states in the state-space
-- Hill Climbing Variants
-  - Steepest-ascent: Choose the highest-valued neighbor
-  - Stochastic: Choose randomly from higher-valued neighbors
-  - First-choice: Choose the first higher-valued neighbor
-  - Random-restart: Conduct hill climbing multiple times
-  - Local Beam Search: Chooses the k highest-valued neighbors
+- **Local and Global Minima and Maxima**: A local maximum (plural: maxima) is a state that has a higher value than its neighboring states. As opposed to that, a global maximum is a state that has the highest value of all states in the state-space
+
+    <img src="https://user-images.githubusercontent.com/99038613/176784640-b8d017a2-d617-4b45-b7b4-1b88def9bd8f.jpg">
+
+    <img src="https://user-images.githubusercontent.com/99038613/176784649-37b67396-fbcc-4933-8b4a-be68f27e5b44.jpg">
+
+- **Hill Climbing Variants**
+  - **Steepest-ascent**: Choose the highest-valued neighbor
+  - **Stochastic**: Choose randomly from higher-valued neighbors
+  - **First-choice**: Choose the first higher-valued neighbor
+  - **Random-restart**: Conduct hill climbing multiple times
+  - **Local Beam Search**: Chooses the k highest-valued neighbors
+  
+- **Limitation**: Hill climbing only changes current state if neighboring state is better, but if we reached any local minima/maxmima, the neighboring states are all worse than the current state, then the algorithm will terminate which leaves us at a local, instead of a global maxima/minima
+
 
 #### [Simulated Annealing](https://en.wikipedia.org/wiki/Simulated_annealing)
 
