@@ -51,8 +51,19 @@ The process of deriving new sentences from old ones
 - **And Elimination**: If an AND proposition is true, then any one atomic proposition within it must also be true
 - **Double Negation Elimination**: A proposition that is negated twice is true
 - **Implication Elimination**: An implication is equivalent to an OR relation between the negated antecedent and the consequent
+
+    <img src="https://user-images.githubusercontent.com/99038613/176773992-c88872d1-9a8b-497c-af92-8019c929ba0a.jpg" width="60%" height="60%">
+
 - **Biconditional Elimination**:A biconditional proposition is equivalent to an implication and its inverse with an And connective
+
+    <img src="https://user-images.githubusercontent.com/99038613/176774268-caea480b-47b2-4eb0-9b10-1307353de97b.jpg" width="60%" height="60%">
+
 - **De Morgan's Law**: Turning AND connective to OR or vice versa
+
+    <img src="https://user-images.githubusercontent.com/99038613/176774450-ccc7b58c-c6b3-47f4-960b-364a64146dfe.jpg" width="60%" height="60%">
+
+    <img src="https://user-images.githubusercontent.com/99038613/176774456-b2f0f3b9-0f62-4efe-ba3f-ebe4dff0ed31.jpg" width="60%" height="60%">
+
 - **Distributive Property**: AND and OR can be distributed just like multiplication
 
 #### Knowledge and Search
