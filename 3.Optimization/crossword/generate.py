@@ -199,6 +199,8 @@ class CrosswordCreator():
         Return True if `assignment` is complete (i.e., assigns a value to each
         crossword variable); return False otherwise.
         """
+        # Complete if all variables are assigned to a value
+        # Assignment dictionary has all variables
         return len(self.domains) == len(assignment)
 
     def consistent(self, assignment):
@@ -290,20 +292,28 @@ class CrosswordCreator():
 
         If no assignment is possible, return None.
         """
+        # Terminate condition (assignment complete)
         if self.assignment_complete(assignment):
             return assignment
 
+        # Select an unassigned variable using:
+        # 1. Minimum remaining range of domain heuristics
+        # 2. Highest number of degrees heuristics
         var = self.select_unassigned_variable(assignment)
 
         for value in self.order_domain_values(var, assignment):
+            assignment[var] = value
             if self.consistent(assignment):
-                assignment[var] = value
-                self.ac3()
-                result = self.backtrack(assignment)
+                self.ac3() # Enforce arc-consistency everytime
+                result = self.backtrack(assignment) # Recursively tracks all assignments
+                # If there is a possible result, return it
                 if result is not None:
                     return result
-            del assignment[var]
 
+            # Not consistent or no possible result, the variable cannot take on this value
+            assignment.pop(var)
+
+        # No value is possible for a result, backtrack
         return None
 
 def main():
