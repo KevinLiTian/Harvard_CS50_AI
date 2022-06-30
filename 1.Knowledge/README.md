@@ -33,7 +33,7 @@ Provides information about the world based on existing sentences which also know
 
 The combination of all existing sentences, where the knowledge-based agents store all their knowledge
 
-#### Entailment (⊨):
+#### Entailment (⊨)
 
 If α ⊨ β (α entails β), then in any possible world where α is true, then β must be true
 
