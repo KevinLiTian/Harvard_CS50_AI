@@ -6,9 +6,7 @@ Agent is an entity that perceives its environment and acts upon that environment
 
 #### State
 
-A configuration of an agent in its environment, also can be understood as the state of the game in a chess game. The below figure is three random states of the Klotski Puzzle Game
-
-<img width="675" alt="Screen Shot 2022-06-19 at 8 45 52 PM" src="https://user-images.githubusercontent.com/98674104/174507105-dbd932c9-fbfa-4a4f-b5df-f79bb3d6e298.png">
+A configuration of an agent in its environment, also can be understood as the state of the game in a chess game
 
 #### Initial State
 
@@ -16,10 +14,8 @@ The state from which the search algorithm starts, the environment when the agent
 
 #### Actions
 
-Choices that can be made in a state </br>
-i.e. Up, Down, Left, Right in the Klotski Puzzle Game
+All possible choices that can be made by an agent in a state
 
-<img width="676" alt="Screen Shot 2022-06-19 at 8 46 13 PM" src="https://user-images.githubusercontent.com/98674104/174507117-71e97a91-08ca-416c-b32a-af7dc5516e55.png">
 
 #### Transition Model
 
