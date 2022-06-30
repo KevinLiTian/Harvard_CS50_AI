@@ -170,7 +170,29 @@ class CrosswordCreator():
         Return True if arc consistency is enforced and no domains are empty;
         return False if one or more domains end up empty.
         """
-        raise NotImplementedError
+        # If arcs is None, we begin by using all the arcs in this CSP
+        if arcs is None:
+            arcs = []
+            for var1 in self.domains:
+                for var2 in self.crossword.neighbors(var1):
+                    arcs.append((var1, var2))
+
+        # Dequeue until empty
+        while len(arcs) != 0:
+            (var1, var2) = arcs.pop(0)
+            # If revised, then check if there's something left in var1's domain
+            # if nothing is left, then this csp is impossible, return false
+            if self.revise(var1, var2):
+                if len(self.domains[var1]) == 0:
+                    return False
+
+                # If this csp is possible, add var1 neighbors into queue (except var2)
+                var1_neighbor = self.crossword.neighbors(var1)
+                var1_neighbor.remove(var2)
+                for var in var1_neighbor:
+                    arcs.append((var, var1))
+
+        return True
 
     def assignment_complete(self, assignment):
         """
@@ -235,6 +257,12 @@ def main():
 
     # Testing
     creator.enforce_node_consistency()
+    print(creator.domains)
+    print()
+    print(crossword.overlaps)
+    print()
+    creator.ac3()
+    print(creator.domains)
 
     # # Print result
     # if assignment is None:
