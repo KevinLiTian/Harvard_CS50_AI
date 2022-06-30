@@ -28,13 +28,7 @@ Search problems involve an agent that is given an initial state and a goal state
 
 ### Objectives
 
-- Agent
-- State
-- Actions
-- Transition Model
-- State Space
-- Goal Test
-- Path Cost
+- Search Problem Terms
 - Algorithms
 - Adversarial Search
 
@@ -49,12 +43,8 @@ Humans reason based on existing knowledge and draw conclusions. The concept of r
 
 ### Objectives
 
-- Knowledge-Based Agents
-- Sentence
 - Propositional Logic
-- Knowledge Engineering
 - Inference
-- Resolution
 - First Order Logic
 
 ### Projects
@@ -69,15 +59,8 @@ Last lecture shows how AI can represent knowledge and from that, derive new know
 ### Objectives
 
 - Probability
-- Conditional Probability
 - Random Variables
-- Bayes's Rule
-- Joint Probability
-- Probability Rules
-- Bayesian Networks
 - Sampling
-- Markov Models
-- Hidden Markov Models
 
 ### Projects
 
@@ -91,13 +74,8 @@ Optimization is choosing the best option from a set of possible options. We have
 ### Objectives
 
 - Local Search
-- Hill Climbing
-- Simulated Annealing
 - Linear Programming
 - Constraint Satisfaction
-- Node Consistency
-- Arc Consistency
-- Backtracking Search
 
 ### Projects
 
