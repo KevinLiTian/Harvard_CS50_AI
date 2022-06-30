@@ -30,6 +30,8 @@ Independence is the knowledge that the occurrence of one event does not affect t
 
 Bayes’ rule is commonly used in probability theory to compute conditional probability. In words, Bayes’ rule says that the probability of b given a is equal to the probability of a given b, times the probability of b, divided by the probability of a
 
+<img src="https://user-images.githubusercontent.com/99038613/176779929-785a9a47-bfcf-44bd-9cb4-5043e5ef8275.jpg" width="60%" height="60%">
+
 ## Joint Probability
 
 Joint probability is the likelihood of multiple events all occurring, and the probability can be calculated as the multiplication of the probabilities of each single event taking place
@@ -44,6 +46,8 @@ Joint probability is the likelihood of multiple events all occurring, and the pr
 ## [Bayesian Networks](https://www.bayesfusion.com/bayesian-networks/)
 
 A Bayesian network is a data structure that represents the dependencies among random variables
+
+<img src="https://user-images.githubusercontent.com/99038613/176780156-0c407208-1fab-4106-baf0-27e43510820b.jpg" width="60%" height="60%">
 
 #### Inference
 
