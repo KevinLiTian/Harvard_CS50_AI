@@ -1,10 +1,24 @@
 # Crossword
 
-An AI that generates crossword puzzles from given data
+An AI that solves crossword puzzles using given structure and words files
 
 ## Background
 
-How might you go about generating a crossword puzzle? Given the structure of a crossword puzzle (i.e., which squares of the grid are meant to be filled in with a letter), and a list of words to use, the problem becomes one of choosing which words should go in each vertical or horizontal sequence of squares. We can model this sort of problem as a constraint satisfaction problem. Each sequence of squares is one variable, for which we need to decide on its value (which word in the domain of possible words will fill in that sequence)
+How might you go about solving a crossword puzzle? Given the structure of a crossword puzzle (i.e., which squares of the grid are meant to be filled in with a letter), and a list of words to use, the problem becomes one of choosing which words should go in each vertical or horizontal sequence of squares. We can model this sort of problem as a constraint satisfaction problem. Each sequence of squares is one variable, for which we need to decide on its value (which word in the domain of possible words will fill in that sequence)
+
+## Files
+
+The _data_ directory contains the structure and words files for the crossword puzzles, one is welcome to add more data files to this directory to test the functionality or just for fun. The _crossword.py_ file has two classes, _variable_ and _crossword_ to help solving the crossword puzzles. The main solving functions are in the _generate.py_ file. In this file, main function takes arguments form command line and decide which structure and words files to use and call the solve function which uses other helper functions in the file
+
+## How to Use
+
+In the crossword directory, run the command
+
+```
+python generate.py data/structure.txt data/words.txt output.png
+```
+
+Where _structure_ and _words_ are txt files in the _data_ directory, one can use the existing 0-2 files or create their own files. The program will also save a png of the solved crossword puzzle
 
 ## Example Output
 
