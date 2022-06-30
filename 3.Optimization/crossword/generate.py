@@ -265,17 +265,21 @@ class CrosswordCreator():
         degree. If there is a tie, any of the tied variables are acceptable
         return values.
         """
-        # TODO: Currently return in arbitrary order, should be returning in min_remain value order
-        # candidates = []
-        # min_remaining = Inf
-        # for var in self.domains:
-        #     if var in assignment:
-        #         continue
+        candidate = None
         for var in self.domains:
-            if var not in assignment:
-                return var
+            if var in assignment:
+                continue
 
-        raise ValueError("All variables are assigned")
+            # If there's less choice in var's domain than candidate's, choose var instead
+            if candidate is None or len(self.domains[var]) < len(self.domains[candidate]):
+                candidate = var
+
+            # Or if they have same domain length, choose by their degree (with more neighbors)
+            elif len(self.domains[var]) == len(self.domains[candidate]) and \
+                len(self.crossword.neighbors(var)) > len(self.crossword.neighbors(candidate)):
+                candidate = var
+
+        return candidate
 
     def backtrack(self, assignment):
         """
