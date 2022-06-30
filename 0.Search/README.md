@@ -1,4 +1,4 @@
-## Definitions
+## Search
 
 #### Agent
 
@@ -15,7 +15,6 @@ The state from which the search algorithm starts, the environment when the agent
 #### Actions
 
 All possible choices that can be made by an agent in a state
-
 
 #### Transition Model
 

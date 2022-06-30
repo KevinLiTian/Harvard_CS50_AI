@@ -1,4 +1,4 @@
-## Definitions
+## Knowledge
 
 #### [Knowledge-Based Agents](https://www.geeksforgeeks.org/knowledge-based-agents-in-ai/)
 

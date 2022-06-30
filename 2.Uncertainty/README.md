@@ -1,10 +1,10 @@
-## Probability
+## Uncertainty
 
 Uncertainty can be represented as a number of events and the likelihood, or probability, of each of them happening
 
 #### Possible Worlds
 
-Every possible situation can be thought of as a world, represented by the lowercase Greek letter omega ω. For example, rolling a die can result in six possible worlds: a world where the die yields a 1, a world where the die yields a 2, and so on. To represent the probability of a certain world, we write P(ω)
+Every possible situation can be thought of as a world, represented by the lowercase Greek letter omega ω. For example, rolling a die can result in six possible worlds: a world where the die yields a 1, a world where the die yields a 2, and so on. To represent the probability of a certain world, we write P(ω) where w is a certain world and P is the probability of that world taking place
 
 #### Axioms in Probability
 
@@ -12,27 +12,27 @@ Every value representing probability must range between 0 and 1. The probabiliti
 
 #### Unconditional Probability
 
-Unconditional probability is the degree of belief in a proposition in the absence of any other evidence. All the questions that we have asked so far were questions of unconditional probability, because the result of rolling a die is not dependent on previous events.
+Unconditional probability is the degree of belief in a proposition in the absence of any other evidence. For instance, the results of rolling a die in a row is unconditional because a roll of die is not dependent on previous rolls
 
 #### Conditional Probability
 
-Conditional probability is the degree of belief in a proposition given some evidence that has already been revealed
+Conditional probability is the degree of belief in a proposition given some evidence that has already been revealed. For instance, children's gene is conditional since it is dependent on their parents' genes
 
 ## Random Variables
 
-A random variable is a variable in probability theory with a domain of possible values that it can take on
+A random variable is a variable in probability theory with a domain of possible values that it can take on. For instance, a random variable can be a roll, and it can take on values from 1 to 6 with even probabilities
 
 #### Independence
 
-Independence is the knowledge that the occurrence of one event does not affect the probability of the other event
+Independence is the knowledge that the occurrence of one event does not affect the probability of the other event. For instance, rolling a die twice in a row, the first roll and the second roll is independent of each other
 
 ## Bayes's Rule
 
-Bayes’ rule is commonly used in probability theory to compute conditional probability
+Bayes’ rule is commonly used in probability theory to compute conditional probability. In words, Bayes’ rule says that the probability of b given a is equal to the probability of a given b, times the probability of b, divided by the probability of a
 
 ## Joint Probability
 
-Joint probability is the likelihood of multiple events all occurring
+Joint probability is the likelihood of multiple events all occurring, and the probability can be calculated as the multiplication of the probabilities of each single event taking place
 
 ## Probability Rules
 
