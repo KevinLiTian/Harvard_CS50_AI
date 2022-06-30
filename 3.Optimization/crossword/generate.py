@@ -1,10 +1,12 @@
+""" An AI that solves crossword puzzles given structure and words """
 import sys
+from PIL import Image, ImageDraw, ImageFont
 
-from crossword import *
+from crossword import Variable, Crossword
 
 
 class CrosswordCreator():
-
+    """ Crossword puzzle AI that takes in a crossword problem """
     def __init__(self, crossword):
         """
         Create new CSP crossword generate.
@@ -48,7 +50,6 @@ class CrosswordCreator():
         """
         Save crossword assignment to an image file.
         """
-        from PIL import Image, ImageDraw, ImageFont
         cell_size = 100
         cell_border = 2
         interior_size = cell_size - 2 * cell_border
@@ -76,10 +77,10 @@ class CrosswordCreator():
                 if self.crossword.structure[i][j]:
                     draw.rectangle(rect, fill="white")
                     if letters[i][j]:
-                        w, h = draw.textsize(letters[i][j], font=font)
+                        width, height = draw.textsize(letters[i][j], font=font)
                         draw.text(
-                            (rect[0][0] + ((interior_size - w) / 2),
-                             rect[0][1] + ((interior_size - h) / 2) - 10),
+                            (rect[0][0] + ((interior_size - width) / 2),
+                             rect[0][1] + ((interior_size - height) / 2) - 10),
                             letters[i][j], fill="black", font=font
                         )
 
@@ -117,7 +118,7 @@ class CrosswordCreator():
             for word in word_list:
                 self.domains[var].remove(word)
 
-    def revise(self, x, y):
+    def revise(self, var1, var2):
         """
         Make variable `x` arc consistent with variable `y`.
         To do so, remove values from `self.domains[x]` for which there is no
@@ -127,7 +128,7 @@ class CrosswordCreator():
         False if no revision was made.
         """
         # Check overlap
-        overlap = self.crossword.overlaps[x, y]
+        overlap = self.crossword.overlaps[var1, var2]
 
         # If no overlap, nothing needs to be changed
         if overlap is None:
@@ -140,10 +141,10 @@ class CrosswordCreator():
         # Otherwise for each word in x domain, check if any word in y domain is possible
         # Same reason, we cannot modify set during iterating, so store first
         remove_words = []
-        for word in self.domains[x]:
+        for word in self.domains[var1]:
             possible = False
             # If any word in y is possible, then the word in x is OK
-            for possible_word in self.domains[y]:
+            for possible_word in self.domains[var2]:
                 if word[index_x] == possible_word[index_y]:
                     possible = True
 
@@ -157,7 +158,7 @@ class CrosswordCreator():
 
         # If there is, remove them from domain of x
         for word in remove_words:
-            self.domains[x].remove(word)
+            self.domains[var1].remove(word)
 
         return True
 
@@ -223,7 +224,7 @@ class CrosswordCreator():
             # 3. No conflict between neighbors
             for neighbor in self.crossword.neighbors(var):
                 if neighbor in assignment:
-                    (index_var, index_neighbor) = self.crossword.overlaps[var, neighbor] 
+                    (index_var, index_neighbor) = self.crossword.overlaps[var, neighbor]
                     if value[index_var] != assignment[neighbor][index_neighbor]:
                         return False
 
@@ -317,7 +318,11 @@ class CrosswordCreator():
         return None
 
 def main():
-
+    """ Main Function
+    Takes arguments from command line, decide which structure and words files to use
+    Use the CrosswordCreator AI to solve the puzzle
+    Outputs the result in terminal and also as a png
+    """
     # Check usage
     if len(sys.argv) not in [3, 4]:
         sys.exit("Usage: python generate.py structure words [output]")
