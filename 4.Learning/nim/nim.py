@@ -142,13 +142,21 @@ class NimAI():
         Q-value in `self.q`. If there are no available actions in
         `state`, return 0.
         """
-        # Initialize reward to 0 since if no actions are available
-        # reward should be 0
-        reward = 0
-        for action in Nim.available_actions(state):
+        possible_actions = Nim.available_actions(state)
+
+        # Corner case where there is no possible actions
+        if len(possible_actions) == 0:
+            return 0
+
+        # Initialize cur_reward to as low as possible to make sure
+        # There are better actions than None
+        reward = -math.inf
+        for action in possible_actions:
             # If action is in self.q and the reward of the action is better
             # then current reward, update reward
-            reward = max(self.get_q_value(state, action), reward)
+            cur_reward = self.get_q_value(state, action)
+            if cur_reward > reward:
+                reward = cur_reward
 
         return reward
 
