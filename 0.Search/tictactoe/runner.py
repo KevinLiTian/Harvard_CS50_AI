@@ -1,4 +1,5 @@
 """ The runner for tictactoe pygame """
+
 import sys
 import time
 import pygame

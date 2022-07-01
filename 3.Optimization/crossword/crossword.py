@@ -1,4 +1,5 @@
 """ Contains two helper classes for solving crossword puzzle """
+
 class Variable():
     """ Represent a variable in a crossword puzzle """
     ACROSS = "across"

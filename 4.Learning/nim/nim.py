@@ -1,10 +1,12 @@
+""" An AI that uses reinforcement learning to learn from experience playing Nim with itself """
+
 import math
 import random
 import time
 
 
 class Nim():
-
+    """ Class to define the Nim game itself """
     def __init__(self, initial=[1, 3, 5, 7]):
         """
         Initialize game board.
@@ -71,7 +73,7 @@ class Nim():
 
 
 class NimAI():
-
+    """ Class to define the AI """
     def __init__(self, alpha=0.5, epsilon=0.1):
         """
         Initialize AI with an empty Q-learning dictionary,

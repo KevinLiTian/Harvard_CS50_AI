@@ -1,4 +1,5 @@
 """ 4 example puzzles that uses logic expressions to make inferences """
+
 from logic import *
 
 AKnight = Symbol("A is a Knight")

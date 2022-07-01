@@ -1,6 +1,5 @@
 """ Logic Expressions """
 
-
 class Sentence():
     """ A logic sentence """
     def evaluate(self, model):
