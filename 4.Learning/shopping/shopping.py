@@ -1,4 +1,4 @@
-""" An AI that uses K-Nearst Neighbor model to train and predict if one will buy the product """
+""" An AI that uses K-Nearst Neighbor model to train and predict if users will buy the product """
 
 import csv
 import sys
