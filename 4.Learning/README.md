@@ -28,7 +28,11 @@ In addition to nearst-neighbors, linear and logistic regressions, another approa
 
 For example, in the figures below, the normal linear regression might generate a boundary line that looks like the white line in the middle graph. With the additional vector, it can create maximum margin separator that optimally generalizes the decision boundary.
 
-Or like the figure below, with the additional vector, the boundary can be more than two dimensions, creating complex shapes of boundary lines instead of a straight line
+<img src="https://user-images.githubusercontent.com/99038613/176823781-411939f2-6c03-46d5-9bd5-96960892559e.jpg">
+
+Or like the figure below, with the additional vector, the boundary can be in more complex shapes instead of a straight line
+
+<img src="https://user-images.githubusercontent.com/99038613/176823866-a3404d58-1cfd-4f7f-875d-8230a1054190.jpg" width=60% height=60%>
 
 #### Regression
 
@@ -48,6 +52,9 @@ One should choose loss functions accordingly to the need of the problem
 
 As loss function becomes the quality indicator of the machine learning model, there is one severe problem, overfitting. This means that the model fits the training dataset too perfectly so that it fails to generalize to the unknown data. For instance, the figures below illustrates graphically the overfitting models. They are perfect for the training dataset, the loss function will always be 0, but they might not be a good model for predictions for other unknown data
 
+<img src="https://user-images.githubusercontent.com/99038613/176824053-e2b69fd6-6de0-4644-b0b3-bf52f6ab246e.jpg">
+
+
 #### Regularization
 
 Regularization is used in order to avoid overfitting. The idea is that the quality of the model should not only depend on the loss function, but also its complexity. The model should not be too complex such like in overfitting models
@@ -62,9 +69,12 @@ Reinforcement learning is another approach to machine learning. Instead of train
 
 Similar to the Markov chain in the uncertainty lecture, the reinforcement learning process can be viewed as a Markov decision process. Under each state, the AI will have a set of actions to choose from and each action will be associated to a reward or punishment (instead of probabilities in the Markov chain). The reward for each action under each state is initially all set to 0 and will be changed by the AI based on its experience
 
-#### Q-Learning
+#### [Q-Learning](https://en.wikipedia.org/wiki/Q-learning)
 
 Q-Learning is one model of reinforcement learning, where a function Q(s, a) outputs an estimate of the value of taking action a in state s. There is also a formula to update the value of action a in state s as the AI gain experience:
+
+![屏幕截图 2022-07-01 003131](https://user-images.githubusercontent.com/99038613/176824214-ec694fde-9aa1-4b0b-95f1-d6df16bc756e.jpg)
+
 
 But there is limitation to reinforcement learning, the AI will learn the way to get rewards, but the way it learned is not necessarily the optimal way. Since the AI will choose the action with the highest reward, which is called the greedy decision making, once it finds a way, it will never explore other ways. This brings us to the tradeoff between exploration vs exploitation. In general, at the beginning of the game, the AI should have a higher chance of making random moves to explore the environment and as it learns more about the environment, there should be a higher chance the AI will make greedy moves
 
@@ -76,6 +86,6 @@ In supervised learning, the data are labeled, and the AI is to find relationship
 
 Clustering is a typical task of unsupervised learning which is to group the data into clusters
 
-#### K-Means Clustering
+#### [K-Means Clustering](https://en.wikipedia.org/wiki/K-means_clustering)
 
 KMC is a clustering algorithm that groups data into k clusters. It initially selects k random centers and marks each data point to its closest center. Then iteratively, the center moves to the average mid point of all its marked data points, then each data point will be remarked to the current closest center. This iterative clustering algorithm will terminate when no data point changes its belonging and finally converges
