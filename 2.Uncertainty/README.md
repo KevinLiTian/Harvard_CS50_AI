@@ -1,6 +1,8 @@
-## Uncertainty
+# Uncertainty
 
-Uncertainty can be represented as a number of events and the likelihood, or probability, of each of them happening
+Uncertainty can be represented as a number of events and the likelihood, or probability, of each of them happening. An AI should be able to make predictions even if events are not certain
+
+## Probability
 
 #### Possible Worlds
 
@@ -18,32 +20,32 @@ Unconditional probability is the degree of belief in a proposition in the absenc
 
 Conditional probability is the degree of belief in a proposition given some evidence that has already been revealed. For instance, children's gene is conditional since it is dependent on their parents' genes
 
-## Random Variables
-
-A random variable is a variable in probability theory with a domain of possible values that it can take on. For instance, a random variable can be a roll, and it can take on values from 1 to 6 with even probabilities
-
-#### Independence
-
-Independence is the knowledge that the occurrence of one event does not affect the probability of the other event. For instance, rolling a die twice in a row, the first roll and the second roll is independent of each other
-
-## Bayes's Rule
+#### Bayes's Rule
 
 Bayes’ rule is commonly used in probability theory to compute conditional probability. In words, Bayes’ rule says that the probability of b given a is equal to the probability of a given b, times the probability of b, divided by the probability of a
 
 <img src="https://user-images.githubusercontent.com/99038613/176779929-785a9a47-bfcf-44bd-9cb4-5043e5ef8275.jpg" width="60%" height="60%">
 
-## Joint Probability
+#### Joint Probability
 
 Joint probability is the likelihood of multiple events all occurring, and the probability can be calculated as the multiplication of the probabilities of each single event taking place
 
-## Probability Rules
+#### Probability Rules
 
 - **Negation**: P(¬a) = 1 - P(a)
 - **Inclusion-Exclusion**: P(a ∨ b) = P(a) + P(b) - P(a ∧ b)
 - **Marginalization**: P(a) = P(a, b) + P(a, ¬b)
 - **Conditioning**: P(a) = P(a | b)P(b) + P(a | ¬b)P(¬b)
 
-## [Bayesian Networks](https://www.bayesfusion.com/bayesian-networks/)
+#### Independence
+
+Independence is the knowledge that the occurrence of one event does not affect the probability of the other event. For instance, rolling a die twice in a row, the first roll and the second roll is independent of each other
+
+## Random Variables
+
+A random variable is a variable in probability theory with a domain of possible values that it can take on. For instance, a random variable can be a roll, and it can take on values from 1 to 6 with even probabilities
+
+#### [Bayesian Networks](https://www.bayesfusion.com/bayesian-networks/)
 
 A Bayesian network is a data structure that represents the dependencies among random variables
 
@@ -65,7 +67,7 @@ Sampling is one technique of approximate inference by letting the AI simute the 
 
 Normal sampling will discard samples we don't need for certain queries, that is inefficient. Likelihood weighting is a way to get around these situations
 
-## [Markov Models](https://en.wikipedia.org/wiki/Markov_model)
+#### [Markov Models](https://en.wikipedia.org/wiki/Markov_model)
 
 #### The Markov Assumption
 

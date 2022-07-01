@@ -1,4 +1,6 @@
-## Knowledge
+# Knowledge
+
+Instead of randomly taking actions and finding the optimal series of actions, with some knowledge about the world, the AI will make inferences and entailments to prove a statement
 
 #### [Knowledge-Based Agents](https://www.geeksforgeeks.org/knowledge-based-agents-in-ai/)
 

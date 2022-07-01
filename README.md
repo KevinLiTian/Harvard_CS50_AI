@@ -18,7 +18,7 @@ Artificial Intelligence (AI) covers a range of techniques that appear as sentien
 - [Knowledge](#lecture-1---knowledge): Representing information and drawing inferences from it
 - [Uncertainty](#lecture-2---uncertainty): Dealing with uncertain events using probability
 - [Optimization](#lecture-3---optimization): Finding not only a correct way to solve a problem, but a better—or the best—way to solve it
-- Learning: Improving performance based on access to data and experience. For example, your email is able to distinguish spam from non-spam mail based on past experience
+- [Learning](#lecture-4---learning): Improving performance based on access to data and experience. For example, your email is able to distinguish spam from non-spam mail based on past experience
 - Neural Networks: A program structure inspired by the human brain that is able to perform tasks effectively
 - Language: Processing natural language, which is produced and understood by humans
 
@@ -80,3 +80,18 @@ Optimization is choosing the best option from a set of possible options. We have
 ### Projects
 
 - [Crossword](3.Optimization/crossword/)
+
+## Lecture 4 - [Learning](4.Learning/)
+
+Machine learning provides a computer with data, rather than explicit instructions. Using these data, the computer learns to recognize patterns and becomes able to execute tasks on its own
+
+### Objectives
+
+- Supervised Learning
+- Reinforcement Learning
+- Unsupervised Learning
+
+### Projects
+
+- [Shopping](4.Learning/shopping/)
+- [Nim](4.Learning/nim/)

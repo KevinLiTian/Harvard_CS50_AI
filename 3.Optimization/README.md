@@ -1,6 +1,8 @@
-## Optimization
+# Optimization
 
-#### Local Search
+An AI should not only find the solution, but also find the optimal solution, by either maximizing the objective or minimizing the cost
+
+## Local Search
 
 Local search is a search algorithm that maintains a single node and searches by moving to a neighboring node
 

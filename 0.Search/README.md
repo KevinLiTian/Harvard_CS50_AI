@@ -1,4 +1,8 @@
-## Search
+# Search
+
+Given two inputs, the intial state and the goal state, the AI will navigate to find the optimal solution of a series of actions
+
+## Search Problem Terms
 
 #### Agent
 
