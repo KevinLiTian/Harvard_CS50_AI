@@ -1,3 +1,5 @@
+""" An AI that uses K-Nearst Neighbor model to train and predict if one will buy the product """
+
 import csv
 import sys
 
@@ -10,20 +12,22 @@ MONTH_NUM = dict(Jan=0, Feb=1, Mar=2, Apr=3, May=4, June=5,
                 Jul=6, Aug=7, Sep=8, Oct=9, Nov=10, Dec=11)
 
 def main():
-
+    """ Main Function
+    Read from csv file, train the model and evaluate the model
+    """
     # Check command-line arguments
     if len(sys.argv) != 2:
         sys.exit("Usage: python shopping.py data")
 
     # Load data from spreadsheet and split into train and test sets
     evidence, labels = load_data(sys.argv[1])
-    X_train, X_test, y_train, y_test = train_test_split(
+    x_train, x_test, y_train, y_test = train_test_split(
         evidence, labels, test_size=TEST_SIZE
     )
 
     # Train model and make predictions
-    model = train_model(X_train, y_train)
-    predictions = model.predict(X_test)
+    model = train_model(x_train, y_train)
+    predictions = model.predict(x_test)
     sensitivity, specificity = evaluate(y_test, predictions)
 
     # Print results
@@ -66,8 +70,8 @@ def load_data(filename):
     labels = []
 
     # Open the csv file and read
-    with open(filename) as f:
-        reader = csv.DictReader(f)
+    with open(filename, encoding='utf-8') as file:
+        reader = csv.DictReader(file)
         for row in reader:
             # Append all rows except the Revenue row to evidence with correct type
             evidence.append([
