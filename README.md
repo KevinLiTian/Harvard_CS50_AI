@@ -20,7 +20,7 @@ Artificial Intelligence (AI) covers a range of techniques that appear as sentien
 - [Optimization](#lecture-3---optimization): Finding not only a correct way to solve a problem, but a better—or the best—way to solve it
 - [Learning](#lecture-4---learning): Improving performance based on access to data and experience. For example, your email is able to distinguish spam from non-spam mail based on past experience
 - [Neural Networks](#lecture-5---neural-networks): A program structure inspired by the human brain that is able to perform tasks effectively
-- Language: Processing natural language, which is produced and understood by humans
+- [Language](#lecture-6---language): Processing natural language, which is produced and understood by humans
 
 ## Lecture 0 - [Search](/0.Search/)
 
@@ -109,3 +109,18 @@ AI neural networks are inspired by neuroscience. In the brain, neurons are cells
 ### Projects
 
 - [Traffic](5.Neural_Networks/traffic/)
+
+## Lecture 6 - [Language](6.Language/)
+
+Natural Language Processing spans all tasks where the AI gets human language as input. It can be challenging since natural languages have complex syntax and are sometimes ambiguous
+
+### Objectives
+
+- Syntax
+- Bayes & TF-IDF
+- Semantics
+
+### Projects
+
+- [Parser](6.Language/parser/)
+- [Questions](6.Language/questions/)
