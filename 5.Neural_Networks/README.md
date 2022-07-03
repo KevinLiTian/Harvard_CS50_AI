@@ -67,7 +67,7 @@ A convolutional neural network is a neural network that uses convolution, usuall
 
 <img src="https://user-images.githubusercontent.com/99038613/177021914-61081035-0e63-46f7-bbb2-1223ab6f4311.jpg" width=60% height=60%>
 
-## Recurrent Neural Networks
+## [Recurrent Neural Networks](https://en.wikipedia.org/wiki/Recurrent_neural_network)
 
 Feed-Forward Neural Networks are the type of neural networks discussed so far, where input data is provided to the network, which eventually produces some output. Whereas in recurrent neural networks, input and ouput is not one to one, depending on the structure and design of the network, sometimes the output of the network is fed in to the input again in order to process continuous input such as videos or voices
 
