@@ -1,10 +1,17 @@
-import cv2
-import numpy as np
+"""
+An AI that uses Tensorflow to train a convolutional neural network
+to identify which traffic sign appears in a photograph
+"""
+
 import os
 import sys
+import cv2
+import numpy as np
 import tensorflow as tf
 
 from sklearn.model_selection import train_test_split
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 EPOCHS = 10
 IMG_WIDTH = 30
@@ -14,7 +21,12 @@ TEST_SIZE = 0.4
 
 
 def main():
-
+    """ Main Function
+    Take arguments from command line, decide which data to use
+    Load data into images and labels lists
+    Train using a configured CNN model
+    Evaluate model, print accuracy score
+    """
     # Check command-line arguments
     if len(sys.argv) not in [2, 3]:
         sys.exit("Usage: python traffic.py data_directory [model.h5]")
