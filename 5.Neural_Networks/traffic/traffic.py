@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 EPOCHS = 10
 IMG_WIDTH = 30
 IMG_HEIGHT = 30
-NUM_CATEGORIES = 3
+NUM_CATEGORIES = 43
 TEST_SIZE = 0.4
 
 
@@ -106,7 +106,7 @@ def get_model():
             32, (3, 3), activation="relu", input_shape=(IMG_WIDTH, IMG_HEIGHT, 3)
         ),
 
-        # Max-pooling layer, using 2x2 pool size
+        # Max-pooling layer, using 3x3 pool size
         tf.keras.layers.MaxPooling2D(pool_size=(3, 3)),
 
         # Flatten units
