@@ -1,5 +1,8 @@
+import os
 import sys
 import tensorflow as tf
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 # Use MNIST handwriting dataset
 mnist = tf.keras.datasets.mnist
