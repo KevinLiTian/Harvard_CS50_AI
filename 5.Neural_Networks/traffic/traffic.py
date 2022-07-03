@@ -63,7 +63,7 @@ def load_data(data_dir):
     labels = []
 
     # Start Loading Data
-    print("*"*10, f"Start loading data from {data_dir}", "*"*10)
+    print("="*30, f"Start loading data from {data_dir}", "="*30)
 
     # Iterate through each dataset in the data directory
     for dataset in os.listdir(data_dir):
@@ -72,7 +72,7 @@ def load_data(data_dir):
         # Avoid including files that are not dataset
         # Load from current dir
         if os.path.isdir(data_path):
-            print("*"*10, f"Loading data from {dataset}", "*"*10)
+            print("="*10, f"Loading data from {dataset}")
             # Load from each file in current dir
             for file in os.listdir(data_path):
                 image = cv2.imread(os.path.join(data_path, file))
@@ -80,10 +80,8 @@ def load_data(data_dir):
                 images.append(image)
                 labels.append(int(dataset))
 
-            print("*"*10, f"Finished loading from {dataset}", "*"*10)
-
     # Finished loading data
-    print("*"*10, "Finished loading data", "*"*10)
+    print("="*30, "Finished loading data", "="*30)
 
     return (images, labels)
 
