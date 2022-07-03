@@ -19,7 +19,7 @@ Artificial Intelligence (AI) covers a range of techniques that appear as sentien
 - [Uncertainty](#lecture-2---uncertainty): Dealing with uncertain events using probability
 - [Optimization](#lecture-3---optimization): Finding not only a correct way to solve a problem, but a better—or the best—way to solve it
 - [Learning](#lecture-4---learning): Improving performance based on access to data and experience. For example, your email is able to distinguish spam from non-spam mail based on past experience
-- Neural Networks: A program structure inspired by the human brain that is able to perform tasks effectively
+- [Neural Networks](#lecture-5---neural-networks): A program structure inspired by the human brain that is able to perform tasks effectively
 - Language: Processing natural language, which is produced and understood by humans
 
 ## Lecture 0 - [Search](/0.Search/)
@@ -95,3 +95,17 @@ Machine learning provides a computer with data, rather than explicit instruction
 
 - [Shopping](4.Learning/shopping/)
 - [Nim](4.Learning/nim/)
+
+## Lecture 5 - [Neural Networks](5.Neural_Networks/)
+
+AI neural networks are inspired by neuroscience. In the brain, neurons are cells that are connected to each other, forming networks. Each neuron is capable of both receiving and sending electrical signals. Once the electrical input that a neuron receives crosses some threshold, the neuron activates, thus sending its electrical signal forward
+
+### Objectives
+
+- Structure and Algorithms
+- Computer Vision
+- Recurrent Neural Networks
+
+### Projects
+
+- [Traffic](5.Neural_Networks/traffic/)

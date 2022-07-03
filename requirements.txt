@@ -1,3 +1,5 @@
 pygame
 pillow
 scikit-learn
+opencv-python
+tensorflow
