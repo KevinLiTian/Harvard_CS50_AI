@@ -23,5 +23,7 @@
 
 - If not explicitly specified, model changes are comparing to the base model
 
+Based on the test results, it can be concluded that the base model which only has one convolution layer, one pooling layer and a MNN performs this specific task poorly with accuracy of 0.0531. A better approach is by adding another convolution layer right after the first one and before the pooling layer which boosts the accuracy score to 0.9780. According to model 4, adding a pooling layer to the base model will not perform well. By adjusting the parameters based on model 3, the final result is maximized when modifying the pool size from 2x2 to 3x3, which scored at 0.9809
+
 ## Video Demo
 [![Traffic Project Video](https://img.youtube.com/vi/IHxHY1ztV1c/0.jpg)](https://youtu.be/IHxHY1ztV1c)
