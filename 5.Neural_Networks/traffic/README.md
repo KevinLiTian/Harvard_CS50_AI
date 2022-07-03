@@ -22,3 +22,6 @@
 | 12  |         Modify Drop Out Rate to 0.3 Compare to model 3          |     `0.9655`     |
 
 - If not explicitly specified, model changes are comparing to the base model
+
+## Video Demo
+[![Traffic Project Video](https://img.youtube.com/vi/IHxHY1ztV1c/0.jpg)](https://youtu.be/IHxHY1ztV1c)
