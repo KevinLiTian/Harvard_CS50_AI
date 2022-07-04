@@ -1,5 +1,17 @@
+# For Tictactoe and Minesweeper games
 pygame
+
+# For drawing images in Crossword
 pillow
+
+# For machine learning tasks in Shopping and Traffic
 scikit-learn
+
+# For image processing in Traffic
 opencv-python
+
+# For NN training in Traffic
 tensorflow
+
+# For natural language processing in Parser and Questions
+nltk
