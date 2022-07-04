@@ -15,7 +15,11 @@ V -> "smiled" | "tell" | "were"
 """
 
 NONTERMINALS = """
-S -> N V
+S -> NP VP | VP NP | S Conj S
+NP -> N | Det N | NP PP | Det AP N
+VP -> V | V NP | V PP | Adv VP | VP Adv
+AP -> Adj | Adj AP
+PP -> P NP
 """
 
 grammar = nltk.CFG.fromstring(NONTERMINALS + TERMINALS)
@@ -62,17 +66,35 @@ def preprocess(sentence):
     and removing any word that does not contain at least one alphabetic
     character.
     """
-    raise NotImplementedError
+    # Lowercase the sentence
+    sentence = sentence.lower()
+
+    # Tokenize each element in the sentence
+    word_list = nltk.word_tokenize(sentence)
+
+    # Remove all words that does not contain at least one alphabetic char
+    for word in word_list:
+        if not any(char.isalpha() for char in word):
+            word_list.remove(word)
+
+    return word_list
 
 
-def np_chunk(tree):
+def np_chunk(tree: nltk.Tree):
     """
     Return a list of all noun phrase chunks in the sentence tree.
     A noun phrase chunk is defined as any subtree of the sentence
     whose label is "NP" that does not itself contain any other
     noun phrases as subtrees.
     """
-    raise NotImplementedError
+    np_chunks = []
+
+    # For each subtree, check if its label is "NP" and no child is np
+    for subtree in tree.subtrees():
+        if subtree.label() == "NP" and not any(child.label() == "NP" for child in subtree):
+            np_chunks.append(subtree)
+
+    return np_chunks
 
 
 if __name__ == "__main__":
