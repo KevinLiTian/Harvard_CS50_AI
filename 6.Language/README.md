@@ -30,7 +30,7 @@ This stands for the structure of the sentence. Notice that the N here can be rep
 - **Noun Phrase (NP)**: Sometimes, "a dog" also means the noun "dog", therefore we can encode something called the NP. Where a N can be either a single N or the NP which is the combination of D and N
 - **Verb Phrase (VP)**: Similar to NP, a verb can be either a single verb or a VP which is a combination of V and NP
 
-Figure 1
+    <img src="https://user-images.githubusercontent.com/99038613/177066741-7f7ae85b-8483-41ca-8949-accebf57c331.jpg" width=60% height=60%>
 
 #### N-Grams
 
@@ -65,15 +65,15 @@ Another way to look at sentences are treating them as a collection of unordered 
 
 Recall the Bayes rule from lecture 2 Uncertainty
 
-Figure 2
+<img src="https://user-images.githubusercontent.com/99038613/177066748-6c6431d1-0d6b-479c-aff2-283f43ae4db2.jpg" width=60% height=60%>
 
 From this rule we can state that the probability of a sentence is positive is equal to the probability of a comment is positive given a certain comment. And that is equal to the joint probability of a comment is positive and a comment is positive given each word in the
 
-Figure 3
+<img src="https://user-images.githubusercontent.com/99038613/177066756-17b0f18a-a665-45b0-9a2a-fde80f76c6b5.jpg" width=60% height=60%>
 
 Then we are able to use this formula to calculate the probability that this comment is positive or negative since we have the data of all the joint probabilities
 
-Figure 4
+<img src="https://user-images.githubusercontent.com/99038613/177066765-e862d326-0f7a-42e3-b7ce-f2e5ffec37af.jpg" width=60% height=60%>
 
 #### Information Retrieval
 
@@ -87,7 +87,7 @@ Intuitively, the importance of information is evaluated as how many times certai
 
 The solution to this problem is the TF-IDF method. This method introduces a mathematical formula that calculates the importance of certain words by the logarithm of number of documents/chapers divided by how many times certain word appears in a document
 
-Figure 5
+<img src="https://user-images.githubusercontent.com/99038613/177066777-1c050265-12a6-4911-9e90-0c6911855028.jpg" width=60% height=60%>
 
 This method considers not only how many times a word appears in a document, but how special it is, in certain context. For instance, if this word appears in all documents, the logarithm of 1 is 0, which means this word is of little importance. If a word appears multiple times in one chapter while absent in others, meaning that the word is important and might be the main information in this certain chapter
 
