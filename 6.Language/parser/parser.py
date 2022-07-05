@@ -1,6 +1,10 @@
-import nltk
-import sys
+""" An AI that recognizes sentence structures/syntax/grammar """
 
+import sys
+import nltk
+
+# Terminal symbols, where each is to be definitely defined by a word
+# Add more words to have better functionality
 TERMINALS = """
 Adj -> "country" | "dreadful" | "enigmatical" | "little" | "moist" | "red"
 Adv -> "down" | "here" | "never"
@@ -14,6 +18,7 @@ V -> "arrived" | "came" | "chuckled" | "had" | "lit" | "said" | "sat"
 V -> "smiled" | "tell" | "were"
 """
 
+# Non-Terminal symbols, where each can be expand to more non-terminal or terminal symbols
 NONTERMINALS = """
 S -> NP VP | VP NP | S Conj S
 NP -> N | Det N | NP PP | Det AP N
@@ -22,29 +27,35 @@ AP -> Adj | Adj AP
 PP -> P NP
 """
 
+# Create grammar from pre-defined symbols
 grammar = nltk.CFG.fromstring(NONTERMINALS + TERMINALS)
 parser = nltk.ChartParser(grammar)
 
 
 def main():
-
+    """ Main Function
+    Takes argument from command line, decide whether to use a pre-defined
+    txt file as input or take user input
+    Parse the sentence and recognize the structure
+    Print out the structure and np_chunks
+    """
     # If filename specified, read sentence from file
     if len(sys.argv) == 2:
-        with open(sys.argv[1]) as f:
-            s = f.read()
+        with open(sys.argv[1], encoding='utf-8') as file:
+            sentence = file.read()
 
     # Otherwise, get sentence as input
     else:
-        s = input("Sentence: ")
+        sentence = input("Sentence: ")
 
     # Convert input into list of words
-    s = preprocess(s)
+    sentence = preprocess(sentence)
 
     # Attempt to parse sentence
     try:
-        trees = list(parser.parse(s))
-    except ValueError as e:
-        print(e)
+        trees = list(parser.parse(sentence))
+    except ValueError as error:
+        print(error)
         return
     if not trees:
         print("Could not parse sentence.")
@@ -55,8 +66,8 @@ def main():
         tree.pretty_print()
 
         print("Noun Phrase Chunks")
-        for np in np_chunk(tree):
-            print(" ".join(np.flatten()))
+        for np_c in np_chunk(tree):
+            print(" ".join(np_c.flatten()))
 
 
 def preprocess(sentence):
