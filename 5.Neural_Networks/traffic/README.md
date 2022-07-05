@@ -16,15 +16,11 @@ The dataset is too large, therefore the _data_ directory only contains the links
 
 Make sure Tensorflow, opencv-python and scikit-learn are installed. If not, run the following command
 
-```
-pip install tensorflow opencv-python scikit-learn
-```
+`pip install tensorflow opencv-python scikit-learn`
 
 In the traffic directory, run the command
 
-```
-python traffic.py data model_filename
-```
+`python traffic.py data model_filename`
 
 Where _data_ should be either gtsrb or gtsrb-small which are downloaded through the links in the _data_ directory. _Model_filename_ is an optional argument that will store the trained model to the specifiled path
 

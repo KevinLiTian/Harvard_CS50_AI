@@ -42,9 +42,7 @@ There are three set of sample pages in folders _corpus0_, _corpus1_ and _corpus2
 
 In the _pagerank_ directory, run the command
 
-```
-python pagerank.py pageset
-```
+`python pagerank.py pageset`
 
 Where pageset is the existing folder of html pages in the directory. One can use the existing corpus0-2 or create their own pagesets
 

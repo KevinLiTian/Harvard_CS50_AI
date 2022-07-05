@@ -16,15 +16,11 @@ The _shopping.csv_ file contains all the data regarding over 10k users, feel fre
 
 Make sure _scikit-learn_ is installed on your device, if not, use the command
 
-```
-pip install scikit-learn
-```
+`pip install scikit-learn`
 
 In the _shopping_ directory, run the command
 
-```
-python shopping.py shopping.csv
-```
+`python shopping.py shopping.csv`
 
 Where the _shopping.csv_ is the data file. Feel free to add more data files
 

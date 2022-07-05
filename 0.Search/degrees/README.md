@@ -24,9 +24,7 @@ The main program is written in the _degrees.py_ file, which utilizes some useful
 
 In the _degrees_ directory, run the command
 
-```
-python degrees.py dataset
-```
+`python degrees.py dataset`
 
 Where dataset is the name of the dataset folder
 

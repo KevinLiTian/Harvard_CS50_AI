@@ -14,9 +14,7 @@ The _data_ directory contains the structure and words files for the crossword pu
 
 In the crossword directory, run the command
 
-```
-python generate.py data/structure.txt data/words.txt output.png
-```
+`python generate.py data/structure.txt data/words.txt output.png`
 
 Where _structure_ and _words_ are txt files in the _data_ directory, one can use the existing 0-2 files or create their own files. The program will also save a png of the solved crossword puzzle
 
@@ -34,7 +32,6 @@ $ python generate.py data/structure1.txt data/words1.txt output.png
 ███████X████E█
 ██████████████
 ```
-
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/99038613/176724983-d23252a0-73cc-41b1-981e-0a2575e66327.jpg" width="60%" height="60%">

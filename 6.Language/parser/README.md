@@ -14,11 +14,11 @@ In _sentences_ directory, there are 10 different pre-defined sentences as txt fi
 
 Make sure nltk is installed, if not, use the following command
 
-```pip install nltk```
+`pip install nltk`
 
 In the parser directory, run the command
 
-```python parser.py sentences/.txt```
+`python parser.py sentences/.txt`
 
 Where the _sentences/.txt_ is an optional argument, if not provided, the AI will take user input
 

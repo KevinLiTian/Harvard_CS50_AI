@@ -10,15 +10,11 @@ The runner.py is used to initiate the pygame instance and it uses functions writ
 
 Make sure _pygame_ is installed on your device, if not, use the command
 
-```
-pip install pygame
-```
+`pip install pygame`
 
 In the _tictactoe_ directory, run the command
 
-```
-python runner.py
-```
+`python runner.py`
 
 A pygame window will pop up like the screenshot below
 
