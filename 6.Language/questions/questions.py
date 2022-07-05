@@ -1,3 +1,5 @@
+""" An AI that replies to queries using tf-idf """
+
 import os
 import sys
 import string
@@ -10,7 +12,13 @@ SENTENCE_MATCHES = 1
 
 
 def main():
-
+    """ Main Function
+    Load data from second command line argument
+    Tokenize each file and sentences
+    Calculate idfs of each word, then use tf*idf
+    to determine the importance of words
+    Based on that, reply the sentence with the most important words
+    """
     # Check command-line arguments
     if len(sys.argv) != 2:
         sys.exit("Usage: python questions.py corpus")
@@ -18,8 +26,8 @@ def main():
     # Calculate IDF values across files
     files = load_files(sys.argv[1])
     file_words = {
-        filename: tokenize(files[filename])
-        for filename in files
+        filename: tokenize(file)
+        for filename, file in files.items()
     }
     file_idfs = compute_idfs(file_words)
 
@@ -27,10 +35,10 @@ def main():
     query = set(tokenize(input("Query: ")))
 
     # Determine top file matches according to TF-IDF
-    filenames = top_files(query, file_words, file_idfs, n=FILE_MATCHES)
+    filenames = top_files(query, file_words, file_idfs, top_n=FILE_MATCHES)
 
     # Extract sentences from top files
-    sentences = dict()
+    sentences = {}
     for filename in filenames:
         for passage in files[filename].split("\n"):
             for sentence in nltk.sent_tokenize(passage):
@@ -42,7 +50,7 @@ def main():
     idfs = compute_idfs(sentences)
 
     # Determine top sentence matches
-    matches = top_sentences(query, sentences, idfs, n=SENTENCE_MATCHES)
+    matches = top_sentences(query, sentences, idfs, top_n=SENTENCE_MATCHES)
     for match in matches:
         print(match)
 
@@ -123,7 +131,7 @@ def compute_idfs(documents):
     return word_idf
 
 
-def top_files(query, files, idfs, n):
+def top_files(query, files, idfs, top_n):
     """
     Given a `query` (a set of words), `files` (a dictionary mapping names of
     files to a list of their words), and `idfs` (a dictionary mapping words
@@ -142,10 +150,10 @@ def top_files(query, files, idfs, n):
     rank_by_score = sorted(file_score.items(), key=lambda x: x[1], reverse=True)
 
     # Return only the list of file names of the n most relevant files
-    return [filename[0] for filename in rank_by_score[:n]]
+    return [filename[0] for filename in rank_by_score[:top_n]]
 
 
-def top_sentences(query, sentences, idfs, n):
+def top_sentences(query, sentences, idfs, top_n):
     """
     Given a `query` (a set of words), `sentences` (a dictionary mapping
     sentences to a list of their words), and `idfs` (a dictionary mapping words
@@ -166,7 +174,7 @@ def top_sentences(query, sentences, idfs, n):
 
     # Rank sentences by scores, return list of tuples (sentence, score), descending order
     rank_by_score = sorted(sentence_score.items(), key=lambda x: (x[1][0], x[1][1]), reverse=True)
-    return [sentence[0] for sentence in rank_by_score[:n]]
+    return [sentence[0] for sentence in rank_by_score[:top_n]]
 
 
 if __name__ == "__main__":
