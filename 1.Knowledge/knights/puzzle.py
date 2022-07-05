@@ -1,6 +1,6 @@
 """ 4 example puzzles that uses logic expressions to make inferences """
 
-from logic import *
+from logic import Symbol, And, Or, Not, Implication, model_check
 
 AKnight = Symbol("A is a Knight")
 AKnave = Symbol("A is a Knave")
@@ -50,7 +50,7 @@ knowledge2 = And(
     Or(BKnight, BKnave),
     Not(And(BKnight, BKnave)),
 
-    
+    # Information about what the characters actually said
     Implication(AKnight, Or(And(AKnight, BKnight), And(AKnave, BKnave))),
     Implication(AKnave, Not(Or(And(AKnight, BKnight), And(AKnave, BKnave)))),
     Implication(BKnight, Or(And(AKnight, BKnave), And(AKnave, BKnight))),

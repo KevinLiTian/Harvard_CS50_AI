@@ -1,8 +1,9 @@
 """ The runner for the minesweeper pygame """
+
 import sys
 import time
-import pygame
 
+import pygame
 
 from minesweeper import Minesweeper, MinesweeperAI
 

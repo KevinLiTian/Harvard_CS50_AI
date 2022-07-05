@@ -1,6 +1,7 @@
 """ An AI that recognizes sentence structures/syntax/grammar """
 
 import sys
+
 import nltk
 
 # Terminal symbols, where each is to be definitely defined by a word
@@ -91,7 +92,7 @@ def preprocess(sentence):
     return word_list
 
 
-def np_chunk(tree: nltk.Tree):
+def np_chunk(tree):
     """
     Return a list of all noun phrase chunks in the sentence tree.
     A noun phrase chunk is defined as any subtree of the sentence

@@ -1,4 +1,5 @@
 """ The Minesweeper AI that plays the game using advanced logics """
+
 import itertools
 import random
 

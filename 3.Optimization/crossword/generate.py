@@ -1,6 +1,7 @@
 """ An AI that solves crossword puzzles given structure and words """
 
 import sys
+
 from PIL import Image, ImageDraw, ImageFont
 
 from crossword import Variable, Crossword

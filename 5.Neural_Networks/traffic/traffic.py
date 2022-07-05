@@ -5,10 +5,10 @@ to identify which traffic sign appears in a photograph
 
 import os
 import sys
+
 import cv2
 import numpy as np
 import tensorflow as tf
-
 from sklearn.model_selection import train_test_split
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'

@@ -1,4 +1,5 @@
 """ Helper classes and methods for the search problems """
+
 class Node():
     """ A node that contains information needed for search """
     def __init__(self, state, parent, action):
