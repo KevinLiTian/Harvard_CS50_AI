@@ -4,7 +4,7 @@ from heredity import joint_probability
 
 class TestJointProbability(unittest.TestCase):
     """ Class inheret from unittest testcase class """
-    
+
     def test_joint_probability(self):
         """ Test the functionality of the joint_probability function """
         family = {

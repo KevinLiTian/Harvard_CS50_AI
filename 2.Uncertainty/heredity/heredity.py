@@ -86,8 +86,8 @@ def main():
             for two_genes in powerset(names - one_gene):
 
                 # Update probabilities with new joint probability
-                p = joint_probability(people, one_gene, two_genes, have_trait)
-                update(probabilities, one_gene, two_genes, have_trait, p)
+                prob = joint_probability(people, one_gene, two_genes, have_trait)
+                update(probabilities, one_gene, two_genes, have_trait, prob)
 
     # Ensure probabilities sum to 1
     normalize(probabilities)
@@ -98,8 +98,8 @@ def main():
         for field in probabilities[person]:
             print(f"  {field.capitalize()}:")
             for value in probabilities[person][field]:
-                p = probabilities[person][field][value]
-                print(f"    {value}: {p:.4f}")
+                prob = probabilities[person][field][value]
+                print(f"    {value}: {prob:.4f}")
 
 
 def load_data(filename):
@@ -110,8 +110,8 @@ def load_data(filename):
     trait should be 0 or 1 if trait is known, blank otherwise.
     """
     data = dict()
-    with open(filename) as f:
-        reader = csv.DictReader(f)
+    with open(filename, encoding='utf-8') as file:
+        reader = csv.DictReader(file)
         for row in reader:
             name = row["name"]
             data[name] = {
@@ -124,14 +124,14 @@ def load_data(filename):
     return data
 
 
-def powerset(s):
+def powerset(input_set):
     """
     Return a list of all possible subsets of set s.
     """
-    s = list(s)
+    input_set = list(input_set)
     return [
-        set(s) for s in itertools.chain.from_iterable(
-            itertools.combinations(s, r) for r in range(len(s) + 1)
+        set(input_set) for input_set in itertools.chain.from_iterable(
+            itertools.combinations(input_set, r) for r in range(len(input_set) + 1)
         )
     ]
 
@@ -228,7 +228,7 @@ def joint_probability(people, one_gene, two_genes, have_trait):
 
     return joint_prob
 
-def update(probabilities, one_gene, two_genes, have_trait, p):
+def update(probabilities, one_gene, two_genes, have_trait, prob):
     """
     Add to `probabilities` a new joint probability `p`.
     Each person should have their "gene" and "trait" distributions updated.
@@ -245,11 +245,11 @@ def update(probabilities, one_gene, two_genes, have_trait, p):
                     0
                    )
 
-        probabilities[family_member]["gene"][num_gene] += p
+        probabilities[family_member]["gene"][num_gene] += prob
 
         # Add the probability distribution to the corresponding trait
         trait = family_member in have_trait
-        probabilities[family_member]["trait"][trait] += p
+        probabilities[family_member]["trait"][trait] += prob
 
 def normalize(probabilities):
     """

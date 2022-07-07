@@ -42,8 +42,8 @@ class Crossword():
     def __init__(self, structure_file, words_file):
 
         # Determine structure of crossword
-        with open(structure_file) as f:
-            contents = f.read().splitlines()
+        with open(structure_file, encoding='utf-8') as file:
+            contents = file.read().splitlines()
             self.height = len(contents)
             self.width = max(len(line) for line in contents)
 
@@ -60,8 +60,8 @@ class Crossword():
                 self.structure.append(row)
 
         # Save vocabulary list
-        with open(words_file) as f:
-            self.words = set(f.read().upper().splitlines())
+        with open(words_file, encoding='utf-8') as file:
+            self.words = set(file.read().upper().splitlines())
 
         # Determine variable set
         self.variables = set()
@@ -111,18 +111,18 @@ class Crossword():
         #    None, if the two variables do not overlap; or
         #    (i, j), where v1's ith character overlaps v2's jth character
         self.overlaps = dict()
-        for v1 in self.variables:
-            for v2 in self.variables:
-                if v1 == v2:
+        for v_1 in self.variables:
+            for v_2 in self.variables:
+                if v_1 == v_2:
                     continue
-                cells1 = v1.cells
-                cells2 = v2.cells
+                cells1 = v_1.cells
+                cells2 = v_2.cells
                 intersection = set(cells1).intersection(cells2)
                 if not intersection:
-                    self.overlaps[v1, v2] = None
+                    self.overlaps[v_1, v_2] = None
                 else:
                     intersection = intersection.pop()
-                    self.overlaps[v1, v2] = (
+                    self.overlaps[v_1, v_2] = (
                         cells1.index(intersection),
                         cells2.index(intersection)
                     )

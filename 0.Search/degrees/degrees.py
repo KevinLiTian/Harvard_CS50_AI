@@ -23,8 +23,8 @@ def load_data(directory):
     Load data from CSV files into memory.
     """
     # Load people
-    with open(f"{directory}/people.csv", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
+    with open(f"{directory}/people.csv", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
         for row in reader:
             people[row["id"]] = {
                 "name": row["name"],
@@ -37,8 +37,8 @@ def load_data(directory):
                 names[row["name"].lower()].add(row["id"])
 
     # Load movies
-    with open(f"{directory}/movies.csv", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
+    with open(f"{directory}/movies.csv", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
         for row in reader:
             movies[row["id"]] = {
                 "title": row["title"],
@@ -47,8 +47,8 @@ def load_data(directory):
             }
 
     # Load stars
-    with open(f"{directory}/stars.csv", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
+    with open(f"{directory}/stars.csv", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
         for row in reader:
             try:
                 people[row["person_id"]]["movies"].add(row["movie_id"])

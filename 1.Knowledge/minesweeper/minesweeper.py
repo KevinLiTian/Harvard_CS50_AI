@@ -245,7 +245,7 @@ class MinesweeperAI():
         for mine_cell in self.mines:
             new_sentence.mark_mine(mine_cell)
 
-        # Add result into KB    
+        # Add result into KB
         self.knowledge.append(new_sentence)
 
         # 4) mark any additional cells as safe or as mines
@@ -278,7 +278,7 @@ class MinesweeperAI():
         for cell in add_mines:
             self.mark_mine(cell)
 
-        # 5) add any new sentences to the AI's knowledge base 
+        # 5) add any new sentences to the AI's knowledge base
         # if they can be inferred from existing knowledge
         new_sentences = []
         # Check each two sentences in the KB whether we can use inference
@@ -304,7 +304,7 @@ class MinesweeperAI():
         # If there are available moves, randomly choose one.
         # Otherwise return None
         if len(available_moves) != 0:
-            return random.choice(tuple(available_moves))    
+            return random.choice(tuple(available_moves))
 
         return None
 

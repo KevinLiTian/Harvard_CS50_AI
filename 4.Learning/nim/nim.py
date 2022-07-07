@@ -7,7 +7,7 @@ import time
 
 class Nim():
     """ Class to define the Nim game itself """
-    def __init__(self, initial=[1, 3, 5, 7]):
+    def __init__(self):
         """
         Initialize game board.
         Each game board has
@@ -15,6 +15,7 @@ class Nim():
             - `player`: 0 or 1 to indicate which player's turn
             - `winner`: None, 0, or 1 to indicate who the winner is
         """
+        initial=[1, 3, 5, 7]
         self.piles = initial.copy()
         self.player = 0
         self.winner = None
@@ -84,7 +85,7 @@ class NimAI():
          - `state` is a tuple of remaining piles, e.g. (1, 1, 4, 4)
          - `action` is a tuple `(i, j)` for an action
         """
-        self.q = dict()
+        self.q_value = {}
         self.alpha = alpha
         self.epsilon = epsilon
 
@@ -105,8 +106,8 @@ class NimAI():
         """
         # If there is a q value for current (state, action)
         # already in `self.q`, return it
-        if (tuple(state), action) in self.q:
-            return self.q[(tuple(state), action)]
+        if (tuple(state), action) in self.q_value:
+            return self.q_value[(tuple(state), action)]
 
         # If current (state action) is not explored yet
         # q is of value 0
@@ -132,7 +133,7 @@ class NimAI():
         alpha = self.alpha
 
         # Update q according to the formula
-        self.q[(tuple(state), action)] = old_q + alpha * (new_value_estimate - old_q)
+        self.q_value[(tuple(state), action)] = old_q + alpha * (new_value_estimate - old_q)
 
     def best_future_reward(self, state):
         """
@@ -204,7 +205,7 @@ class NimAI():
 
         return best_action
 
-def train(n):
+def train(epoch):
     """
     Train an AI by playing `n` games against itself.
     """
@@ -212,7 +213,7 @@ def train(n):
     player = NimAI()
 
     # Play n games
-    for i in range(n):
+    for i in range(epoch):
         print(f"Playing training game {i + 1}")
         game = Nim()
 
@@ -263,7 +264,7 @@ def train(n):
     return player
 
 
-def play(ai, human_player=None):
+def play(nim_ai, human_player=None):
     """
     Play human game against the AI.
     `human_player` can be set to 0 or 1 to specify whether
@@ -304,7 +305,7 @@ def play(ai, human_player=None):
         # Have AI make a move
         else:
             print("AI's Turn")
-            pile, count = ai.choose_action(game.piles, epsilon=False)
+            pile, count = nim_ai.choose_action(game.piles, epsilon=False)
             print(f"AI chose to take {count} from pile {pile}.")
 
         # Make move

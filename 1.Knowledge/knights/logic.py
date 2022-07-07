@@ -21,25 +21,25 @@ class Sentence():
             raise TypeError("must be a logical sentence")
 
     @classmethod
-    def parenthesize(cls, s):
+    def parenthesize(cls, string):
         """Parenthesizes an expression if not already parenthesized."""
-        def balanced(s):
+        def balanced(string):
             """Checks if a string has balanced parentheses."""
             count = 0
-            for c in s:
-                if c == "(":
+            for char in string:
+                if char == "(":
                     count += 1
-                elif c == ")":
+                elif char == ")":
                     if count <= 0:
                         return False
                     count -= 1
             return count == 0
-        if not len(s) or s.isalpha() or (
-            s[0] == "(" and s[-1] == ")" and balanced(s[1:-1])
+        if len(string) == 0 or string.isalpha() or (
+            string[0] == "(" and string[-1] == ")" and balanced(string[1:-1])
         ):
-            return s
-        else:
-            return f"({s})"
+            return string
+
+        return f"({string})"
 
 class Symbol(Sentence):
     """ Logic symbols """
@@ -247,15 +247,15 @@ def model_check(knowledge, query):
 
             # Choose one of the remaining unused symbols
             remaining = symbols.copy()
-            p = remaining.pop()
+            top = remaining.pop()
 
             # Create a model where the symbol is true
             model_true = model.copy()
-            model_true[p] = True
+            model_true[top] = True
 
             # Create a model where the symbol is false
             model_false = model.copy()
-            model_false[p] = False
+            model_false[top] = False
 
             # Ensure entailment holds in both models
             return (check_all(knowledge, query, remaining, model_true) and
