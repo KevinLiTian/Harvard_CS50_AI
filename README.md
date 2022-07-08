@@ -1,6 +1,6 @@
-# Harvard University's CS50 - Introduction to AI
+# Harvard University's CS50AI - Introduction to Artificial Intelligence
 
-In the summer after my sophomore year, in order to gain more knowledge and continue programming, I chose to study Harvard's online artificial intelligence course, [CS50](https://cs50.harvard.edu/ai/2020/), which I found through the online learning platform, [edX](https://www.edx.org/)<br/>
+In the summer after my sophomore year, in order to gain more knowledge and continue programming, I chose to study Harvard's online artificial intelligence course, [CS50AI](https://cs50.harvard.edu/ai/2020/), which I found through the online learning platform, [edX](https://www.edx.org/)<br/>
 
 In this repository, I will put my notes and my work on course projects. For each lecture, I will list the objectives of the lecture and corresponding projects. Detailed notes and in-class examples regarding each lecture can be accessed through the link of the corresponding lecture below
 
@@ -14,13 +14,13 @@ This course explores the concepts and algorithms at the foundation of modern art
 
 Artificial Intelligence (AI) covers a range of techniques that appear as sentient behavior by the computer. For example, AI is used to recognize faces in photographs on your social media, beat the World’s Champion in chess, and process your speech when you speak to Siri or Alexa on your phone. This course will explore some of the ideas that make AI possible
 
-- [Search](#lecture-0---search): Finding a solution to a problem, like a navigator app that finds the best route from your origin to the destination, or like playing a game and figuring out the next move
-- [Knowledge](#lecture-1---knowledge): Representing information and drawing inferences from it
-- [Uncertainty](#lecture-2---uncertainty): Dealing with uncertain events using probability
-- [Optimization](#lecture-3---optimization): Finding not only a correct way to solve a problem, but a better—or the best—way to solve it
-- [Learning](#lecture-4---learning): Improving performance based on access to data and experience. For example, your email is able to distinguish spam from non-spam mail based on past experience
-- [Neural Networks](#lecture-5---neural-networks): A program structure inspired by the human brain that is able to perform tasks effectively
-- [Language](#lecture-6---language): Processing natural language, which is produced and understood by humans
+- **[Search](#lecture-0---search)**: Finding a solution to a problem, like a navigator app that finds the best route from your origin to the destination, or like playing a game and figuring out the next move
+- **[Knowledge](#lecture-1---knowledge)**: Representing information and drawing inferences from it
+- **[Uncertainty](#lecture-2---uncertainty)**: Dealing with uncertain events using probability
+- **[Optimization](#lecture-3---optimization)**: Finding not only a correct way to solve a problem, but a better—or the best—way to solve it
+- **[Learning](#lecture-4---learning)**: Improving performance based on access to data and experience. For example, your email is able to distinguish spam from non-spam mail based on past experience
+- **[Neural Networks](#lecture-5---neural-networks)**: A program structure inspired by the human brain that is able to perform tasks effectively
+- **[Language](#lecture-6---language)**: Processing natural language, which is produced and understood by humans
 
 ## Lecture 0 - [Search](/0.Search/)
 
