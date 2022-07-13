@@ -21,3 +21,7 @@ where `AI` is the preferred name of your new environment. You can name it whatev
 Then use `pip` to install all the packages needed which are specified in the `requirements.txt`. It is recommanded to use the command below to install all the packages at once:
 
 `pip install -r requirements.txt --upgrade`
+
+## Clone Repo
+
+Next step is to [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository to your local device. [Github Desktop](https://desktop.github.com/) is recommanded, [Git](https://git-scm.com/) command line also works if you are comfortable with it
