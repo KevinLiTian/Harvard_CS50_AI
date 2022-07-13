@@ -12,7 +12,7 @@ In `sentences` directory, there are 10 different pre-defined sentences as txt fi
 
 ## How to Use
 
-Make sure nltk is installed, if not, use the following command
+Make sure `nltk` is installed, if not, use the following command
 
 `pip install nltk`
 
