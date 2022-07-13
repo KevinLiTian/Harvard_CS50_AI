@@ -132,4 +132,4 @@ Natural Language Processing spans all tasks where the AI gets human language as 
 
 ## Contact ME
 
-If you have any questions regarding the course material or any of the projects, please feel free to contact me through my email <kevintian.li@mail.utoronto.ca> or <kevin.li20021106@gmail.com>
+If you have any questions regarding the course material or any of the projects, please feel free to contact me through my emails <kevintian.li@mail.utoronto.ca> or <kevin.li20021106@gmail.com>
