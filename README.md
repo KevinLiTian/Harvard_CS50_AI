@@ -22,6 +22,11 @@ Artificial Intelligence (AI) covers a range of techniques that appear as sentien
 - **[Neural Networks](#lecture-5---neural-networks)**: A program structure inspired by the human brain that is able to perform tasks effectively
 - **[Language](#lecture-6---language)**: Processing natural language, which is produced and understood by humans
 
+## Get Started
+
+- To setup the environment on your device, please follow the guide in [docs](docs/)
+- To practice doing projects, check all the projects with their specifications in [DIY](DIY/)
+
 ## Lecture 0 - [Search](/0.Search/)
 
 Search problems involve an agent that is given an initial state and a goal state, and it returns a solution of how to get from the former to the latter
