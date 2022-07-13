@@ -12,7 +12,7 @@ In the `corpus` directory, there are some documents from wikipedia which contain
 
 ## How to Use
 
-Make sure nltk is installed, if not, use the following command
+Make sure `nltk` is installed, if not, use the following command
 
 `pip install nltk`
 
