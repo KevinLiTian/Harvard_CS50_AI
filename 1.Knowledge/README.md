@@ -4,11 +4,13 @@ Instead of randomly taking actions and finding the optimal series of actions, wi
 
 #### [Knowledge-Based Agents](https://www.geeksforgeeks.org/knowledge-based-agents-in-ai/)
 
-Similar to the agent definition in Lecture 0, but knowledge-based agents are agents that reason by operating on internal representations of knowledge
+Similar to the previous agent definition, but knowledge-based agents are agents that reason and infer by operating on internal representations of knowledge instead of taking actions under states
 
 #### Sentence
 
 Sentence is an assertion about the world in a knowledge representation language. A sentence is how AI stores knowledge and uses it to infer new information
+
+Propositional logic, also known as sentential logic, is that branch of logic that studies ways of combining or altering statements or propositions to form more complicated statements or propositions. Joining two simpler propositions with the word “and” is one common way of combining statements
 
 ## [Propositional Logic](https://iep.utm.edu/prop-log/#:~:text=Propositional%20logic%2C%20also%20known%20as%20sentential%20logic%2C%20is%20that%20branch,common%20way%20of%20combining%20statements.)
 
@@ -29,7 +31,7 @@ Logical connectives are logical symbols that connect propositional symbols in or
 
 #### Model
 
-Provides information about the world based on existing sentences which also known as the Knowledge Base. Input a query about the world into the model, it will output its best result based on the KB
+Provides information about the world based on existing sentences which also known as the Knowledge Base (KB). Input a query about the world into the model, it will output its best result based on the KB
 
 #### Knowledge Base (KB)
 
@@ -37,11 +39,16 @@ The combination of all existing sentences, where the knowledge-based agents stor
 
 #### Entailment (⊨)
 
-If α ⊨ β (α entails β), then in any possible world where α is true, then β must be true
+If α ⊨ β (α entails β), then in any possible world where α is true, then β must be true. For example, if there are two statements:
+
+- "Harry will go outside if it is raining"
+- "It is raining"
+
+Then the AI is able to make entailment stating that "Harry is outside" based on these two sentences
 
 #### Knowledge Engineering
 
-The process of figuring out how to represent propositions and logic using programming
+The process of figuring out how to represent propositions and logic using programming. For instance, in the `Knights` project, the `logic.py` is fully implemented already to represent propositional logics with Python
 
 ## [Inference](https://en.wikipedia.org/wiki/Inference)
 
@@ -49,9 +56,9 @@ The process of deriving new sentences from old ones
 
 #### Inference Rules
 
-- **Modus Ponens**: If we know an implication and its antecedent is true, then the consequent must also be true
-- **And Elimination**: If an AND proposition is true, then any one atomic proposition within it must also be true
-- **Double Negation Elimination**: A proposition that is negated twice is true
+- **Modus Ponens**: If we know an implication and its antecedent is true, then the consequent must also be true. If a → b is true, and a is true, then b must be true
+- **And Elimination**: If an AND proposition is true, then any one atomic proposition within it must also be true. If (a ∧ b) is true, then a, b must all be true
+- **Double Negation Elimination**: A proposition that is negated twice is true. If (¬)(¬a) is true, then a must be true
 - **Implication Elimination**: An implication is equivalent to an OR relation between the negated antecedent and the consequent
 
     <img src="https://user-images.githubusercontent.com/99038613/176773992-c88872d1-9a8b-497c-af92-8019c929ba0a.jpg" width="60%" height="60%">
@@ -66,7 +73,7 @@ The process of deriving new sentences from old ones
 
     <img src="https://user-images.githubusercontent.com/99038613/176774456-b2f0f3b9-0f62-4efe-ba3f-ebe4dff0ed31.jpg" width="60%" height="60%">
 
-- **Distributive Property**: AND and OR can be distributed just like multiplication
+- **Distributive Property**: AND and OR can be distributed just like multiplication. If a ∨ (b ∧ c) is true, then (a ∨ b) ∧ (a ∨ c) must be true
 
 #### Knowledge and Search
 
