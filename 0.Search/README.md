@@ -41,7 +41,7 @@ The condition that determines whether a given state is a goal state, if certain 
 
 A numerical cost associated with a given path </br>
 The cost of each edge (between two vertices) could be 1 or more than 1 </br>
-i.e. when navigating a path on the map, we do not only consider the distance but also trying to minimize the path cost, which is the traffic on certain path. If there's a bad traffic on a certain path, then the cost of that path is high
+i.e. when navigating a path on the map, we do not only consider the distance but also trying to minimize the path cost, which in real life is the traffic condition on certain roads. If there's a bad traffic on a certain road, then the cost of that road is high
 
 <img width="675" alt="Screen Shot 2022-06-19 at 8 47 16 PM" src="https://user-images.githubusercontent.com/98674104/174507169-e74f9eaa-3533-4d9b-a549-d0765f475a5b.png">
 
@@ -49,10 +49,9 @@ i.e. when navigating a path on the map, we do not only consider the distance but
 
 #### [Depth-First Search (DFS)](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
 
-Exhausts each one direction before trying another direction </br>
-There are different possible ways, which will be chosen randomly. So, DFS might not be efficient to find the shortiest path due to this randomness </br>
+Exhausts each one direction before trying another direction. If there are several possible ways, the agent will choose randomly. So, DFS might not be efficient to find the path due to this randomness, and it does not guarantee to find the shortest path
 
-For example: </br>
+For example:
 
 <img width="675" alt="Screen Shot 2022-06-19 at 8 48 56 PM" src="https://user-images.githubusercontent.com/98674104/174507280-633a5e6a-9d41-4111-9634-0b12d5963dcb.png">
 
@@ -60,21 +59,59 @@ OR </br>
 
 <img width="678" alt="Screen Shot 2022-06-19 at 8 50 04 PM" src="https://user-images.githubusercontent.com/98674104/174507348-2df8c20c-6e2e-4df2-912a-ee3f2dc6dafd.png">
 
+DFS typically uses a [stack](https://www.programiz.com/dsa/stack) data structure to store all of the possible actions. Below is the pseudo code for the DFS implementation
+
+```
+DFS(G,v)   ( v is the vertex where the search starts )
+    Stack S := {};   ( start with an empty stack )
+    for each vertex u, set visited[u] := false;
+    push S, v;
+    while (S is not empty) do
+    u := pop S;
+
+    if u is destination then
+        return path from v to u
+
+    if (not visited[u]) then
+        visited[u] := true;
+        for each unvisited neighbour w of u
+            push S, w;
+```
+
 #### [Breadth-First Search (BFS)](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
 
 Follow multiple directions at the same time, taking one step in each possible direction before taking the second step in each direction </br>
-Guarantee the shortest path, but take long time as it seeks each directions setp by step. Also, BFS only considers unweighted path and ignore the path cost, so it's more efficient to use A\* when doing map navigation rather than BFS
+Guarantee the shortest path, but takes relatively a long time as it seeks each directions setp by step. Also, BFS only considers unweighted path and ignore the path cost, so it's more efficient to use A\* when doing map navigation rather than BFS
 
 <img width="677" alt="Screen Shot 2022-06-19 at 8 48 21 PM" src="https://user-images.githubusercontent.com/98674104/174507239-b6c05071-3100-4143-81d1-95581c24f33e.png">
+
+BFS typically uses a [queue](https://www.programiz.com/dsa/queue) data structure to store all of the possible actions. Below is the pseudo code for the BFS implementation
+
+```
+BFS (G, s)  (G is the graph and s is the source node)
+    let Q be queue
+    Q.enqueue( s )
+    mark s as visited
+
+    while ( Q is not empty)
+        v  =  Q.dequeue( )
+
+        if v is destination then
+            return path from s to v
+
+        for all neighbours w of v in Graph G
+            if w is not visited
+                Q.enqueue( w )
+```
 
 #### [Greedy Best-First Search](https://www.javatpoint.com/ai-informed-search-algorithms#:~:text=Greedy%20best%2Dfirst%20search%20algorithm,the%20advantages%20of%20both%20algorithms.)
 
 At any time, choose the state that is closest to the goal as the next state (only consider the estimated cost to the goal), as estimated by a
-heuristic function h(n). However, it only consider the distance between the current node to the destination but not consider the cost to reach this node (g(n)). The greedy algorithm does not guarantee a shortest path
+heuristic function h(n). However, it only consider the distance between the current node to the destination but not the cost to reach this node from the source. The greedy algorithm does not guarantee the shortest path
 
 <img width="678" alt="Screen Shot 2022-06-19 at 8 55 53 PM" src="https://user-images.githubusercontent.com/98674104/174507683-67090988-940d-4a4e-b045-0ac985f4fb4c.png">
 
-Manhattan distance vs Euclidean distance, we uses Manhattan distance in the Greedy BFS
+Manhattan distance vs Euclidean distance. We use either of these to estimate the cost from current state to the goal, then choose the action that minimizes the cost
 
 <img src="https://user-images.githubusercontent.com/98674104/174507758-c1a8a28d-3a2a-4a3b-bfe8-be28384a6a95.jpeg" width="680" height="350">
 
@@ -88,6 +125,25 @@ h(n) = estimated cost to the destination node </br>
 Thus, A\* is the best path search algorithm as it considers the distance, weight, cost, etc. and it guarantees to find the shortest path
 
 <img width="679" alt="Screen Shot 2022-06-19 at 8 53 16 PM" src="https://user-images.githubusercontent.com/98674104/174507529-69b6908c-f37f-41ed-a94a-0d9323aab6e8.png">
+
+```
+A* (G, s)  (G is the graph and s is the source node)
+
+    # Order the queue by ascending order of g(n) + h(n)
+    let Q be priority_queue
+    Q.enqueue( s )
+    mark s as visited
+
+    while ( Q is not empty)
+        v  =  Q.dequeue( )
+
+        if v is destination then
+            return path from s to v
+
+        for all neighbours w of v in Graph G
+            if w is not visited
+                Q.enqueue( w )
+```
 
 ## Adversarial Search
 
