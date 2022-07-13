@@ -4,11 +4,11 @@ An AI should not only find the solution, but also find the optimal solution, by 
 
 ## Local Search
 
-Local search is a search algorithm that maintains a single node and searches by moving to a neighboring node
+Local search is a search algorithm that maintains a single node and searches by moving to a neighboring node, and determines whether to move to neighboring node based on if the neighbor node is better or worse
 
 #### State Space Landscape
 
-In all the state space, there are better and worse results that are unevenly distributed, as the figure below illustrates
+In all the state space, there are better and worse results that are unevenly distributed, as the figure below illustrates. Optimization techniques allows agent to find the global optimum or global minimum based on the need of the problem
 
 <img src="https://user-images.githubusercontent.com/99038613/176784545-bb4f5683-9d8d-47f5-8258-028fe8f6ab66.jpg" width=60% height=60%>
 
@@ -28,7 +28,7 @@ Hill climbing is one type of a local search algorithm. In this algorithm, the ne
   - **First-choice**: Choose the first higher-valued neighbor
   - **Random-restart**: Conduct hill climbing multiple times
   - **Local Beam Search**: Chooses the k highest-valued neighbors
-- **Limitation**: Hill climbing only changes current state if neighboring state is better, but if we reached any local minima/maxmima, the neighboring states are all worse than the current state, then the algorithm will terminate which leaves us at a local, instead of a global maxima/minima
+- **Limitation**: Hill climbing only changes current state if neighboring state is better, but if we reached any local minima/maxmima, the neighboring states are all worse than the current state, thus stuck at that local point, then the algorithm will terminate which leaves us at a local, instead of a global maxima/minima
 
 #### [Simulated Annealing](https://en.wikipedia.org/wiki/Simulated_annealing)
 
@@ -36,17 +36,38 @@ Although we have seen variants that can improve hill climbing, they all share th
 
 - [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem): A typical type of problem that can use Simulated Annealing to get good results
 
+```
+Notations :
+  T : temperature. Decreases to 0.
+  s : a system state
+  E(s) : Energy at s. The function we want to minimize
+  ∆E : variation of E, from state s to state s_next
+  P(∆E , T) : Probability to move from s to s_next.
+  	if  ( ∆E < 0 ) P = 1
+  	      else P = exp ( - ∆E / T) . Decreases as T →  0
+
+Pseudo-code:
+    Let s = s0  -- initial state
+    For k = 0 through kmax (exclusive):
+        T ← temperature(k , kmax)
+        Pick a random neighbour state , s_next ← neighbour(s)
+        ∆E ← E(s) - E(s_next)
+        If P(∆E , T) ≥ random(0, 1), move to the new state:
+            s ← s_next
+    Output: the final state s
+```
+
 ## Linear Programming
 
 Linear programming is a family of problems that optimize a linear equation (an equation of the form y = ax₁ + bx₂ + …)
 
 ## Constraint Satisfaction Problem
 
-Constraint Satisfaction problems are a class of problems where variables need to be assigned values while satisfying some conditions
+Constraint Satisfaction problems are a class of problems where variables need to be assigned values while satisfying some conditions. For example, the game of Sudoku, where each empty space is a variable that needs to be assigned value from 1 to 9
 
 #### Unary & Binary Constraints
 
-Unary constraints are the limitations applying to a single variable such as a cannot be equal to 1. Binary constraints are the limitations applying to two variables such as the value of a cannot be equal to the value of b
+Unary constraints are the limitations applying to a single variable such as a cannot be equal to 1. Binary constraints are the limitations applying to two variables such as the value of a cannot be equal to the value of b. In the game of Sudoku, the unary constraint is for each space, the value must be within 1 to 9. The binary constraint is that two variable/empty space, in the same row or column or each 3x3 block, cannot take on the same value
 
 #### Node Consistency
 
@@ -63,3 +84,31 @@ Backtracking search is a type of a search algorithm that takes into account the 
 - **Inference**: Although backtracking search is more efficient than simple search, it still takes a lot of computational power. Enforcing arc consistency, on the other hand, is less resource intensive. By interleaving backtracking search with inference (enforcing arc consistency), we can get at a more efficient algorithm
 
 - **Minimum Remaining Values (MRV)**: When choosing the next variable to try, the MRV heuristic says that we should let the variable that has the least number of values in its domain to try first since there's a higher chance to get the correct result
+
+```
+csp - Constraint Satisfaction Problem
+assignment - Assign variables to a value
+assignment complete - All variables are assigned to a value
+domain -  Set of all values a variable can take on
+consistent - Ensure that so far, all constraints are satisfied
+
+function BackTrack(assignment, csp)
+  if assignment complete:
+    return assignment
+
+  var = select from unassigned variables(assignment, csp)
+  for value in domain(var, assignment, csp):
+      add {var, value} to assignment
+
+      if value is consistent with assignment:
+        Ensure Arc-Consistency
+
+        result = BackTrack(assignement, csp)
+
+        if result not failed:
+          return result
+
+      remove {var, value} from assignment
+
+    return fail if the variable cannot take on any value
+```

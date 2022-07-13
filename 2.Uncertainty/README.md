@@ -67,15 +67,17 @@ Sampling is one technique of approximate inference by letting the AI simute the 
 
 Normal sampling will discard samples we don't need for certain queries, that is inefficient. Likelihood weighting is a way to get around these situations
 
-#### [Markov Models](https://en.wikipedia.org/wiki/Markov_model)
+### [Markov Models](https://en.wikipedia.org/wiki/Markov_model)
+
+To be able to predict events in the future, we will use Markov Models
 
 #### The Markov Assumption
 
-The Markov assumption is an assumption that the current state depends on only a finite fixed number of previous states
+The Markov assumption is an assumption that the current state depends on only a finite fixed number of previous states in order not have to store or use too many data
 
 #### Markov Chain
 
-A Markov chain is a sequence of random variables where the distribution of each variable follows the Markov assumption
+A Markov chain is a sequence of random variables where the distribution of each variable follows the Markov assumption. Just like simulating the selection process, the Markov chain predicts future based on past probabilities. For instance, in weather predicting, the Markov chain predicts whether tomorrow will rain or not based on the weather condition of today and past probabilities. If today is raining, if tomorrow will still be raining will be based on the probability of two consecutive rainy days in the past
 
 #### Hidden Markov Models
 
