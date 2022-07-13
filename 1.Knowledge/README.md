@@ -10,9 +10,9 @@ Similar to the previous agent definition, but knowledge-based agents are agents 
 
 Sentence is an assertion about the world in a knowledge representation language. A sentence is how AI stores knowledge and uses it to infer new information
 
-Propositional logic, also known as sentential logic, is that branch of logic that studies ways of combining or altering statements or propositions to form more complicated statements or propositions. Joining two simpler propositions with the word “and” is one common way of combining statements
-
 ## [Propositional Logic](https://iep.utm.edu/prop-log/#:~:text=Propositional%20logic%2C%20also%20known%20as%20sentential%20logic%2C%20is%20that%20branch,common%20way%20of%20combining%20statements.)
+
+Propositional logic, also known as sentential logic, is that branch of logic that studies ways of combining or altering statements or propositions to form more complicated statements or propositions. Joining two simpler propositions with the word “and” is one common way of combining statements
 
 #### Propositional Symbols
 
