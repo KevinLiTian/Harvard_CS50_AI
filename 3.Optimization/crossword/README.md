@@ -8,7 +8,7 @@ How might you go about solving a crossword puzzle? Given the structure of a cros
 
 ## Files
 
-The _data_ directory contains the structure and words files for the crossword puzzles, one is welcome to add more data files to this directory to test the functionality or just for fun. The _crossword.py_ file has two classes, _variable_ and _crossword_ to help solving the crossword puzzles. The main solving functions are in the _generate.py_ file. In this file, main function takes arguments form command line and decide which structure and words files to use and call the solve function which uses other helper functions in the file
+The `data` directory contains the structure and words files for the crossword puzzles, one is welcome to add more data files to this directory to test the functionality or just for fun. The `crossword.py` file has two classes, `variable` and `crossword` to help solving the crossword puzzles. The main solving functions are in the `generate.py` file. In this file, main function takes arguments form command line and decide which structure and words files to use and call the solve function which uses other helper functions in the file
 
 ## How to Use
 
@@ -16,7 +16,7 @@ In the crossword directory, run the command
 
 `python generate.py data/structure.txt data/words.txt output.png`
 
-Where _structure_ and _words_ are txt files in the _data_ directory, one can use the existing 0-2 files or create their own files. The program will also save a png of the solved crossword puzzle
+Where `structure` and `words` are txt files in the `data` directory, one can use the existing 0-2 files or create their own files. The program will also save a png of the solved crossword puzzle
 
 ## Example Output
 

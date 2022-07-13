@@ -10,7 +10,7 @@ The dataset that will be used is the [German Traffic Sign Recognition Benchmark 
 
 ## Files
 
-The dataset is too large, therefore the _data_ directory only contains the links to download them. After downloading, the _data_ directory should be replaced by the downloaded folder, namely "gtsrb". The _traffic.py_ file contains the main functions including loading data, getting model, training the model and evaluating the model
+The dataset is too large, therefore the `data` directory only contains the links to download them. After downloading, the `data` directory should be replaced by the downloaded folder, namely "gtsrb". The `traffic.py` file contains the main functions including loading data, getting model, training the model and evaluating the model
 
 ## How to Use
 
@@ -22,7 +22,7 @@ In the traffic directory, run the command
 
 `python traffic.py data model_filename`
 
-Where _data_ should be either gtsrb or gtsrb-small which are downloaded through the links in the _data_ directory. _Model_filename_ is an optional argument that will store the trained model to the specifiled path
+Where `data` should be either gtsrb or gtsrb-small which are downloaded through the links in the `data` directory. `Model_filename` is an optional argument that will store the trained model to the specifiled path
 
 ## Example Output
 

@@ -8,7 +8,7 @@ A common task in natural language processing is parsing, the process of determin
 
 ## Files
 
-In _sentences_ directory, there are 10 different pre-defined sentences as txt files, each with a different syntax. One is welcome to add more sentences as txt files to test the functionality of the AI. In the _parser.py_ file, the AI use the [nltk (natural language tool kit)](https://www.nltk.org/) and some customized context free grammars to recognize the sentence structures. Feel free to add more words to the non-terminal variable to expand the functionality of the AI
+In `sentences` directory, there are 10 different pre-defined sentences as txt files, each with a different syntax. One is welcome to add more sentences as txt files to test the functionality of the AI. In the `parser.py` file, the AI use the [nltk (natural language tool kit)](https://www.nltk.org/) and some customized context free grammars to recognize the sentence structures. Feel free to add more words to the non-terminal variable to expand the functionality of the AI
 
 ## How to Use
 
@@ -20,7 +20,7 @@ In the parser directory, run the command
 
 `python parser.py sentences/.txt`
 
-Where the _sentences/.txt_ is an optional argument, if not provided, the AI will take user input
+Where the `sentences/.txt` is an optional argument, if not provided, the AI will take user input
 
 ## Example Output
 

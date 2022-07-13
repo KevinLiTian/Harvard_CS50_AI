@@ -10,11 +10,11 @@ Reinforcement learning is quite useful in these kinds of mathematical strategy g
 
 ## Files
 
-The _nim.py_ file contains the definition of the Nim game itself and a NimAI that trains itself by playing the game over and over again. The _play.py_ file starts the training process and the game by calling functions in _nim.py_
+The `nim.py` file contains the definition of the Nim game itself and a NimAI that trains itself by playing the game over and over again. The `play.py` file starts the training process and the game by calling functions in `nim.py`
 
 ## How to Use
 
-Check in the _play.py_ file, the train function takes in an integer input as how many games will the NimAI train by playing with itself. Use input of 0 to play against an untrained AI and use input of 10000 to play against a well trained one. After configuring the number of training games, run the command
+Check in the `play.py` file, the train function takes in an integer input as how many games will the NimAI train by playing with itself. Use input of 0 to play against an untrained AI and use input of 10000 to play against a well trained one. After configuring the number of training games, run the command
 
 `python play.py`
 

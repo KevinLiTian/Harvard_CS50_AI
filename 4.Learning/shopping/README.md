@@ -10,19 +10,19 @@ The AI will have access to the data of previous users such as what webpages they
 
 ## Files
 
-The _shopping.csv_ file contains all the data regarding over 10k users, feel free to view them in Microsoft Excel, Google sheets or a text editor. The _shopping.py_ file contains the loading of data, the training of the model and the predictions along with its evaluation
+The `shopping.csv` file contains all the data regarding over 10k users, feel free to view them in Microsoft Excel, Google sheets or a text editor. The `shopping.py` file contains the loading of data, the training of the model and the predictions along with its evaluation
 
 ## How to Use
 
-Make sure _scikit-learn_ is installed on your device, if not, use the command
+Make sure `scikit-learn` is installed on your device, if not, use the command
 
 `pip install scikit-learn`
 
-In the _shopping_ directory, run the command
+In the `shopping` directory, run the command
 
 `python shopping.py shopping.csv`
 
-Where the _shopping.csv_ is the data file. Feel free to add more data files
+Where the `shopping.csv` is the data file. Feel free to add more data files
 
 ## Example Output
 

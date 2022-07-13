@@ -18,10 +18,10 @@ That puzzle was on the simpler side. With more characters and more sentences, th
 
 ## Files
 
-There are two files, _logic.py_ and _puzzle.py_. _Logic.py_ has all the helper functions for us to translate human logic into AI knowledge, such as AND, OR, NOT, etc. Furthermore there are also functions to give entailments based on existing knowledge base such as the model check function. _Puzzle.py_ is the actual use of all the helper functions in _logic.py_. There are four scenarios, each have its own KB. We have to determine whether each character in each scenario is a knight or a knave based on the corresponding KB. Some are easy for human to "logic" it out and some are a bit tricky, that's why AI will be better at these kinds of job since they will never make mistakes, they "algorithm" it out (otherwise blame on the programmer LOL)
+There are two files, `logic.py` and `puzzle.py`. `Logic.py` has all the helper functions for us to translate human logic into AI knowledge, such as AND, OR, NOT, etc. Furthermore there are also functions to give entailments based on existing knowledge base such as the model check function. `Puzzle.py` is the actual use of all the helper functions in `logic.py`. There are four scenarios, each have its own KB. We have to determine whether each character in each scenario is a knight or a knave based on the corresponding KB. Some are easy for human to "logic" it out and some are a bit tricky, that's why AI will be better at these kinds of job since they will never make mistakes, they "algorithm" it out (otherwise blame on the programmer LOL)
 
 ## How to Use
 
-Go into the _puzzle.py_ and check the four scenarios, try to reason it out which character is a knight or a knave. Then in the _knights_ directory, run the command below to see if you got it right!
+Go into the `puzzle.py` and check the four scenarios, try to reason it out which character is a knight or a knave. Then in the `knights` directory, run the command below to see if you got it right!
 
 `python puzzle.py`

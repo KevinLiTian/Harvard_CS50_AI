@@ -4,15 +4,15 @@ An AI that uses the Minimax Algorithm to play the Tic-Tac-Toe game optimally
 
 ## Files
 
-The runner.py is used to initiate the pygame instance and it uses functions written in tictactoe.py as the logic for the AI. In tictactoe.py, the AI determines board state, possible actions, win conditions and using the Minimax Algorithm to make the optimal move at the current state of the game
+The `runner.py` is used to initiate the pygame instance and it uses functions written in `tictactoe.py` as the logic for the AI. In `tictactoe.py`, the AI determines board state, possible actions, win conditions and using the Minimax Algorithm to make the optimal move at the current state of the game
 
 ## How to Play
 
-Make sure _pygame_ is installed on your device, if not, use the command
+Make sure `pygame` is installed on your device, if not, use the command
 
 `pip install pygame`
 
-In the _tictactoe_ directory, run the command
+In the `tictactoe` directory, run the command
 
 `python runner.py`
 

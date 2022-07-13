@@ -36,11 +36,11 @@ PR(p) represents the page rank, which is also the probability of getting visited
 
 ## Files
 
-There are three set of sample pages in folders _corpus0_, _corpus1_ and _corpus2, and a main file \_pagerank.py_. In _pagerank.py_, there are two constants, the damping factor (d=0.85) and the sample size (N=10000). The main function takes in arguments specifying which set of pages the program will be using and pass them into two functions, the _sample_pagerank_ and the _iterate_pagerank_. They uses the Random Surfer Model and the Iterative Algorithm respectively
+There are three set of sample pages in folders `corpus0`, `corpus1` and `corpus2`, and a main file `pagerank.py`. In `pagerank.py`, there are two constants, the damping factor (d=0.85) and the sample size (N=10000). The main function takes in arguments specifying which set of pages the program will be using and pass them into two functions, the `sample_pagerank` and the `iterate_pagerank`. They uses the Random Surfer Model and the Iterative Algorithm respectively
 
 ## How to Use
 
-In the _pagerank_ directory, run the command
+In the `pagerank` directory, run the command
 
 `python pagerank.py pageset`
 

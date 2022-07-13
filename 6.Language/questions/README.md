@@ -8,7 +8,7 @@ Question Answering (QA) is a field within natural language processing focused on
 
 ## Files
 
-In the _corpus_ directory, there are some documents from wikipedia which contains some information for the AI to use. One can add more information to this directory to expand the functionality of the Q&A AI. In the _questions.py_, the AI reads from the documents, tokenize files and sentences, then use tf-idf to calculate the importance of certain words, reply the users' queries with the most relevant sentence
+In the `corpus` directory, there are some documents from wikipedia which contains some information for the AI to use. One can add more information to this directory to expand the functionality of the Q&A AI. In the `questions.py`, the AI reads from the documents, tokenize files and sentences, then use tf-idf to calculate the importance of certain words, reply the users' queries with the most relevant sentence
 
 ## How to Use
 
