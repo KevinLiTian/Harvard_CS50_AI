@@ -14,7 +14,7 @@ The dataset is too large, therefore the `data` directory only contains the links
 
 ## How to Use
 
-Make sure Tensorflow, opencv-python and scikit-learn are installed. If not, run the following command
+Make sure `Tensorflow`, `opencv-python` and `scikit-learn` are installed. If not, run the following command
 
 `pip install tensorflow opencv-python scikit-learn`
 
