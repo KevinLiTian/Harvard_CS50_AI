@@ -35,3 +35,7 @@ Recommanded to learn in the order of the lectures, from `0.Search` to `6.Languag
 3. Check the completed projects, read the descriptions, and run them to see what they do. It is recommanded to DIY the projects afterwards, the specifications and release materials of each project are in the `DIY` directory
 
 Learning AI is a long road and this is just a beginning, it is normal if you have any difficulties understanding the notes, example codes or the projects. Feel free to contact me if needed through my emails <kevintian.li@mail.utoronto.ca> or <kevin.li20021106@gmail.com>
+
+## Troubleshoot
+
+- If some download links are not working when you click them, try to right click and copy link address, then paste the address in your browser and hit enter
