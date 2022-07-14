@@ -7,4 +7,4 @@ Let the AI take in template sentences and it will be able to extract the informa
 And by telling the AI that "Facebook, 2004" and "Google, 1998" are what we are looking for, the AI will be able to recognize the template that 
 - "{company} was founded in {year}"
 
-Examples and source codes can be found [HERE](https://cdn.cs50.net/ai/2020/spring/lectures/6/src6/templates/)
+To see examples and source codes, downloaded from [HERE](http://cdn.cs50.net/ai/2020/spring/lectures/6/src6.zip) and navigate into the `templates` directory
