@@ -27,3 +27,7 @@ The `evaluate` function should accept a list of `labels` (the true labels for th
 - You may assume each label will be `1` for positive results (users who did go through with a purchase) or `0` for negative results (users who did not go through with a purchase).
 
 You should not modify anything else in `shopping.py` other than the functions the specification calls for you to implement, though you may write additional functions and/or import other Python standard library modules. You may also import `numpy` or `pandas` or anything from `scikit-learn`, if familiar with them, but you should not use any other third-party Python modules. You should not modify `shopping.csv`.
+
+## Hints
+
+- For information and examples about how to load data from a CSV file, see Python’s [CSV documentation](https://docs.python.org/3/library/csv.html)

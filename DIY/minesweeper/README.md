@@ -30,3 +30,14 @@ In the `MinesweeperAI` class, complete the implementations of `add_knowledge`, `
   - The move must not be a move that has already been made.
   - The move must not be a move that is known to be a mine.
   - If no such moves are possible, the function should return `None`.
+
+## Hints
+
+- Be sure you’ve thoroughly read the Background section to understand how knowledge is represented in this AI and how the AI can make inferences
+- If feeling less comfortable with object-oriented programming, you may find [Python’s documentation on classes](https://docs.python.org/3/tutorial/classes.html) helpful
+- You can find some common `set` operations in [Python’s documentation on sets](https://docs.python.org/3/library/stdtypes.html#set)
+- When implementing `known_mines` and `known_safes` in the `Sentence` class, consider: under what circumstances do you know for sure that a sentence’s cells are safe? Under what circumstances do you know for sure that a sentence’s cells are mines?
+- `add_knowledge` does quite a lot of work, and will likely be the longest function you write for this project by far. It will likely be helpful to implement this function’s behavior one step at a time
+- You’re welcome to add new methods to any of the classes if you would like, but you should not modify any of the existing functions’ definitions or arguments
+- When you run your AI (as by clicking “AI Move”), note that it will not always win! There will be some cases where the AI must guess, because it lacks sufficient information to make a safe move. This is to be expected. `runner.py` will print whether the AI is making a move it believes to be safe or whether it is making a random move
+- Be careful not to modify a set while iterating over it. Doing so may result in errors!

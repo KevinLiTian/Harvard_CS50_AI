@@ -31,3 +31,9 @@ Complete the implementations of `player`, `actions`, `result`, `winner`, `termin
 For all functions that accept a `board` as input, you may assume that it is a valid board (namely, that it is a list that contains three rows, each with three values of either `X`, `O`, or `EMPTY`). You should not modify the function declarations (the order or number of arguments to each function) provided.
 
 Once all functions are implemented correctly, you should be able to run `python runner.py` and play against your AI. And, since Tic-Tac-Toe is a tie given optimal play by both sides, you should never be able to beat the AI (though if you don’t play optimally as well, it may beat you!)
+
+## Hints
+
+- If you’d like to test your functions in a different Python file, you can import them with lines like `from tictactoe import initial_state`
+- You’re welcome to add additional helper functions to `tictactoe.py`, provided that their names do not collide with function or variable names already in the module
+- Alpha-beta pruning is optional, but may make your AI run more efficiently!
