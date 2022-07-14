@@ -37,7 +37,7 @@ If one wants to run the unit test `testcase.py`, use the command
 
 ## Example Output
 
-```Python
+```shell
 $ python heredity.py data/family0.csv
 Harry:
   Gene:

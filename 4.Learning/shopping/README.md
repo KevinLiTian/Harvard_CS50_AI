@@ -26,7 +26,7 @@ Where the `shopping.csv` is the data file. Feel free to add more data files
 
 ## Example Output
 
-```python
+```shell
 $ python shopping.py shopping.csv
 Correct: 4088
 Incorrect: 844

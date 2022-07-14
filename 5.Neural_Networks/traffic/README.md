@@ -18,7 +18,7 @@ Make sure `Tensorflow`, `opencv-python` and `scikit-learn` are installed. If not
 
 `pip install tensorflow opencv-python scikit-learn`
 
-In the traffic directory, run the command
+In the `traffic` directory, run the command
 
 `python traffic.py data model_filename`
 
@@ -26,7 +26,7 @@ Where `data` should be either gtsrb or gtsrb-small which are downloaded through 
 
 ## Example Output
 
-```python
+```shell
 $ python traffic.py gtsrb
 Epoch 1/10
 500/500 [==============================] - 5s 9ms/step - loss: 3.7139 - accuracy: 0.1545

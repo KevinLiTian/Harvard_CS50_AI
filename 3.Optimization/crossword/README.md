@@ -12,7 +12,7 @@ The `data` directory contains the structure and words files for the crossword pu
 
 ## How to Use
 
-In the crossword directory, run the command
+In the `crossword` directory, run the command
 
 `python generate.py data/structure.txt data/words.txt output.png`
 
@@ -20,7 +20,7 @@ Where `structure` and `words` are txt files in the `data` directory, one can use
 
 ## Example Output
 
-```python
+```shell
 $ python generate.py data/structure1.txt data/words1.txt output.png
 ██████████████
 ███████M████R█

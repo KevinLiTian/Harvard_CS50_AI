@@ -16,7 +16,7 @@ Make sure `nltk` is installed, if not, use the following command
 
 `pip install nltk`
 
-In the parser directory, run the command
+In the `questions` directory, run the command
 
 `python questions.py corpus`
 
@@ -24,7 +24,7 @@ Then enter some query as prompt to get a reply from the AI
 
 ## Example Output
 
-```python
+```shell
 $ python questions.py corpus
 Query: What are the types of supervised learning?
 Types of supervised learning algorithms include Active learning , classification and regression.

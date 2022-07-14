@@ -32,7 +32,7 @@ If you are using the large dataset, it will take some time for the data to load 
 
 ## Example Output
 
-```Python
+```shell
 $ python degrees.py large
 Loading data...
 Data loaded.

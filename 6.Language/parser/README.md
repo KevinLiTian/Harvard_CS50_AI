@@ -16,7 +16,7 @@ Make sure `nltk` is installed, if not, use the following command
 
 `pip install nltk`
 
-In the parser directory, run the command
+In the `parser` directory, run the command
 
 `python parser.py sentences/.txt`
 
@@ -24,7 +24,7 @@ Where the `sentences/.txt` is an optional argument, if not provided, the AI will
 
 ## Example Output
 
-```python
+```shell
         S
    _____|___
   NP        VP

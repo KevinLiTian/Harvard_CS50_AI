@@ -48,7 +48,7 @@ Where pageset is the existing folder of html pages in the directory. One can use
 
 ## Example Output
 
-```Python
+```shell
 $ python pagerank.py corpus0
 PageRank Results from Sampling (n = 10000)
   1.html: 0.2223

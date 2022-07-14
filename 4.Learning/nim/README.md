@@ -14,7 +14,7 @@ The `nim.py` file contains the definition of the Nim game itself and a NimAI tha
 
 ## How to Use
 
-Check in the `play.py` file, the train function takes in an integer input as how many games will the NimAI train by playing with itself. Use input of 0 to play against an untrained AI and use input of 10000 to play against a well trained one. After configuring the number of training games, run the command
+Check in the `play.py` file, the train function takes in an integer input as how many games will the NimAI train by playing with itself. Use input of 0 to play against an untrained AI and use input of 10000 to play against a well trained one. After configuring the number of training games, run this command in the `nim` directory:
 
 `python play.py`
 
@@ -22,7 +22,7 @@ As a human player, one should input which pile and what amount to remove accordi
 
 ## Example Output
 
-```python
+```shell
 $ python play.py
 Playing training game 1
 Playing training game 2

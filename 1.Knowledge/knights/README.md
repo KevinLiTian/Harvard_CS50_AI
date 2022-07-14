@@ -25,3 +25,20 @@ There are two files, `logic.py` and `puzzle.py`. `Logic.py` has all the helper f
 Go into the `puzzle.py` and check the four scenarios, try to reason it out which character is a knight or a knave. Then in the `knights` directory, run the command below to see if you got it right!
 
 `python puzzle.py`
+
+## Example Output
+
+```shell
+Puzzle 0
+    A is a Knave
+Puzzle 1
+    A is a Knave
+    B is a Knight
+Puzzle 2
+    A is a Knave
+    B is a Knight
+Puzzle 3
+    A is a Knight
+    B is a Knave
+    C is a Knight
+```
