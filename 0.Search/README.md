@@ -67,15 +67,15 @@ DFS(G,v)   ( v is the vertex where the search starts )
     for each vertex u, set visited[u] := false;
     push S, v;
     while (S is not empty) do
-    u := pop S;
+        u = pop S;
 
-    if u is destination then
-        return path from v to u
+        if u is destination then
+            return path from v to u
 
-    if (not visited[u]) then
-        visited[u] := true;
-        for each unvisited neighbour w of u
-            push S, w;
+        if (not visited[u]) then
+            visited[u] = true;
+            for each unvisited neighbour w of u
+                push S, w;
 ```
 
 #### [Breadth-First Search (BFS)](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
@@ -85,7 +85,7 @@ Guarantee the shortest path, but takes relatively a long time as it seeks each d
 
 <img width="677" alt="Screen Shot 2022-06-19 at 8 48 21 PM" src="https://user-images.githubusercontent.com/98674104/174507239-b6c05071-3100-4143-81d1-95581c24f33e.png">
 
-BFS typically uses a [queue](https://www.programiz.com/dsa/queue) data structure to store all of the possible actions. Below is the pseudo code for the BFS implementation
+BFS typically uses a [queue](https://www.programiz.com/dsa/queue) data structure to store all of the possible actions. Below is the pseudo code for the BFS implementation, the only difference between DFS and BFS is one uses stack and one uses queue
 
 ```
 BFS (G, s)  (G is the graph and s is the source node)
