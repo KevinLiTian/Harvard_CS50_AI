@@ -44,7 +44,7 @@ In the `MinesweeperAI` class, complete the implementations of `add_knowledge`, `
 
 There is a specific type of inference regarding minesweeper game. Take a look at the following example
 
-Figure 1
+<img src="https://user-images.githubusercontent.com/99038613/179137274-3878c0fd-7fba-4551-a617-f1f5679a2972.jpg" width=60%>
 
 We know from the top-middle cell that mine in `{A, B, C} = 1`, and from the bottom-middle cell that mine in `{A, B, C, D, E} = 2`; from these two sentences, we are able to infer that `{D, E} = 1`. How to represent the infer process? We can infer by `{A, B, C, D, E} - {A, B, C} = 2 - 1`, which can be generalized to `{Set 2} - {Set 1} = Mine 2 - Mine 1`
 
