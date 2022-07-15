@@ -81,11 +81,11 @@ A Markov chain is a sequence of random variables where the distribution of each 
 
 To start constructing a Markov chain, we need a transition model that will specify the the probability distributions of the next event based on the possible values of the current event
 
-Figure 2
+<img src="https://user-images.githubusercontent.com/99038613/179137384-8090b40a-940d-4605-8461-0052312a75a6.jpg" width=60%>
 
 In this example, the probability of tomorrow being sunny based on today being sunny is 0.8. This is reasonable, because it is more likely than not that a sunny day will follow a sunny day. However, if it is rainy today, the probability of rain tomorrow is 0.7, since rainy days are more likely to follow each other. Using this transition model, it is possible to sample a Markov chain. Start with a day being either rainy or sunny, and then sample the next day based on the probability of it being sunny or rainy given the weather today. Then, condition the probability of the day after tomorrow based on tomorrow, and so on, resulting in a Markov chain:
 
-Figure 3
+![3](https://user-images.githubusercontent.com/99038613/179137478-9f3f7b58-d331-404e-bbe9-3c28aaf5a826.jpg)
 
 #### Hidden Markov Models
 
