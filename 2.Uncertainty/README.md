@@ -77,7 +77,15 @@ The Markov assumption is an assumption that the current state depends on only a 
 
 #### Markov Chain
 
-A Markov chain is a sequence of random variables where the distribution of each variable follows the Markov assumption. Just like simulating the selection process, the Markov chain predicts future based on past probabilities. For instance, in weather predicting, the Markov chain predicts whether tomorrow will rain or not based on the weather condition of today and past probabilities. If today is raining, if tomorrow will still be raining will be based on the probability of two consecutive rainy days in the past
+A Markov chain is a sequence of random variables where the distribution of each variable follows the Markov assumption. That is, each event in the chain occurs based on the probability of the event before it
+
+To start constructing a Markov chain, we need a transition model that will specify the the probability distributions of the next event based on the possible values of the current event
+
+Figure 2
+
+In this example, the probability of tomorrow being sunny based on today being sunny is 0.8. This is reasonable, because it is more likely than not that a sunny day will follow a sunny day. However, if it is rainy today, the probability of rain tomorrow is 0.7, since rainy days are more likely to follow each other. Using this transition model, it is possible to sample a Markov chain. Start with a day being either rainy or sunny, and then sample the next day based on the probability of it being sunny or rainy given the weather today. Then, condition the probability of the day after tomorrow based on tomorrow, and so on, resulting in a Markov chain:
+
+Figure 3
 
 #### Hidden Markov Models
 

@@ -16,9 +16,11 @@ Add knowledge to knowledge bases `knowledge0`, `knowledge1`, `knowledge2`, and `
   - B then says “C is a knave.”
   - C says “A is a knight.”
 
-In each of the above puzzles, each character is either a knight or a knave. Every sentence spoken by a knight is true, and every sentence spoken by a knave is false.
+In each of the above puzzles, each character is either a knight or a knave. Every sentence spoken by a knight is true, and every sentence spoken by a knave is false
 
-Once you’ve completed the knowledge base for a problem, you should be able to run `python puzzle.py` to see the solution to the puzzle.
+You should only tell the AI what the characters said with propositional logics defined in `logic.py`, without telling the AI what you think. You can use the `model_check` function in `logic.py` to check what the entailments are
+
+Once you’ve completed the knowledge base for a problem, you should be able to run `python puzzle.py` to see the solution to the puzzle
 
 ## Hints
 

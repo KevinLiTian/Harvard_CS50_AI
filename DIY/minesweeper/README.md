@@ -41,3 +41,11 @@ In the `MinesweeperAI` class, complete the implementations of `add_knowledge`, `
 - You’re welcome to add new methods to any of the classes if you would like, but you should not modify any of the existing functions’ definitions or arguments
 - When you run your AI (as by clicking “AI Move”), note that it will not always win! There will be some cases where the AI must guess, because it lacks sufficient information to make a safe move. This is to be expected. `runner.py` will print whether the AI is making a move it believes to be safe or whether it is making a random move
 - Be careful not to modify a set while iterating over it. Doing so may result in errors!
+
+There is a specific type of inference regarding minesweeper game. Take a look at the following example
+
+Figure 1
+
+We know from the top-middle cell that mine in `{A, B, C} = 1`, and from the bottom-middle cell that mine in `{A, B, C, D, E} = 2`; from these two sentences, we are able to infer that `{D, E} = 1`. How to represent the infer process? We can infer by `{A, B, C, D, E} - {A, B, C} = 2 - 1`, which can be generalized to `{Set 2} - {Set 1} = Mine 2 - Mine 1`
+
+Every type of problem has its own inference method, and we as programmers are to find these patterns and engineer them with programming languages. This is knowledge engineering

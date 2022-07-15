@@ -117,10 +117,10 @@ Manhattan distance vs Euclidean distance. We use either of these to estimate the
 
 #### [A\* Search](https://www.geeksforgeeks.org/a-search-algorithm/)
 
-Consider both the cost of path until now and the estimated cost to the goal, g(n) + h(n) </br>
+Consider both the cost of path until now and the estimated cost to the goal, g(n) + h(n)
 
-g(n) = cumalative cost reaching the current node </br>
-h(n) = estimated cost to the destination node </br>
+- g(n) = cumalative cost reaching the current node
+- h(n) = estimated cost to the destination node
 
 Thus, A\* is the best path search algorithm as it considers the distance, weight, cost, etc. and it guarantees to find the shortest path
 
