@@ -1,4 +1,6 @@
 import termcolor
+import colorama
+colorama.init()
 
 from logic import *
 
@@ -35,18 +37,20 @@ knowledge = And(
     Or(knife, revolver, wrench)
 )
 
-# Initial cards
+# Initial clues
 knowledge.add(And(
     Not(mustard), Not(kitchen), Not(revolver)
 ))
 
-# Unknown card
+"""
+# First Clues
 knowledge.add(Or(
     Not(scarlet), Not(library), Not(wrench)
 ))
 
-# Known cards
+# Second Clues
 knowledge.add(Not(plum))
 knowledge.add(Not(ballroom))
+"""
 
 check_knowledge(knowledge)

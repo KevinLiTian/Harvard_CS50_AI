@@ -104,6 +104,10 @@ BFS (G, s)  (G is the graph and s is the source node)
                 Q.enqueue( w )
 ```
 
+#### Example
+
+Check out `examples` directory for Python implementation of DFS and BFS that solves mazes
+
 #### [Greedy Best-First Search](https://www.javatpoint.com/ai-informed-search-algorithms#:~:text=Greedy%20best%2Dfirst%20search%20algorithm,the%20advantages%20of%20both%20algorithms.)
 
 At any time, choose the state that is closest to the goal as the next state (only consider the estimated cost to the goal), as estimated by a
