@@ -20,7 +20,13 @@ Assigning a variable the value of the closest observation. For instance, given a
 
 Other than considering the neighbors, another way of going about a classification problem is the perceptron learning. Oppose to only looking at a small area of data, perceptron learning looks in a bigger picture, and tries to create a decision boundary, or graphically, create a straight line separating two types of data. This method can also be called linear regression
 
+<img src="https://user-images.githubusercontent.com/99038613/179422902-04df9c74-740a-4f48-9eae-64930a51a6ef.jpg" width=60%>
+
 This method creates a "hard" threshhold function so that anything on one side of the boundary is of a certain value and on the other side another. But it might be too certain and in the real world, sometimes events involves some degree of uncertainty. So if we want to incorporate uncertainty and give the probability of a data point belongs to a certain category, a logistic function can be used instead to create a "soft" threshhold function. This method is called logistic regression
+
+<img src="https://user-images.githubusercontent.com/99038613/179422910-16120f5e-bdd1-4402-9cd7-a6014d7d11ad.jpg" width=60%>
+
+<img src="https://user-images.githubusercontent.com/99038613/179422913-d6bf43e1-8972-4e72-afe8-ad187440a8fc.jpg" width=60%>
 
 #### Support Vector Machine
 
