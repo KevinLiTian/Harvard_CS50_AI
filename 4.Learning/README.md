@@ -95,3 +95,5 @@ Clustering is a typical task of unsupervised learning which is to group the data
 #### [K-Means Clustering](https://en.wikipedia.org/wiki/K-means_clustering)
 
 KMC is a clustering algorithm that groups data into k clusters. It initially selects k random centers and marks each data point to its closest center. Then iteratively, the center moves to the average mid point of all its marked data points, then each data point will be remarked to the current closest center. This iterative clustering algorithm will terminate when no data point changes its belonging and finally converges
+
+![1](https://user-images.githubusercontent.com/99038613/179422984-6359733e-20aa-4f1a-8f76-1981d599730e.jpg)
