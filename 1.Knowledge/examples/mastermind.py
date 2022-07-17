@@ -35,6 +35,7 @@ for i in range(4):
                     Symbol(f"{c1}{i}"), Not(Symbol(f"{c2}{i}"))
                 ))
 
+# Knowledge Base for AI to deduce upon
 knowledge.add(Or(
     And(Symbol("red0"), Symbol("blue1"), Not(Symbol("green2")), Not(Symbol("yellow3"))),
     And(Symbol("red0"), Symbol("green2"), Not(Symbol("blue1")), Not(Symbol("yellow3"))),

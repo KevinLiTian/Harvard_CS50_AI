@@ -1,3 +1,5 @@
+""" Construct Bayesian Network """
+
 from pomegranate import *
 
 # Rain node has no parents

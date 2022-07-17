@@ -15,3 +15,6 @@ tensorflow
 
 # For natural language processing in Parser and Questions
 nltk
+
+# Uncertainty Library
+pomegranate

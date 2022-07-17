@@ -1,3 +1,5 @@
+""" Markov Chain """
+
 from pomegranate import *
 
 # Define starting probabilities

@@ -1,6 +1,8 @@
+""" Given a fact/observation, predict the probability of other events taking place """
+
 from model import model
 
-# Calculate predictions
+# Given fact/observation
 predictions = model.predict_proba({
     "train": "delayed"
 })
