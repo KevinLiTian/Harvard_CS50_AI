@@ -14,8 +14,8 @@ In the `digits` directory, run the command `python recognition.py model.h5`
 
 A pygame window should pop up and you can use your mouse to draw something
 
-Figure 1
+![1](https://user-images.githubusercontent.com/99038613/179424233-51522b53-1586-420e-9df1-c11a01630490.jpg)
 
 Click `Classify` to let the neural network classify what the number you are writing. Click `Reset` to clear the drawing area and the classification
 
-Figure 2
+![2](https://user-images.githubusercontent.com/99038613/179424236-f84a38d5-2cd8-48c9-849c-0c17b8a26ff3.jpg)
