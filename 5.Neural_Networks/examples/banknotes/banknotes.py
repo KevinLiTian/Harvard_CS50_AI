@@ -1,11 +1,13 @@
+""" Using tensorflow neural network to identify counterfeit banknotes """
+
 import csv
 import tensorflow as tf
 
 from sklearn.model_selection import train_test_split
 
 # Read data in from file
-with open("banknotes.csv") as f:
-    reader = csv.reader(f)
+with open("banknotes.csv", encoding="utf-8") as file:
+    reader = csv.reader(file)
     next(reader)
 
     data = []

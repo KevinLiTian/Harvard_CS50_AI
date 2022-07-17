@@ -1,4 +1,5 @@
-import math
+""" Image Convolution """
+
 import sys
 
 from PIL import Image, ImageFilter

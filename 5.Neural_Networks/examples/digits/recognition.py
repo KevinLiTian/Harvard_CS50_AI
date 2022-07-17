@@ -1,8 +1,10 @@
+""" Identify Human Handwriting with Trained Neural Network """
+
+import sys
+
 import numpy as np
 import pygame
-import sys
 import tensorflow as tf
-import time
 
 # Check command-line arguments
 if len(sys.argv) != 2:

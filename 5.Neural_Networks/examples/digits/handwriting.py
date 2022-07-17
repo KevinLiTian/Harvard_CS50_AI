@@ -1,3 +1,5 @@
+""" Train the Neural Network with MNIST dataset """
+
 import os
 import sys
 import tensorflow as tf
