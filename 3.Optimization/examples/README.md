@@ -6,7 +6,7 @@
 
 The problem we are to solve is: inside a space, there are randomly located houses. We are to place some number of hospitals so that the sum of distance from any house to its closest hospital results as small as possible
 
-Figure 1
+![1](https://user-images.githubusercontent.com/99038613/179422421-7789a0a9-7fcc-42c4-a70a-6417b4bb50f2.jpg)
 
 The idea of local search here is to first randomly place the hospitals on the graph, then each step we move one hospital for one grid. If the total distance goes down, we accept this state and repeat the process. This is a typical hill climbing search
 
