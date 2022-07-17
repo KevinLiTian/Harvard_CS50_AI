@@ -1,6 +1,9 @@
+""" DFS/BFS Algorithm """
+
 import sys
 
 class Node():
+    """ A node that contains information needed for search """
     def __init__(self, state, parent, action):
         self.state = state
         self.parent = parent
@@ -8,6 +11,7 @@ class Node():
 
 
 class StackFrontier():
+    """ Uses a Stack to store information. DFS """
     def __init__(self):
         self.frontier = []
 
@@ -30,7 +34,7 @@ class StackFrontier():
 
 
 class QueueFrontier(StackFrontier):
-
+    """ Uses a Queue to store information. BFS """
     def remove(self):
         if self.empty():
             raise Exception("empty frontier")
@@ -40,7 +44,7 @@ class QueueFrontier(StackFrontier):
             return node
 
 class Maze():
-
+    """ Class to describe and solve the maze """
     def __init__(self, filename):
 
         # Read file and set height and width of maze
@@ -215,15 +219,25 @@ class Maze():
         img.save(filename)
 
 
-if len(sys.argv) != 2:
-    sys.exit("Usage: python maze.py maze.txt")
+def main():
+    """ Main Function
+    Take arguments from command line, find the maze.txt
+    Read from the maze and construct the maze
+    Solve the maze and output the results
+    """
+    if len(sys.argv) != 2:
+        sys.exit("Usage: python maze.py maze.txt")
 
-m = Maze(sys.argv[1])
-print("Maze:")
-m.print()
-print("Solving...")
-m.solve()
-print("States Explored:", m.num_explored)
-print("Solution:")
-m.print()
-m.output_image("maze.png", show_explored=True)
+    m = Maze(sys.argv[1])
+    print("Maze:")
+    m.print()
+    print("Solving...")
+    m.solve()
+    print("States Explored:", m.num_explored)
+    print("Solution:")
+    m.print()
+    m.output_image("maze.png", show_explored=True)
+
+
+if __name__ == "__main__":
+    main()
