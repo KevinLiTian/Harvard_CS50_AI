@@ -28,7 +28,11 @@ Hill climbing is one type of a local search algorithm. In this algorithm, the ne
   - **First-choice**: Choose the first higher-valued neighbor
   - **Random-restart**: Conduct hill climbing multiple times
   - **Local Beam Search**: Chooses the k highest-valued neighbors
-- **Limitation**: Hill climbing only changes current state if neighboring state is better, but if we reached any local minima/maxmima, the neighboring states are all worse than the current state, thus stuck at that local point, then the algorithm will terminate which leaves us at a local, instead of a global maxima/minima
+- **Limitation**: Hill climbing only changes current state if neighboring state is better, but if we reached any local minima/maxmima, the neighboring states are all worse than the current state, thus stuck at that local point, then the algorithm will terminate which leaves us at a local, instead of a global optimum
+
+#### Random Start
+
+One way to get around this limitation is by choosing the start points randomly, and re-run the hill climbing algorithm multiple times, then record the result of each rum. Maybe some iterations of hill climb will result better than other hill climbs because the start point of those iterations are randomly choosed and are lucky enough to fall into the local region of the global optimum
 
 #### [Simulated Annealing](https://en.wikipedia.org/wiki/Simulated_annealing)
 

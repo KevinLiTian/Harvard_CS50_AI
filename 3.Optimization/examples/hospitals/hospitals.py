@@ -1,8 +1,15 @@
+"""
+A graph of some houses randomly placed in it
+Goal is to find the optimal locations for placing some hospitals
+so that the sum of the distance from any house to its closest hospital
+results as small as possible
+"""
+
 import random
 
 
 class Space():
-
+    """ Describe the graph """
     def __init__(self, height, width, num_hospitals):
         """Create a new state space with given dimensions."""
         self.height = height
@@ -189,11 +196,22 @@ class Space():
 
         img.save(filename)
 
+def main():
+    """ Main Function
+    Generates the graph
+    Use hill climb to find the optimal location of hospitals
+    Optional: Use random start to have a better chance of finding global optimum
+    """
+    # Create a new space and add houses randomly
+    s = Space(height=10, width=20, num_hospitals=3)
+    for i in range(15):
+        s.add_house(random.randrange(s.height), random.randrange(s.width))
 
-# Create a new space and add houses randomly
-s = Space(height=10, width=20, num_hospitals=3)
-for i in range(15):
-    s.add_house(random.randrange(s.height), random.randrange(s.width))
+    # Use local search to determine hospital placement
+    __ = s.hill_climb(image_prefix="hospitals", log=True)
 
-# Use local search to determine hospital placement
-hospitals = s.hill_climb(image_prefix="hospitals", log=True)
+    # Ramdom Restart
+    # __ = s.random_restart(maximum=10,image_prefix="hospitals", log=True)
+
+if __name__ == "__main__":
+    main()

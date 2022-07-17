@@ -1,4 +1,4 @@
-# Logic
+# Knowledge Examples
 
 The `logic.py` file contains helpful propositional logic representations using Python such as logic symbols (assertion of reality), logical connectives (and, or, not...), and functions to check the logical representation and entailments (`formula`, `model_check`). And the remaining four files contain the utilization of propositional logics
 

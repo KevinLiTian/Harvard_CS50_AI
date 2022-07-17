@@ -1,4 +1,4 @@
-# Maze
+# Search Examples
 
 This example shows the example algorithm for both BFS and DFS since the only difference between them is the data structure used to store the neighbor nodes. This program also outputs the total number of states explored and a png showing the states explored as red and the final path found as yellow
 

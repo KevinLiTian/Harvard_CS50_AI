@@ -3,6 +3,8 @@ Naive backtracking search without any heuristics or inference.
 """
 
 VARIABLES = ["A", "B", "C", "D", "E", "F", "G"]
+
+# Variables that cannot have the same value
 CONSTRAINTS = [
     ("A", "B"),
     ("A", "C"),

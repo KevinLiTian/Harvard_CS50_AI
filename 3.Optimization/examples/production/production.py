@@ -1,3 +1,8 @@
+"""
+Optimizing using linear programming given some functions and variables
+Run 'python production.py'
+"""
+
 import scipy.optimize
 
 # Objective Function: 50x_1 + 80x_2
