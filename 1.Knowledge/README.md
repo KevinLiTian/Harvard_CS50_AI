@@ -107,3 +107,7 @@ Existential quantification is an idea parallel to universal quantification. Howe
 Existential and universal quantification can be used in the same sentence. For example, the sentence ∀x. Person(x) → (∃y. House(y) ∧ BelongsTo(x, y)) expresses the idea that if x is a person, then there is at least one house, y, to which this person belongs. In other words, this sentence means that every person belongs to a house.
 
 There are other types of logic as well, and the commonality between them is that they all exist in pursuit of representing information. These are the systems we use to represent knowledge in our AI
+
+## Examples
+
+Check out some [examples](examples/) that practice these theories

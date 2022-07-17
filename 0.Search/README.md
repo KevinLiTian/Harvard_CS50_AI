@@ -187,3 +187,7 @@ function minimax(node, depth, maximizingPlayer) is
         minEva= min(minEva, eva)    //gives minimum of the values
         return minEva
 ```
+
+## Examples
+
+Check out some [examples](examples/) that practice these theories

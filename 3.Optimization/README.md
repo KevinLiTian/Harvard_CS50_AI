@@ -116,3 +116,7 @@ function BackTrack(assignment, csp)
 
     return fail if the variable cannot take on any value
 ```
+
+## Examples
+
+Check out some [examples](examples/) that practice these theories

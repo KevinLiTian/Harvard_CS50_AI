@@ -121,3 +121,7 @@ The distance between "book" and "book" is 0, since they are the same word, and s
 Amazingly, since words are represented by vectors, we are able to compute the difference vector between two vectors. For instance, take the words "man" and "king" and subtract two words. It is absurd to human to subtract two words but since to the AI, they are nothing but two vectors, therefore it is able to compute the difference as a vector. And if we add this difference to the word "woman", surprisingly, we are able to get the word "queen". This means that the AI is able to understand the actual meaning of the words
 
 `King - Man + Woman = Queen`
+
+## Examples
+
+Check out some [examples](examples/) that practice these theories

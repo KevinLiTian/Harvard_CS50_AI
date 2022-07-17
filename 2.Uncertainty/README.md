@@ -94,3 +94,7 @@ A hidden Markov model is a type of a Markov model for a system with hidden state
 #### Sensor Markov Assumption
 
 The assumption that the evidence variable depends only on the corresponding state
+
+## Examples
+
+Check out some [examples](examples/) that practice these theories

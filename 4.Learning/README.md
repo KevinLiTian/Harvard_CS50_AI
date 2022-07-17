@@ -60,7 +60,6 @@ As loss function becomes the quality indicator of the machine learning model, th
 
 <img src="https://user-images.githubusercontent.com/99038613/176824053-e2b69fd6-6de0-4644-b0b3-bf52f6ab246e.jpg">
 
-
 #### Regularization
 
 Regularization is used in order to avoid overfitting. The idea is that the quality of the model should not only depend on the loss function, but also its complexity. The model should not be too complex such like in overfitting models
@@ -81,7 +80,6 @@ Q-Learning is one model of reinforcement learning, where a function Q(s, a) outp
 
 ![屏幕截图 2022-07-01 003131](https://user-images.githubusercontent.com/99038613/176824214-ec694fde-9aa1-4b0b-95f1-d6df16bc756e.jpg)
 
-
 But there is limitation to reinforcement learning, the AI will learn the way to get rewards, but the way it learned is not necessarily the optimal way. Since the AI will choose the action with the highest reward, which is called the greedy decision making, once it finds a way, it will never explore other ways. This brings us to the tradeoff between exploration vs exploitation. In general, at the beginning of the game, the AI should have a higher chance of making random moves to explore the environment and as it learns more about the environment, there should be a higher chance the AI will make greedy moves
 
 ## Unsupervised Learning
@@ -97,3 +95,7 @@ Clustering is a typical task of unsupervised learning which is to group the data
 KMC is a clustering algorithm that groups data into k clusters. It initially selects k random centers and marks each data point to its closest center. Then iteratively, the center moves to the average mid point of all its marked data points, then each data point will be remarked to the current closest center. This iterative clustering algorithm will terminate when no data point changes its belonging and finally converges
 
 ![1](https://user-images.githubusercontent.com/99038613/179422984-6359733e-20aa-4f1a-8f76-1981d599730e.jpg)
+
+## Examples
+
+Check out some [examples](examples/) that practice these theories
