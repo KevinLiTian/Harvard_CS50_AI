@@ -1,7 +1,10 @@
-import math
-import nltk
+""" TF """
+
 import os
 import sys
+
+import nltk
+
 
 
 def main():

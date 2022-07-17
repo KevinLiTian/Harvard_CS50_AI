@@ -1,9 +1,10 @@
-from collections import Counter
+""" Use nltk ngrams to see what is the most frequent occurrence of a sequence of words """
 
-import math
-import nltk
 import os
 import sys
+from collections import Counter
+
+import nltk
 
 
 def main():

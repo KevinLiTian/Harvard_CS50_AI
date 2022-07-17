@@ -1,6 +1,9 @@
-import nltk
+""" Classify positive and negative sentences """
+
 import os
 import sys
+
+import nltk
 
 
 def main():

@@ -1,3 +1,5 @@
+""" WordNet database """
+
 from nltk.corpus import wordnet
 
 word = input("Word: ")

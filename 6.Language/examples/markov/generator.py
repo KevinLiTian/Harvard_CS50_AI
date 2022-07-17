@@ -1,5 +1,14 @@
-import markovify
+"""
+Read in existing text, produce tone-like output
+This implementation reads text written by Shakespear
+analyze with markovify and produce text that in the tone
+of Shakespeare
+"""
+
 import sys
+
+import markovify
+
 
 # Read text from file
 if len(sys.argv) != 2:

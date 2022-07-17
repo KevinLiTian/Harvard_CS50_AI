@@ -95,6 +95,10 @@ This method considers not only how many times a word appears in a document, but 
 
 Semantics is the meaning of words or sentences. While sometimes we only want to know the structure a sentence, or the important information within a context, but there are times we want the AI to understand the actual, underlying meaning of each word and sentence
 
+#### WordNet
+
+One approach is using the existing database created by researchers, the [WordNet](https://en.wikipedia.org/wiki/WordNet). It contains all the information about words such as their definitions, different senses/meanings, and relationship to other words
+
 #### Word Representation
 
 Computers only know 0s and 1s, in order for the AI to understand natural language, we have to somehow encode the words into numbers. One way to represent words is by one hot encoding. For instance, for words "He wrote a book", we can encode that:

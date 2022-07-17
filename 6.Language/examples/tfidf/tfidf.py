@@ -1,7 +1,11 @@
-import math
-import nltk
+""" TF-IDF """
+
 import os
 import sys
+import math
+
+import nltk
+
 
 
 def main():

@@ -1,3 +1,5 @@
+""" Using nltk lib to identify sentence structure """
+
 import nltk
 
 grammar = nltk.CFG.fromstring("""
