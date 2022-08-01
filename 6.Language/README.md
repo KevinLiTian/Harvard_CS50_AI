@@ -15,7 +15,7 @@ In the previous lectures, we are rephrasing human-readable problems into AI-read
 
 Syntax is sentence structure. As native speakers of some human language, we don’t struggle with producing grammatical sentences and flagging non-grammatical sentences as wrong; however, the AI has no idea about natural languages. In order for AI to understand the fundamentals of language, they have to know the sentence structures or, syntax, of the language
 
-#### Context-Free Grammar
+### Context-Free Grammar
 
 In context-free grammar, the text is abstracted from its meaning to represent the structure of the sentence using formal grammar. In another word, the actual meaning of the text are irrelevant since we are only looking at the structure of the sentence, such as nouns, verbs, adjectives, etc. For example, the sentence:
 
@@ -32,7 +32,7 @@ This stands for the structure of the sentence. Notice that the N here can be rep
 
     <img src="https://user-images.githubusercontent.com/99038613/177066741-7f7ae85b-8483-41ca-8949-accebf57c331.jpg" width=60% height=60%>
 
-#### N-Grams
+### N-Grams
 
 Sentences are often long, the AI might have a hard time recognizing something that long and it hasn't seen before. That's where N-Grams comes in. This method introduces similar idea to batch, it groups every n number (often 1-3) of words together and form a short sentence like in the sentence:
 
@@ -40,15 +40,15 @@ Sentences are often long, the AI might have a hard time recognizing something th
 
 Some N-Grams could be "How often have", "often have I", "have I said", ... Shorter sentences are more likely to appear multiple times so the AI will be able to recognize them more easily
 
-#### Tokenization
+### Tokenization
 
 Tokenization is the task of splitting a sequence of characters into pieces (tokens). Tokens can be words or sentences, which are called word tokenization or sentence tokenization respectively
 
-#### Markov Models
+### Markov Models
 
 Once we have tokens or n-grams, we can use them to predict words or sentences. For instance, if in an article, there's a lot of 3-grams "have I said", then if there is a "have" and "I" together, then the next word is highly possible to be "said". This operates just like the Markov chain, we use what happened before to predict what will happen after
 
-#### Information Extraction
+### Information Extraction
 
 Information Extraction is the task of extracting knowledge from documents. One way is to let the AI learn the syntax of the knowledge. For example, Harvard Business Review stated that "When Facebook was founded in 2004", we can tell the AI that there is a certain type of sentence looks like "When {company} was founded in {year}", and from these sentences we are able to extract the company name and year they were founded. Similar methods can be applied to more sentence structures to extract information
 
@@ -61,7 +61,7 @@ Another way to look at sentences are treating them as a collection of unordered 
 - “One of the best games I’ve played in a long time.”
 - “Kind of cheap and flimsy, not worth it.”
 
-#### Naive Bayes
+### Naive Bayes
 
 Recall the Bayes rule from lecture 2 Uncertainty
 
@@ -75,11 +75,11 @@ Then we are able to use this formula to calculate the probability that this comm
 
 <img src="https://user-images.githubusercontent.com/99038613/177066765-e862d326-0f7a-42e3-b7ce-f2e5ffec37af.jpg" width=60% height=60%>
 
-#### Information Retrieval
+### Information Retrieval
 
 Another task where the AI will not need to know the syntax is information retrieval. Imagine searching something on the internet, one will enter some short sentences and find what's most relevant. How does AI know what's relevant? This task is information retrieval, which the AI will retrieve the most important/relevant information in a search space such as in an article or in the internet
 
-#### TF-IDF
+### TF-IDF
 
 One common approach to go about information retrieval is the TF-IDF or the "Term Frequency - Inverse Document Frequency" method.
 
@@ -95,11 +95,11 @@ This method considers not only how many times a word appears in a document, but 
 
 Semantics is the meaning of words or sentences. While sometimes we only want to know the structure a sentence, or the important information within a context, but there are times we want the AI to understand the actual, underlying meaning of each word and sentence
 
-#### WordNet
+### WordNet
 
 One approach is using the existing database created by researchers, the [WordNet](https://en.wikipedia.org/wiki/WordNet). It contains all the information about words such as their definitions, different senses/meanings, and relationship to other words
 
-#### Word Representation
+### Word Representation
 
 Computers only know 0s and 1s, in order for the AI to understand natural language, we have to somehow encode the words into numbers. One way to represent words is by one hot encoding. For instance, for words "He wrote a book", we can encode that:
 
@@ -110,7 +110,7 @@ Computers only know 0s and 1s, in order for the AI to understand natural languag
 
 However, this method is not feasible for real world use since there are too many words to be one hot encoded. A vector of thousands of items only to represent a word is too costly. Also, by one hot encoding, we are not able to represent relationships between words since the 1 is randomly placed, so the word "book" and "novel" has no mathematical relationship for the AI to recognize.
 
-#### Word2Vec
+### Word2Vec
 
 Therefore, we turn to the idea of distributed representation, where each word is represented by a vector of less than 100 items and each item is a floating point number. This method is counter-intuitive since how can words be represented by a bunch of floating point numbers? Well, this method actually works really well in real life problems. We can test the functionality of this method by calculating the mathematical distance between two words by calculating the distance between vectors. And it turns out it can represent the relationship between words by a floating point number. For instance, the word "book" and "novel", the vector representation of the word "book" is:
 

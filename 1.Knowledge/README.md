@@ -2,11 +2,11 @@
 
 Instead of randomly taking actions and finding the optimal series of actions, with some knowledge about the world, the AI will make inferences and entailments to prove a statement
 
-#### [Knowledge-Based Agents](https://www.geeksforgeeks.org/knowledge-based-agents-in-ai/)
+### [Knowledge-Based Agents](https://www.geeksforgeeks.org/knowledge-based-agents-in-ai/)
 
 Similar to the previous agent definition, but knowledge-based agents are agents that reason and infer by operating on internal representations of knowledge instead of taking actions under states
 
-#### Sentence
+### Sentence
 
 Sentence is an assertion about the world in a knowledge representation language. A sentence is how AI stores knowledge and uses it to infer new information
 
@@ -14,11 +14,11 @@ Sentence is an assertion about the world in a knowledge representation language.
 
 Propositional logic, also known as sentential logic, is that branch of logic that studies ways of combining or altering statements or propositions to form more complicated statements or propositions. Joining two simpler propositions with the word “and” is one common way of combining statements
 
-#### Propositional Symbols
+### Propositional Symbols
 
 Propositional symbols are used to represent an assertion in reality
 
-#### [Logical Connectives](https://en.wikipedia.org/wiki/Logical_connective)
+### [Logical Connectives](https://en.wikipedia.org/wiki/Logical_connective)
 
 Logical connectives are logical symbols that connect propositional symbols in order to reason in a more complex way about the world
 
@@ -29,15 +29,15 @@ Logical connectives are logical symbols that connect propositional symbols in or
 - **Implication (→)**: Represents a structure of “if P then Q.”
 - **Biconditional (⇔)**: Implication that goes both directions
 
-#### Model
+### Model
 
 Provides information about the world based on existing sentences which also known as the Knowledge Base (KB). Input a query about the world into the model, it will output its best result based on the KB
 
-#### Knowledge Base (KB)
+### Knowledge Base (KB)
 
 The combination of all existing sentences, where the knowledge-based agents store all their knowledge
 
-#### Entailment (⊨)
+### Entailment (⊨)
 
 If α ⊨ β (α entails β), then in any possible world where α is true, then β must be true. For example, if there are two statements:
 
@@ -46,7 +46,7 @@ If α ⊨ β (α entails β), then in any possible world where α is true, then 
 
 Then the AI is able to make entailment stating that "Harry is outside" based on these two sentences
 
-#### Knowledge Engineering
+### Knowledge Engineering
 
 The process of figuring out how to represent propositions and logic using programming. For instance, in the `Knights` project, the `logic.py` is fully implemented already to represent propositional logics with Python
 
@@ -54,7 +54,7 @@ The process of figuring out how to represent propositions and logic using progra
 
 The process of deriving new sentences from old ones
 
-#### Inference Rules
+### Inference Rules
 
 - **Modus Ponens**: If we know an implication and its antecedent is true, then the consequent must also be true. If a → b is true, and a is true, then b must be true
 - **And Elimination**: If an AND proposition is true, then any one atomic proposition within it must also be true. If (a ∧ b) is true, then a, b must all be true
@@ -75,11 +75,11 @@ The process of deriving new sentences from old ones
 
 - **Distributive Property**: AND and OR can be distributed just like multiplication. If a ∨ (b ∧ c) is true, then (a ∨ b) ∧ (a ∨ c) must be true
 
-#### Knowledge and Search
+### Knowledge and Search
 
 Inference can be viewed as a search problem. The initial state is the starting KB, the actions are inference rules and inferencing, the goal is a statement we are trying to prove
 
-#### Resolution
+### Resolution
 
 A power inference rule that states that if one of two atomic propositions in an OR proposition is false, the other has to be true
 
@@ -96,11 +96,11 @@ First order logic is another type of logic that allows us to express more comple
 
 For example, we return to the logic puzzle with different people and house assignments at Hogwarts. The constant symbols are people or houses, like Minerva, Pomona, Gryffindor, Hufflepuff, etc. The predicate symbols are properties that hold true or false of some constant symbols. For example, we can express the idea that Minerva is a person using the sentence Person(Minerva). Similarly, we can express the idea the Gryffindor is a house using the sentence House(Gryffindor). All the logical connectives work in first order logic the same way as before. For example, ¬House(Minerva) expresses the idea that Minerva is not a house. A predicate symbol can also take two or more arguments and express a relation between them. For example, BelongsTo expresses a relation between two arguments, the person and the house to which the person belongs. Thus, the idea that Minerva belongs to Gryffindor can be expressed as BelongsTo(Minerva, Gryffindor). First order logic allows having one symbol for each person and one symbol for each house. This is more succinct than propositional logic, where each person—house assignment would require a different symbol
 
-#### Universal Quantification
+### Universal Quantification
 
 Quantification is a tool that can be used in first order logic to represent sentences without using a specific constant symbol. Universal quantification uses the symbol ∀ to express “for all.” So, for example, the sentence ∀x. BelongsTo(x, Gryffindor) → ¬BelongsTo(x, Hufflepuff) expresses the idea that it is true for every symbol that if this symbol belongs to Gryffindor, it does not belong to Hufflepuff.
 
-#### Existential Quantification
+### Existential Quantification
 
 Existential quantification is an idea parallel to universal quantification. However, while universal quantification was used to create sentences that are true for all x, existential quantification is used to create sentences that are true for at least one x. It is expressed using the symbol ∃. For example, the sentence ∃x. House(x) ∧ BelongsTo(Minerva, x) means that there is at least one symbol that is both a house and that Minerva belongs to it. In other words, this expresses the idea that Minerva belongs to a house.
 
