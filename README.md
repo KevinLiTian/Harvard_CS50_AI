@@ -1,8 +1,8 @@
 # Harvard University's CS50AI - Introduction to Artificial Intelligence
 
-In the summer after my sophomore year, in order to gain more knowledge and continue programming, I chose to study Harvard's online artificial intelligence course, [CS50AI](https://cs50.harvard.edu/ai/2020/), which I found through the online learning platform, [edX](https://www.edx.org/)<br/>
+In the summer after my sophomore year, in order to gain more knowledge and continue programming, I chose to study Harvard's online artificial intelligence course, [CS50AI](https://cs50.harvard.edu/ai/2020/), which I found through the online learning platform, [edX](https://www.edx.org/). Here's my [certificate](https://certificates.cs50.io/f5a81eaf-2bf6-4c43-8a3c-c866f94c1052) after completing the course
 
-In this repository, I will put my notes and my work on course projects. For each lecture, I will list the objectives of the lecture and corresponding projects. Detailed notes and in-class examples regarding each lecture can be accessed through the link of the corresponding lecture below. The release material and specification of each project are also included in the `DIY` directory in case one wants to practice doing them
+In this repository, I am putting my notes and my work on course projects. For each lecture, I will list the objectives of the lecture and corresponding projects. Detailed notes and in-class examples regarding each lecture can be accessed through the link of the corresponding lecture below. The release material and specification of each project are also included in the `DIY` directory in case one wants to practice doing them
 
 Please <strong>DO NOT</strong> directly use the source code, they are <strong>ONLY</strong> for reference. Plagiarism is strictly prohibited by both the Harvard University and the edX platform. See [academic honesty](https://cs50.harvard.edu/college/2021/fall/syllabus/#academic-honesty) and [license](https://cs50.harvard.edu/ai/2020/license/) for details
 
