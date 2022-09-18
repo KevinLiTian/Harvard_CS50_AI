@@ -1,9 +1,9 @@
 ---
-name: Feature request
+name: Feature Request
 about: Suggest an idea for this project
-title: "[FR]"
+title: "[FEATURE]"
 labels: enhancement
-assignees: kevinli
+assignees: kevinlitian
 
 ---
 
